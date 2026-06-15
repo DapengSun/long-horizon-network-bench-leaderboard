@@ -61,6 +61,23 @@ npm run preview -- --host 127.0.0.1
 https://<github-username>.github.io/long-horizon-network-bench-leaderboard/
 ```
 
+## GitLab Pages 部署
+
+也可以将本目录作为独立 GitLab public 仓库推送。已内置 GitLab CI 配置：
+
+- `.gitlab-ci.yml`
+- 在 `site/` 子目录执行 `npm ci`、`npm test`、`npm run build`
+- 自动设置 `VITE_BASE_PATH=/${CI_PROJECT_NAME}/`
+- 将 `site/dist` 复制到 GitLab Pages 需要的 `public/` artifact
+
+推送到 GitLab 默认分支后，`pages` job 会自动发布。如果项目名是 `long-horizon-network-bench-leaderboard`，访问地址通常是：
+
+```text
+https://<gitlab-username>.gitlab.io/long-horizon-network-bench-leaderboard/
+```
+
+如果使用自定义域名或仓库名为 `<gitlab-username>.gitlab.io` 的用户主页仓库，需要将 `.gitlab-ci.yml` 中的 `VITE_BASE_PATH` 改为 `/`。
+
 ## 当前数据入口
 
 - `site/src/data/networkDashboardMock.json`：排名表和雷达图使用的网络任务分类、模型和分数。
