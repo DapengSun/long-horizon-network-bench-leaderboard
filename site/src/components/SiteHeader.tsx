@@ -44,7 +44,7 @@ export const SiteHeader: React.FC<SiteHeaderProps> = ({
         />
         <a
           className="site-link"
-          href="https://github.com/ai-twinkle/Eval"
+          href="https://github.com/ybai-nasp/NetEval-Pro"
           target="_blank"
           rel="noopener noreferrer"
         >
