@@ -2,7 +2,7 @@ import React, { useMemo, useState } from "react";
 import { Button, Checkbox, Input, Popover, Space, Table, Typography } from "antd";
 import { CaretRightOutlined, FilterOutlined, SearchOutlined } from "@ant-design/icons";
 import type { TableColumnsType } from "antd";
-import mockData from "../data/networkDashboardMock.json";
+import { getDashboardData } from "../data/leaderboardDataSource";
 import {
   buildScoreTableRows,
   categoryMatchesQuery,
@@ -17,7 +17,7 @@ import { useLocale } from "../i18n/LocaleContext";
 import type { MessageKey } from "../i18n/messages";
 import type { EvaluationDetailSelection } from "../types";
 
-const data = mockData as DashboardBenchmarkData;
+const data: DashboardBenchmarkData = getDashboardData();
 
 const PRIMARY_CATEGORIES: Array<{
   id: PrimaryCategoryId;
@@ -47,6 +47,7 @@ const PRIMARY_CATEGORIES: Array<{
     labelKey: "ops",
     children: [
       { id: "LTHOps", labelKey: "lthOpsTitle" },
+      { id: "LTMixOps", labelKey: "ltmixOpsTitle" },
       { id: "LTSOps", labelKey: "ltsOpsTitle" },
       { id: "LTNOps", labelKey: "ltnOpsTitle" },
     ],
@@ -88,6 +89,19 @@ function ScoreBar({ score, title }: { score: number; title?: string }) {
       <span className="tw-score-value">{formatAverage(score)}</span>
     </span>
   );
+}
+
+export function detailCategoryForRow(
+  row: DashboardScoreTableRow,
+  selectedItems: Array<{ id: string }>
+): string {
+  const visibleScored = selectedItems
+    .map((item) => item.id)
+    .filter((id) => typeof row.scores[id] === "number");
+  if (visibleScored.length === 1) {
+    return visibleScored[0];
+  }
+  return visibleScored[0] ?? "LTNP";
 }
 
 interface BenchmarkDashboardProps {
@@ -268,7 +282,7 @@ export const BenchmarkDashboard: React.FC<BenchmarkDashboardProps> = ({
           onClick={() =>
             onViewDetail({
               model: row.model,
-              category: "LTCO",
+              category: detailCategoryForRow(row, selectedSecondaryItems),
             })
           }
         >

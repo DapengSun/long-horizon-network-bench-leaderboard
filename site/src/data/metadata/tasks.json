@@ -1,0 +1,992 @@
+[
+  {
+    "id": "ltcc-highbdp-v4",
+    "benchmark": "LTCC",
+    "title": "Ltcc Highbdp V4",
+    "family": "ltcc-highbdp",
+    "scenario": "default",
+    "scale": "highbdp",
+    "size": "v4"
+  },
+  {
+    "id": "ltcc-incast-v4",
+    "benchmark": "LTCC",
+    "title": "Ltcc Incast V4",
+    "family": "ltcc-incast",
+    "scenario": "default",
+    "scale": "incast",
+    "size": "v4"
+  },
+  {
+    "id": "ltcc-lat-mouse-v4",
+    "benchmark": "LTCC",
+    "title": "Ltcc Lat Mouse V4",
+    "family": "ltcc-lat",
+    "scenario": "mouse",
+    "scale": "mouse",
+    "size": "v4"
+  },
+  {
+    "id": "ltcc-link-perturb-v4",
+    "benchmark": "LTCC",
+    "title": "Ltcc Link Perturb V4",
+    "family": "ltcc-link",
+    "scenario": "perturb",
+    "scale": "perturb",
+    "size": "v4"
+  },
+  {
+    "id": "ltcc-m2m-mixed-v4",
+    "benchmark": "LTCC",
+    "title": "Ltcc M2m Mixed V4",
+    "family": "ltcc-m2m",
+    "scenario": "mixed",
+    "scale": "mixed",
+    "size": "v4"
+  },
+  {
+    "id": "ltcc-tandem-db-v4",
+    "benchmark": "LTCC",
+    "title": "Ltcc Tandem Db V4",
+    "family": "ltcc-tandem",
+    "scenario": "db",
+    "scale": "db",
+    "size": "v4"
+  },
+  {
+    "id": "ltcg-clos-bgp-v1",
+    "benchmark": "LTCG",
+    "title": "Ltcg Clos Bgp V1",
+    "family": "ltcg-clos",
+    "scenario": "bgp",
+    "scale": "bgp",
+    "size": "v1"
+  },
+  {
+    "id": "ltco-a100-ag-16-128m",
+    "benchmark": "LTCO",
+    "title": "Ltco A100 Ag 16 128m",
+    "family": "ltco-a100",
+    "scenario": "ag-16",
+    "scale": "16",
+    "size": "128m"
+  },
+  {
+    "id": "ltco-a100-ag-16-1g",
+    "benchmark": "LTCO",
+    "title": "Ltco A100 Ag 16 1g",
+    "family": "ltco-a100",
+    "scenario": "ag-16",
+    "scale": "16",
+    "size": "1g"
+  },
+  {
+    "id": "ltco-a100-ag-16-4k",
+    "benchmark": "LTCO",
+    "title": "Ltco A100 Ag 16 4k",
+    "family": "ltco-a100",
+    "scenario": "ag-16",
+    "scale": "16",
+    "size": "4k"
+  },
+  {
+    "id": "ltco-a100-ag-16-512k",
+    "benchmark": "LTCO",
+    "title": "Ltco A100 Ag 16 512k",
+    "family": "ltco-a100",
+    "scenario": "ag-16",
+    "scale": "16",
+    "size": "512k"
+  },
+  {
+    "id": "ltco-a100-ag-32-128m",
+    "benchmark": "LTCO",
+    "title": "Ltco A100 Ag 32 128m",
+    "family": "ltco-a100",
+    "scenario": "ag-32",
+    "scale": "32",
+    "size": "128m"
+  },
+  {
+    "id": "ltco-a100-ag-32-1g",
+    "benchmark": "LTCO",
+    "title": "Ltco A100 Ag 32 1g",
+    "family": "ltco-a100",
+    "scenario": "ag-32",
+    "scale": "32",
+    "size": "1g"
+  },
+  {
+    "id": "ltco-a100-ag-32-4k",
+    "benchmark": "LTCO",
+    "title": "Ltco A100 Ag 32 4k",
+    "family": "ltco-a100",
+    "scenario": "ag-32",
+    "scale": "32",
+    "size": "4k"
+  },
+  {
+    "id": "ltco-a100-ag-32-512k",
+    "benchmark": "LTCO",
+    "title": "Ltco A100 Ag 32 512k",
+    "family": "ltco-a100",
+    "scenario": "ag-32",
+    "scale": "32",
+    "size": "512k"
+  },
+  {
+    "id": "ltco-a100-ag-8-128m",
+    "benchmark": "LTCO",
+    "title": "Ltco A100 Ag 8 128m",
+    "family": "ltco-a100",
+    "scenario": "ag-8",
+    "scale": "8",
+    "size": "128m"
+  },
+  {
+    "id": "ltco-a100-ag-8-1g",
+    "benchmark": "LTCO",
+    "title": "Ltco A100 Ag 8 1g",
+    "family": "ltco-a100",
+    "scenario": "ag-8",
+    "scale": "8",
+    "size": "1g"
+  },
+  {
+    "id": "ltco-a100-ag-8-4k",
+    "benchmark": "LTCO",
+    "title": "Ltco A100 Ag 8 4k",
+    "family": "ltco-a100",
+    "scenario": "ag-8",
+    "scale": "8",
+    "size": "4k"
+  },
+  {
+    "id": "ltco-a100-ag-8-512k",
+    "benchmark": "LTCO",
+    "title": "Ltco A100 Ag 8 512k",
+    "family": "ltco-a100",
+    "scenario": "ag-8",
+    "scale": "8",
+    "size": "512k"
+  },
+  {
+    "id": "ltco-mi300x-ag-16-128m",
+    "benchmark": "LTCO",
+    "title": "Ltco Mi300x Ag 16 128m",
+    "family": "ltco-mi300x",
+    "scenario": "ag-16",
+    "scale": "16",
+    "size": "128m"
+  },
+  {
+    "id": "ltco-mi300x-ag-16-1g",
+    "benchmark": "LTCO",
+    "title": "Ltco Mi300x Ag 16 1g",
+    "family": "ltco-mi300x",
+    "scenario": "ag-16",
+    "scale": "16",
+    "size": "1g"
+  },
+  {
+    "id": "ltco-mi300x-ag-16-4k",
+    "benchmark": "LTCO",
+    "title": "Ltco Mi300x Ag 16 4k",
+    "family": "ltco-mi300x",
+    "scenario": "ag-16",
+    "scale": "16",
+    "size": "4k"
+  },
+  {
+    "id": "ltco-mi300x-ag-16-512k",
+    "benchmark": "LTCO",
+    "title": "Ltco Mi300x Ag 16 512k",
+    "family": "ltco-mi300x",
+    "scenario": "ag-16",
+    "scale": "16",
+    "size": "512k"
+  },
+  {
+    "id": "ltco-mi300x-ag-32-128m",
+    "benchmark": "LTCO",
+    "title": "Ltco Mi300x Ag 32 128m",
+    "family": "ltco-mi300x",
+    "scenario": "ag-32",
+    "scale": "32",
+    "size": "128m"
+  },
+  {
+    "id": "ltco-mi300x-ag-32-1g",
+    "benchmark": "LTCO",
+    "title": "Ltco Mi300x Ag 32 1g",
+    "family": "ltco-mi300x",
+    "scenario": "ag-32",
+    "scale": "32",
+    "size": "1g"
+  },
+  {
+    "id": "ltco-mi300x-ag-32-4k",
+    "benchmark": "LTCO",
+    "title": "Ltco Mi300x Ag 32 4k",
+    "family": "ltco-mi300x",
+    "scenario": "ag-32",
+    "scale": "32",
+    "size": "4k"
+  },
+  {
+    "id": "ltco-mi300x-ag-32-512k",
+    "benchmark": "LTCO",
+    "title": "Ltco Mi300x Ag 32 512k",
+    "family": "ltco-mi300x",
+    "scenario": "ag-32",
+    "scale": "32",
+    "size": "512k"
+  },
+  {
+    "id": "ltco-mi300x-ag-8-128m",
+    "benchmark": "LTCO",
+    "title": "Ltco Mi300x Ag 8 128m",
+    "family": "ltco-mi300x",
+    "scenario": "ag-8",
+    "scale": "8",
+    "size": "128m"
+  },
+  {
+    "id": "ltco-mi300x-ag-8-1g",
+    "benchmark": "LTCO",
+    "title": "Ltco Mi300x Ag 8 1g",
+    "family": "ltco-mi300x",
+    "scenario": "ag-8",
+    "scale": "8",
+    "size": "1g"
+  },
+  {
+    "id": "ltco-mi300x-ag-8-4k",
+    "benchmark": "LTCO",
+    "title": "Ltco Mi300x Ag 8 4k",
+    "family": "ltco-mi300x",
+    "scenario": "ag-8",
+    "scale": "8",
+    "size": "4k"
+  },
+  {
+    "id": "ltco-mi300x-ag-8-512k",
+    "benchmark": "LTCO",
+    "title": "Ltco Mi300x Ag 8 512k",
+    "family": "ltco-mi300x",
+    "scenario": "ag-8",
+    "scale": "8",
+    "size": "512k"
+  },
+  {
+    "id": "LTHOps-001",
+    "benchmark": "LTHOps",
+    "title": "LTHOps 001",
+    "family": "LTHOps-001",
+    "scenario": "default",
+    "scale": "LTHOps",
+    "size": "001"
+  },
+  {
+    "id": "LTHOps-002",
+    "benchmark": "LTHOps",
+    "title": "LTHOps 002",
+    "family": "LTHOps-002",
+    "scenario": "default",
+    "scale": "LTHOps",
+    "size": "002"
+  },
+  {
+    "id": "LTHOps-003",
+    "benchmark": "LTHOps",
+    "title": "LTHOps 003",
+    "family": "LTHOps-003",
+    "scenario": "default",
+    "scale": "LTHOps",
+    "size": "003"
+  },
+  {
+    "id": "LTHOps-004",
+    "benchmark": "LTHOps",
+    "title": "LTHOps 004",
+    "family": "LTHOps-004",
+    "scenario": "default",
+    "scale": "LTHOps",
+    "size": "004"
+  },
+  {
+    "id": "LTHOps-005",
+    "benchmark": "LTHOps",
+    "title": "LTHOps 005",
+    "family": "LTHOps-005",
+    "scenario": "default",
+    "scale": "LTHOps",
+    "size": "005"
+  },
+  {
+    "id": "LTHOps-006",
+    "benchmark": "LTHOps",
+    "title": "LTHOps 006",
+    "family": "LTHOps-006",
+    "scenario": "default",
+    "scale": "LTHOps",
+    "size": "006"
+  },
+  {
+    "id": "LTHOps-007",
+    "benchmark": "LTHOps",
+    "title": "LTHOps 007",
+    "family": "LTHOps-007",
+    "scenario": "default",
+    "scale": "LTHOps",
+    "size": "007"
+  },
+  {
+    "id": "LTHOps-008",
+    "benchmark": "LTHOps",
+    "title": "LTHOps 008",
+    "family": "LTHOps-008",
+    "scenario": "default",
+    "scale": "LTHOps",
+    "size": "008"
+  },
+  {
+    "id": "LTHOps-009",
+    "benchmark": "LTHOps",
+    "title": "LTHOps 009",
+    "family": "LTHOps-009",
+    "scenario": "default",
+    "scale": "LTHOps",
+    "size": "009"
+  },
+  {
+    "id": "LTHOps-010",
+    "benchmark": "LTHOps",
+    "title": "LTHOps 010",
+    "family": "LTHOps-010",
+    "scenario": "default",
+    "scale": "LTHOps",
+    "size": "010"
+  },
+  {
+    "id": "LTHOps-011",
+    "benchmark": "LTHOps",
+    "title": "LTHOps 011",
+    "family": "LTHOps-011",
+    "scenario": "default",
+    "scale": "LTHOps",
+    "size": "011"
+  },
+  {
+    "id": "LTHOps-012",
+    "benchmark": "LTHOps",
+    "title": "LTHOps 012",
+    "family": "LTHOps-012",
+    "scenario": "default",
+    "scale": "LTHOps",
+    "size": "012"
+  },
+  {
+    "id": "LTHOps-013",
+    "benchmark": "LTHOps",
+    "title": "LTHOps 013",
+    "family": "LTHOps-013",
+    "scenario": "default",
+    "scale": "LTHOps",
+    "size": "013"
+  },
+  {
+    "id": "LTHOps-014",
+    "benchmark": "LTHOps",
+    "title": "LTHOps 014",
+    "family": "LTHOps-014",
+    "scenario": "default",
+    "scale": "LTHOps",
+    "size": "014"
+  },
+  {
+    "id": "LTHOps-015",
+    "benchmark": "LTHOps",
+    "title": "LTHOps 015",
+    "family": "LTHOps-015",
+    "scenario": "default",
+    "scale": "LTHOps",
+    "size": "015"
+  },
+  {
+    "id": "LTHOps-016",
+    "benchmark": "LTHOps",
+    "title": "LTHOps 016",
+    "family": "LTHOps-016",
+    "scenario": "default",
+    "scale": "LTHOps",
+    "size": "016"
+  },
+  {
+    "id": "LTHOps-017",
+    "benchmark": "LTHOps",
+    "title": "LTHOps 017",
+    "family": "LTHOps-017",
+    "scenario": "default",
+    "scale": "LTHOps",
+    "size": "017"
+  },
+  {
+    "id": "LTHOps-018",
+    "benchmark": "LTHOps",
+    "title": "LTHOps 018",
+    "family": "LTHOps-018",
+    "scenario": "default",
+    "scale": "LTHOps",
+    "size": "018"
+  },
+  {
+    "id": "LTHOps-019",
+    "benchmark": "LTHOps",
+    "title": "LTHOps 019",
+    "family": "LTHOps-019",
+    "scenario": "default",
+    "scale": "LTHOps",
+    "size": "019"
+  },
+  {
+    "id": "LTHOps-020",
+    "benchmark": "LTHOps",
+    "title": "LTHOps 020",
+    "family": "LTHOps-020",
+    "scenario": "default",
+    "scale": "LTHOps",
+    "size": "020"
+  },
+  {
+    "id": "LTHOps-021",
+    "benchmark": "LTHOps",
+    "title": "LTHOps 021",
+    "family": "LTHOps-021",
+    "scenario": "default",
+    "scale": "LTHOps",
+    "size": "021"
+  },
+  {
+    "id": "LTHOps-022",
+    "benchmark": "LTHOps",
+    "title": "LTHOps 022",
+    "family": "LTHOps-022",
+    "scenario": "default",
+    "scale": "LTHOps",
+    "size": "022"
+  },
+  {
+    "id": "LTHOps-023",
+    "benchmark": "LTHOps",
+    "title": "LTHOps 023",
+    "family": "LTHOps-023",
+    "scenario": "default",
+    "scale": "LTHOps",
+    "size": "023"
+  },
+  {
+    "id": "LTHOps-024",
+    "benchmark": "LTHOps",
+    "title": "LTHOps 024",
+    "family": "LTHOps-024",
+    "scenario": "default",
+    "scale": "LTHOps",
+    "size": "024"
+  },
+  {
+    "id": "LTHOps-025",
+    "benchmark": "LTHOps",
+    "title": "LTHOps 025",
+    "family": "LTHOps-025",
+    "scenario": "default",
+    "scale": "LTHOps",
+    "size": "025"
+  },
+  {
+    "id": "LTHOps-026",
+    "benchmark": "LTHOps",
+    "title": "LTHOps 026",
+    "family": "LTHOps-026",
+    "scenario": "default",
+    "scale": "LTHOps",
+    "size": "026"
+  },
+  {
+    "id": "ltlb-elephant-interfere-v4",
+    "benchmark": "LTLB",
+    "title": "Ltlb Elephant Interfere V4",
+    "family": "ltlb-elephant",
+    "scenario": "interfere",
+    "scale": "interfere",
+    "size": "v4"
+  },
+  {
+    "id": "ltlb-flowlet-timeout-v4",
+    "benchmark": "LTLB",
+    "title": "Ltlb Flowlet Timeout V4",
+    "family": "ltlb-flowlet",
+    "scenario": "timeout",
+    "scale": "timeout",
+    "size": "v4"
+  },
+  {
+    "id": "ltlb-heavytail-ecmp-v4",
+    "benchmark": "LTLB",
+    "title": "Ltlb Heavytail Ecmp V4",
+    "family": "ltlb-heavytail",
+    "scenario": "ecmp",
+    "scale": "ecmp",
+    "size": "v4"
+  },
+  {
+    "id": "ltlb-rdma-reorder-v4",
+    "benchmark": "LTLB",
+    "title": "Ltlb Rdma Reorder V4",
+    "family": "ltlb-rdma",
+    "scenario": "reorder",
+    "scale": "reorder",
+    "size": "v4"
+  },
+  {
+    "id": "ltlb-voq-path-lb-v4",
+    "benchmark": "LTLB",
+    "title": "Ltlb Voq Path Lb V4",
+    "family": "ltlb-voq",
+    "scenario": "path-lb",
+    "scale": "lb",
+    "size": "v4"
+  },
+  {
+    "id": "LTMixOps-001",
+    "benchmark": "LTMixOps",
+    "title": "LTMixOps 001",
+    "family": "LTMixOps-001",
+    "scenario": "default",
+    "scale": "LTMixOps",
+    "size": "001"
+  },
+  {
+    "id": "LTMixOps-002",
+    "benchmark": "LTMixOps",
+    "title": "LTMixOps 002",
+    "family": "LTMixOps-002",
+    "scenario": "default",
+    "scale": "LTMixOps",
+    "size": "002"
+  },
+  {
+    "id": "LTMixOps-003",
+    "benchmark": "LTMixOps",
+    "title": "LTMixOps 003",
+    "family": "LTMixOps-003",
+    "scenario": "default",
+    "scale": "LTMixOps",
+    "size": "003"
+  },
+  {
+    "id": "LTMixOps-004",
+    "benchmark": "LTMixOps",
+    "title": "LTMixOps 004",
+    "family": "LTMixOps-004",
+    "scenario": "default",
+    "scale": "LTMixOps",
+    "size": "004"
+  },
+  {
+    "id": "LTMixOps-005",
+    "benchmark": "LTMixOps",
+    "title": "LTMixOps 005",
+    "family": "LTMixOps-005",
+    "scenario": "default",
+    "scale": "LTMixOps",
+    "size": "005"
+  },
+  {
+    "id": "LTNOps-001",
+    "benchmark": "LTNOps",
+    "title": "LTNOps 001",
+    "family": "LTNOps-001",
+    "scenario": "default",
+    "scale": "LTNOps",
+    "size": "001"
+  },
+  {
+    "id": "LTNOps-002",
+    "benchmark": "LTNOps",
+    "title": "LTNOps 002",
+    "family": "LTNOps-002",
+    "scenario": "default",
+    "scale": "LTNOps",
+    "size": "002"
+  },
+  {
+    "id": "LTNOps-003",
+    "benchmark": "LTNOps",
+    "title": "LTNOps 003",
+    "family": "LTNOps-003",
+    "scenario": "default",
+    "scale": "LTNOps",
+    "size": "003"
+  },
+  {
+    "id": "LTNOps-004",
+    "benchmark": "LTNOps",
+    "title": "LTNOps 004",
+    "family": "LTNOps-004",
+    "scenario": "default",
+    "scale": "LTNOps",
+    "size": "004"
+  },
+  {
+    "id": "LTNOps-005",
+    "benchmark": "LTNOps",
+    "title": "LTNOps 005",
+    "family": "LTNOps-005",
+    "scenario": "default",
+    "scale": "LTNOps",
+    "size": "005"
+  },
+  {
+    "id": "LTNOps-006",
+    "benchmark": "LTNOps",
+    "title": "LTNOps 006",
+    "family": "LTNOps-006",
+    "scenario": "default",
+    "scale": "LTNOps",
+    "size": "006"
+  },
+  {
+    "id": "LTNOps-007",
+    "benchmark": "LTNOps",
+    "title": "LTNOps 007",
+    "family": "LTNOps-007",
+    "scenario": "default",
+    "scale": "LTNOps",
+    "size": "007"
+  },
+  {
+    "id": "LTNOps-008",
+    "benchmark": "LTNOps",
+    "title": "LTNOps 008",
+    "family": "LTNOps-008",
+    "scenario": "default",
+    "scale": "LTNOps",
+    "size": "008"
+  },
+  {
+    "id": "LTNOps-009",
+    "benchmark": "LTNOps",
+    "title": "LTNOps 009",
+    "family": "LTNOps-009",
+    "scenario": "default",
+    "scale": "LTNOps",
+    "size": "009"
+  },
+  {
+    "id": "LTNOps-010",
+    "benchmark": "LTNOps",
+    "title": "LTNOps 010",
+    "family": "LTNOps-010",
+    "scenario": "default",
+    "scale": "LTNOps",
+    "size": "010"
+  },
+  {
+    "id": "LTNOps-011",
+    "benchmark": "LTNOps",
+    "title": "LTNOps 011",
+    "family": "LTNOps-011",
+    "scenario": "default",
+    "scale": "LTNOps",
+    "size": "011"
+  },
+  {
+    "id": "LTNOps-012",
+    "benchmark": "LTNOps",
+    "title": "LTNOps 012",
+    "family": "LTNOps-012",
+    "scenario": "default",
+    "scale": "LTNOps",
+    "size": "012"
+  },
+  {
+    "id": "ltnp-hpcnet-newbuild-v1-std",
+    "benchmark": "LTNP",
+    "title": "Ltnp Hpcnet Newbuild V1 Std",
+    "family": "ltnp-hpcnet",
+    "scenario": "newbuild-v1",
+    "scale": "v1",
+    "size": "std"
+  },
+  {
+    "id": "ltnp-hpcnet-newbuild-v2-std",
+    "benchmark": "LTNP",
+    "title": "Ltnp Hpcnet Newbuild V2 Std",
+    "family": "ltnp-hpcnet",
+    "scenario": "newbuild-v2",
+    "scale": "v2",
+    "size": "std"
+  },
+  {
+    "id": "ltnp-hpcnet-newbuild-v3-std",
+    "benchmark": "LTNP",
+    "title": "Ltnp Hpcnet Newbuild V3 Std",
+    "family": "ltnp-hpcnet",
+    "scenario": "newbuild-v3",
+    "scale": "v3",
+    "size": "std"
+  },
+  {
+    "id": "ltnp-idc-expansion-v1-std",
+    "benchmark": "LTNP",
+    "title": "Ltnp Idc Expansion V1 Std",
+    "family": "ltnp-idc",
+    "scenario": "expansion-v1",
+    "scale": "v1",
+    "size": "std"
+  },
+  {
+    "id": "ltnp-idc-expansion-v2-std",
+    "benchmark": "LTNP",
+    "title": "Ltnp Idc Expansion V2 Std",
+    "family": "ltnp-idc",
+    "scenario": "expansion-v2",
+    "scale": "v2",
+    "size": "std"
+  },
+  {
+    "id": "ltnp-idc-expansion-v3-std",
+    "benchmark": "LTNP",
+    "title": "Ltnp Idc Expansion V3 Std",
+    "family": "ltnp-idc",
+    "scenario": "expansion-v3",
+    "scale": "v3",
+    "size": "std"
+  },
+  {
+    "id": "ltnp-idc-newpod-v1-std",
+    "benchmark": "LTNP",
+    "title": "Ltnp Idc Newpod V1 Std",
+    "family": "ltnp-idc",
+    "scenario": "newpod-v1",
+    "scale": "v1",
+    "size": "std"
+  },
+  {
+    "id": "ltnp-idc-newpod-v2-std",
+    "benchmark": "LTNP",
+    "title": "Ltnp Idc Newpod V2 Std",
+    "family": "ltnp-idc",
+    "scenario": "newpod-v2",
+    "scale": "v2",
+    "size": "std"
+  },
+  {
+    "id": "ltnp-idc-newpod-v3-std",
+    "benchmark": "LTNP",
+    "title": "Ltnp Idc Newpod V3 Std",
+    "family": "ltnp-idc",
+    "scenario": "newpod-v3",
+    "scale": "v3",
+    "size": "std"
+  },
+  {
+    "id": "ltnp-multiscene-mix-v1-std",
+    "benchmark": "LTNP",
+    "title": "Ltnp Multiscene Mix V1 Std",
+    "family": "ltnp-multiscene",
+    "scenario": "mix-v1",
+    "scale": "v1",
+    "size": "std"
+  },
+  {
+    "id": "ltnp-multiscene-mix-v2-std",
+    "benchmark": "LTNP",
+    "title": "Ltnp Multiscene Mix V2 Std",
+    "family": "ltnp-multiscene",
+    "scenario": "mix-v2",
+    "scale": "v2",
+    "size": "std"
+  },
+  {
+    "id": "ltnp-multiscene-mix-v3-std",
+    "benchmark": "LTNP",
+    "title": "Ltnp Multiscene Mix V3 Std",
+    "family": "ltnp-multiscene",
+    "scenario": "mix-v3",
+    "scale": "v3",
+    "size": "std"
+  },
+  {
+    "id": "ltnp-overseas-mini-v1-std",
+    "benchmark": "LTNP",
+    "title": "Ltnp Overseas Mini V1 Std",
+    "family": "ltnp-overseas",
+    "scenario": "mini-v1",
+    "scale": "v1",
+    "size": "std"
+  },
+  {
+    "id": "ltnp-overseas-mini-v2-std",
+    "benchmark": "LTNP",
+    "title": "Ltnp Overseas Mini V2 Std",
+    "family": "ltnp-overseas",
+    "scenario": "mini-v2",
+    "scale": "v2",
+    "size": "std"
+  },
+  {
+    "id": "ltnp-overseas-mini-v3-std",
+    "benchmark": "LTNP",
+    "title": "Ltnp Overseas Mini V3 Std",
+    "family": "ltnp-overseas",
+    "scenario": "mini-v3",
+    "scale": "v3",
+    "size": "std"
+  },
+  {
+    "id": "ltrp-egress-multivrf-v1-std",
+    "benchmark": "LTRP",
+    "title": "Ltrp Egress Multivrf V1 Std",
+    "family": "ltrp-egress",
+    "scenario": "multivrf-v1",
+    "scale": "v1",
+    "size": "std"
+  },
+  {
+    "id": "ltrp-egress-multivrf-v2-std",
+    "benchmark": "LTRP",
+    "title": "Ltrp Egress Multivrf V2 Std",
+    "family": "ltrp-egress",
+    "scenario": "multivrf-v2",
+    "scale": "v2",
+    "size": "std"
+  },
+  {
+    "id": "ltrp-egress-multivrf-v3-std",
+    "benchmark": "LTRP",
+    "title": "Ltrp Egress Multivrf V3 Std",
+    "family": "ltrp-egress",
+    "scenario": "multivrf-v3",
+    "scale": "v3",
+    "size": "std"
+  },
+  {
+    "id": "ltrp-expansion-continuity-v1-std",
+    "benchmark": "LTRP",
+    "title": "Ltrp Expansion Continuity V1 Std",
+    "family": "ltrp-expansion",
+    "scenario": "continuity-v1",
+    "scale": "v1",
+    "size": "std"
+  },
+  {
+    "id": "ltrp-expansion-continuity-v2-std",
+    "benchmark": "LTRP",
+    "title": "Ltrp Expansion Continuity V2 Std",
+    "family": "ltrp-expansion",
+    "scenario": "continuity-v2",
+    "scale": "v2",
+    "size": "std"
+  },
+  {
+    "id": "ltrp-expansion-continuity-v3-std",
+    "benchmark": "LTRP",
+    "title": "Ltrp Expansion Continuity V3 Std",
+    "family": "ltrp-expansion",
+    "scenario": "continuity-v3",
+    "scale": "v3",
+    "size": "std"
+  },
+  {
+    "id": "ltrp-multitenant-ipam-v1-std",
+    "benchmark": "LTRP",
+    "title": "Ltrp Multitenant Ipam V1 Std",
+    "family": "ltrp-multitenant",
+    "scenario": "ipam-v1",
+    "scale": "v1",
+    "size": "std"
+  },
+  {
+    "id": "ltrp-multitenant-ipam-v2-std",
+    "benchmark": "LTRP",
+    "title": "Ltrp Multitenant Ipam V2 Std",
+    "family": "ltrp-multitenant",
+    "scenario": "ipam-v2",
+    "scale": "v2",
+    "size": "std"
+  },
+  {
+    "id": "ltrp-multitenant-ipam-v3-std",
+    "benchmark": "LTRP",
+    "title": "Ltrp Multitenant Ipam V3 Std",
+    "family": "ltrp-multitenant",
+    "scenario": "ipam-v3",
+    "scale": "v3",
+    "size": "std"
+  },
+  {
+    "id": "LTSOps-001",
+    "benchmark": "LTSOps",
+    "title": "LTSOps 001",
+    "family": "LTSOps-001",
+    "scenario": "default",
+    "scale": "LTSOps",
+    "size": "001"
+  },
+  {
+    "id": "LTSOps-002",
+    "benchmark": "LTSOps",
+    "title": "LTSOps 002",
+    "family": "LTSOps-002",
+    "scenario": "default",
+    "scale": "LTSOps",
+    "size": "002"
+  },
+  {
+    "id": "LTSOps-003",
+    "benchmark": "LTSOps",
+    "title": "LTSOps 003",
+    "family": "LTSOps-003",
+    "scenario": "default",
+    "scale": "LTSOps",
+    "size": "003"
+  },
+  {
+    "id": "LTSOps-004",
+    "benchmark": "LTSOps",
+    "title": "LTSOps 004",
+    "family": "LTSOps-004",
+    "scenario": "default",
+    "scale": "LTSOps",
+    "size": "004"
+  },
+  {
+    "id": "LTSOps-005",
+    "benchmark": "LTSOps",
+    "title": "LTSOps 005",
+    "family": "LTSOps-005",
+    "scenario": "default",
+    "scale": "LTSOps",
+    "size": "005"
+  },
+  {
+    "id": "LTSOps-006",
+    "benchmark": "LTSOps",
+    "title": "LTSOps 006",
+    "family": "LTSOps-006",
+    "scenario": "default",
+    "scale": "LTSOps",
+    "size": "006"
+  },
+  {
+    "id": "LTSOps-007",
+    "benchmark": "LTSOps",
+    "title": "LTSOps 007",
+    "family": "LTSOps-007",
+    "scenario": "default",
+    "scale": "LTSOps",
+    "size": "007"
+  }
+]

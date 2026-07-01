@@ -1,0 +1,270 @@
+{
+  "benchmark": "LTCC",
+  "generatedAt": "2026-07-01T02:50:42.138Z",
+  "tasks": [
+    {
+      "taskId": "ltcc-highbdp-v4",
+      "model": "DeepSeek-V4-Pro",
+      "agent": "opencode",
+      "runId": "fake-latest-opencode-deepseek-v4-pro",
+      "score": 0.644512,
+      "nativeScore": 0.644512,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 57.2,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltcc-highbdp-v4",
+      "model": "GLM-5.1",
+      "agent": "claudecode",
+      "runId": "fake-latest-claudecode-glm-5-1",
+      "score": 0.806616,
+      "nativeScore": 0.806616,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 55.8,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltcc-highbdp-v4",
+      "model": "MiniMax-M2.5",
+      "agent": "claudecode",
+      "runId": "fake-latest-claudecode-minimax-m2-5",
+      "score": 0.576052,
+      "nativeScore": 0.576052,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 51.3,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltcc-highbdp-v4",
+      "model": "Qwen3.6-35B-A3B",
+      "agent": "opencode",
+      "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+      "score": 0.717292,
+      "nativeScore": 0.717292,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 51.2,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltcc-incast-v4",
+      "model": "DeepSeek-V4-Pro",
+      "agent": "opencode",
+      "runId": "fake-latest-opencode-deepseek-v4-pro",
+      "score": 0.655504,
+      "nativeScore": 0.655504,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 50,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltcc-incast-v4",
+      "model": "GLM-5.1",
+      "agent": "claudecode",
+      "runId": "fake-latest-claudecode-glm-5-1",
+      "score": 0.765672,
+      "nativeScore": 0.765672,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 59,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltcc-incast-v4",
+      "model": "MiniMax-M2.5",
+      "agent": "claudecode",
+      "runId": "fake-latest-claudecode-minimax-m2-5",
+      "score": 0.592204,
+      "nativeScore": 0.592204,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 45.4,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltcc-incast-v4",
+      "model": "Qwen3.6-35B-A3B",
+      "agent": "opencode",
+      "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+      "score": 0.715108,
+      "nativeScore": 0.715108,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 45,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltcc-lat-mouse-v4",
+      "model": "DeepSeek-V4-Pro",
+      "agent": "opencode",
+      "runId": "fake-latest-opencode-deepseek-v4-pro",
+      "score": 0.611668,
+      "nativeScore": 0.611668,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 52,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltcc-lat-mouse-v4",
+      "model": "GLM-5.1",
+      "agent": "claudecode",
+      "runId": "fake-latest-claudecode-glm-5-1",
+      "score": 0.764076,
+      "nativeScore": 0.764076,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 44.3,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltcc-lat-mouse-v4",
+      "model": "MiniMax-M2.5",
+      "agent": "claudecode",
+      "runId": "fake-latest-claudecode-minimax-m2-5",
+      "score": 0.597568,
+      "nativeScore": 0.597568,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 48.5,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltcc-lat-mouse-v4",
+      "model": "Qwen3.6-35B-A3B",
+      "agent": "opencode",
+      "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+      "score": 0.6646,
+      "nativeScore": 0.6646,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 55.8,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltcc-link-perturb-v4",
+      "model": "DeepSeek-V4-Pro",
+      "agent": "opencode",
+      "runId": "fake-latest-opencode-deepseek-v4-pro",
+      "score": 0.658084,
+      "nativeScore": 0.658084,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 55.9,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltcc-link-perturb-v4",
+      "model": "GLM-5.1",
+      "agent": "claudecode",
+      "runId": "fake-latest-claudecode-glm-5-1",
+      "score": 0.766716,
+      "nativeScore": 0.766716,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 46.7,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltcc-link-perturb-v4",
+      "model": "MiniMax-M2.5",
+      "agent": "claudecode",
+      "runId": "fake-latest-claudecode-minimax-m2-5",
+      "score": 0.588856,
+      "nativeScore": 0.588856,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 51.6,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltcc-link-perturb-v4",
+      "model": "Qwen3.6-35B-A3B",
+      "agent": "opencode",
+      "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+      "score": 0.69544,
+      "nativeScore": 0.69544,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 47.9,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltcc-m2m-mixed-v4",
+      "model": "DeepSeek-V4-Pro",
+      "agent": "opencode",
+      "runId": "fake-latest-opencode-deepseek-v4-pro",
+      "score": 0.635416,
+      "nativeScore": 0.635416,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 46.8,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltcc-m2m-mixed-v4",
+      "model": "GLM-5.1",
+      "agent": "claudecode",
+      "runId": "fake-latest-claudecode-glm-5-1",
+      "score": 0.728016,
+      "nativeScore": 0.728016,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 45.1,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltcc-m2m-mixed-v4",
+      "model": "MiniMax-M2.5",
+      "agent": "claudecode",
+      "runId": "fake-latest-claudecode-minimax-m2-5",
+      "score": 0.613516,
+      "nativeScore": 0.613516,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 56.7,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltcc-m2m-mixed-v4",
+      "model": "Qwen3.6-35B-A3B",
+      "agent": "opencode",
+      "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+      "score": 0.632212,
+      "nativeScore": 0.632212,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 54.9,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltcc-tandem-db-v4",
+      "model": "DeepSeek-V4-Pro",
+      "agent": "opencode",
+      "runId": "fake-latest-opencode-deepseek-v4-pro",
+      "score": 0.687256,
+      "nativeScore": 0.687256,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 57.8,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltcc-tandem-db-v4",
+      "model": "GLM-5.1",
+      "agent": "claudecode",
+      "runId": "fake-latest-claudecode-glm-5-1",
+      "score": 0.827376,
+      "nativeScore": 0.827376,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 44.9,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltcc-tandem-db-v4",
+      "model": "MiniMax-M2.5",
+      "agent": "claudecode",
+      "runId": "fake-latest-claudecode-minimax-m2-5",
+      "score": 0.642748,
+      "nativeScore": 0.642748,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 52,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltcc-tandem-db-v4",
+      "model": "Qwen3.6-35B-A3B",
+      "agent": "opencode",
+      "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+      "score": 0.708916,
+      "nativeScore": 0.708916,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 43.7,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    }
+  ]
+}

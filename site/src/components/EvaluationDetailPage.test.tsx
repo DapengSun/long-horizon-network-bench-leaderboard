@@ -3,6 +3,8 @@ import { useEffect } from "react";
 import { beforeAll, describe, expect, it, vi } from "vitest";
 import { LocaleProvider, useLocale } from "../i18n/LocaleContext";
 import type { Locale } from "../i18n/messages";
+import type { CaseDetailChartPayload } from "../types";
+import { CaseLatencyChart } from "./CaseLatencyChart";
 import { EvaluationDetailPage } from "./EvaluationDetailPage";
 
 beforeAll(() => {
@@ -45,9 +47,17 @@ function renderDetail(
   );
 }
 
+function renderChart(payload: CaseDetailChartPayload) {
+  return render(
+    <LocaleProvider>
+      <CaseLatencyChart payload={payload} />
+    </LocaleProvider>
+  );
+}
+
 describe("EvaluationDetailPage", () => {
   it("shows the LTCO case list with English UI chrome by default", () => {
-    renderDetail({ model: "DeepSeek-V4-Pro", category: "LTCO" });
+    renderDetail({ model: "DeepSeek-V4-Pro · OpenCode", category: "LTCO" });
 
     expect(screen.getByText("Back to ranking")).toBeTruthy();
     expect(screen.getByText("Latest Evaluation Details")).toBeTruthy();
@@ -64,12 +74,10 @@ describe("EvaluationDetailPage", () => {
     expect(screen.getByText("opt%")).toBeTruthy();
     expect(screen.getByText("duration")).toBeTruthy();
     expect(screen.getByText("ltco-a100-ag-16-128m")).toBeTruthy();
-    expect(screen.getByText("0.10%")).toBeTruthy();
-    expect(screen.getByText("15.2m")).toBeTruthy();
   });
 
   it("shows Chinese UI chrome when locale is Chinese", () => {
-    renderDetail({ model: "DeepSeek-V4-Pro", category: "LTCO" }, "zh-CN");
+    renderDetail({ model: "DeepSeek-V4-Pro · OpenCode", category: "LTCO" }, "zh-CN");
 
     expect(screen.getByText("返回排名表")).toBeTruthy();
     expect(screen.getByText("最新评测详情")).toBeTruthy();
@@ -93,7 +101,7 @@ describe("EvaluationDetailPage", () => {
   });
 
   it("opens the latency chart modal when clicking the case trend icon", () => {
-    renderDetail({ model: "DeepSeek-V4-Pro", category: "LTCO" });
+    renderDetail({ model: "DeepSeek-V4-Pro · OpenCode", category: "LTCO" });
 
     const chartButtons = screen.getAllByLabelText("View latency trend chart");
     expect(chartButtons.length).toBeGreaterThan(0);
@@ -102,6 +110,101 @@ describe("EvaluationDetailPage", () => {
 
     expect(screen.getByText("Optimization Trend")).toBeTruthy();
     expect(screen.getByRole("dialog")).toBeTruthy();
-    expect(screen.getAllByText("DeepSeek-V4-Pro").length).toBeGreaterThan(0);
+    expect(screen.getAllByText("DeepSeek-V4-Pro · OpenCode").length).toBeGreaterThan(0);
+  });
+
+  it("opens the LTCC multiphase modal for phase-aware cases", () => {
+    renderDetail({ model: "DeepSeek-V4-Pro · OpenCode", category: "LTCC" });
+
+    expect(screen.getByText("LTCC/LTLB multiphase evaluation")).toBeTruthy();
+    expect(document.querySelector(".ant-table-row-expand-icon-cell")).toBeNull();
+    expect(screen.getAllByText(/P1 \d+ \/ P2 \d+/).length).toBeGreaterThan(0);
+    expect(screen.getByText("Score")).toBeTruthy();
+    expect(screen.getByText("0.6445")).toBeTruthy();
+    expect(screen.queryByText("64.45%")).toBeNull();
+
+    const chartButtons = screen.getAllByLabelText("View latency trend chart");
+    fireEvent.click(chartButtons[0]);
+
+    expect(screen.getAllByText("Learning Journey").length).toBeGreaterThan(0);
+    expect(screen.getAllByText("Phase 1").length).toBeGreaterThan(0);
+    expect(screen.getAllByText("Phase 2").length).toBeGreaterThan(0);
+    expect(screen.getByText("Total score")).toBeTruthy();
+    expect(screen.queryByText("Generalization story")).toBeNull();
+
+    fireEvent.click(screen.getByRole("button", { name: /Phase 2/i }));
+
+    expect(screen.getByText("Worst scenario")).toBeTruthy();
+  });
+
+  it("shows LTCO latency formula details without changing other chart semantics", () => {
+    const { container } = renderChart({
+      case: "ltco-a100-ag-16-512k",
+      category: "LTCO",
+      categoryTitle: "Collective Communication CCL Algorithm Optimization - LTCO",
+      metric: {
+        name: "score",
+        label: "Score",
+        unit: "",
+        direction: "higher_is_better",
+        baseline: "first_round",
+      },
+      results: [
+        {
+          model: "DeepSeek-V4-Pro · OpenCode",
+          bestRound: "round2",
+          detail: [
+            {
+              round: "round1",
+              score: 0,
+              metrics: {
+                best_latency_us: 256.794,
+                baseline_latency_us: 202.275,
+                valid: true,
+              },
+            },
+            {
+              round: "round2",
+              score: 0.19769620566061058,
+              metrics: {
+                best_latency_us: 162.286,
+                baseline_latency_us: 202.275,
+                valid: true,
+                candidate_hash:
+                  "a42f8c36a8e65c81f7e0c349e260bb8f7f2f464db7e1d1528791d6bc2231f635",
+                sourceArtifact:
+                  "agent/LTCO/ltco-a100-ag-16-512k/artifacts/rounds/round2/score.json",
+              },
+            },
+          ],
+        },
+      ],
+    });
+
+    expect(
+      screen.queryByText(
+        "Latency formula: score = max(0, 1 - best latency / baseline latency)"
+      )
+    ).toBeNull();
+    expect(screen.getByText("Formula")).toBeTruthy();
+    expect(screen.getByText("max(0, 1 - 162.286 / 202.275)")).toBeTruthy();
+    expect(screen.getByRole("columnheader", { name: "Best latency (us)" })).toBeTruthy();
+    expect(screen.getByRole("columnheader", { name: "Baseline latency (us)" })).toBeTruthy();
+    expect(screen.getByText("162.286")).toBeTruthy();
+    expect(screen.getAllByText("202.275").length).toBeGreaterThan(0);
+    expect(screen.getAllByText("+19.77%").length).toBeGreaterThan(0);
+    expect(screen.queryByRole("columnheader", { name: "Best" })).toBeNull();
+    expect(screen.queryByLabelText("Expand row")).toBeNull();
+    expect(screen.getByLabelText("Best round")).toBeTruthy();
+
+    const bestPoint = container.querySelector(".case-latency-chart-point-best");
+    expect(bestPoint?.parentElement).toBeTruthy();
+    fireEvent.mouseEnter(bestPoint?.parentElement as Element);
+
+    expect(screen.getByText("best_latency_us: 162.286 us")).toBeTruthy();
+    expect(screen.getByText("baseline_latency_us: 202.275 us")).toBeTruthy();
+    expect(screen.queryByText("valid")).toBeNull();
+    expect(screen.queryByText(/a42f8c36a8e65/)).toBeNull();
+    expect(screen.queryByText(/sourceArtifact/)).toBeNull();
   });
 });

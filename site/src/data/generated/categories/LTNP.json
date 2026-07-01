@@ -1,0 +1,17 @@
+{
+  "benchmark": "LTNP",
+  "generatedAt": "2026-07-01T02:15:53.783Z",
+  "tasks": [
+    {
+      "taskId": "ltnp-hpcnet-newbuild-v1-std",
+      "model": "deepseek-v4-pro",
+      "agent": "opencode",
+      "runId": "2026-06-30T110636+0000-opencode-deepseek-v4-pro",
+      "score": 0.4349,
+      "nativeScore": 0.4349,
+      "bestRound": "round0",
+      "durationMinutes": 10.1,
+      "submittedAt": "2026-06-30T11:06:36+00:00"
+    }
+  ]
+}

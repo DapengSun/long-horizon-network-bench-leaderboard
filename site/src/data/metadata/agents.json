@@ -1,0 +1,12 @@
+[
+  {
+    "id": "opencode",
+    "name": "OpenCode",
+    "type": "agent-framework"
+  },
+  {
+    "id": "claudecode",
+    "name": "ClaudeCode",
+    "type": "agent-framework"
+  }
+]

@@ -5,9 +5,14 @@
   "type": "module",
   "scripts": {
     "dev": "vite",
+    "prod": "npm run generate:data:real && vite --mode production",
     "build": "tsc --noEmit && vite build",
     "preview": "vite preview",
-    "test": "vitest run"
+    "test": "vitest run",
+    "seed:data:fake": "node scripts/seed-fake-leaderboard-data.js",
+    "generate:data": "node scripts/generate-leaderboard-data.js",
+    "generate:data:fake": "node scripts/generate-leaderboard-data.js --mode fake",
+    "generate:data:real": "node scripts/generate-leaderboard-data.js --mode real"
   },
   "dependencies": {
     "@ant-design/icons": "^6.2.5",

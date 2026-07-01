@@ -1,0 +1,42 @@
+[
+  {
+    "id": "GLM-5.1",
+    "name": "GLM-5.1",
+    "provider": "Z.ai",
+    "url": "https://huggingface.co/zai-org/GLM-5.1",
+    "tags": [
+      "OSS",
+      "Agentic"
+    ]
+  },
+  {
+    "id": "Qwen3.6-35B-A3B",
+    "name": "Qwen3.6-35B-A3B",
+    "provider": "Qwen",
+    "url": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B",
+    "tags": [
+      "OSS",
+      "Multimodal"
+    ]
+  },
+  {
+    "id": "DeepSeek-V4-Pro",
+    "name": "DeepSeek-V4-Pro",
+    "provider": "DeepSeek",
+    "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
+    "tags": [
+      "OSS",
+      "国产"
+    ]
+  },
+  {
+    "id": "MiniMax-M2.5",
+    "name": "MiniMax-M2.5",
+    "provider": "MiniMax",
+    "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.5",
+    "tags": [
+      "OSS",
+      "MoE"
+    ]
+  }
+]

@@ -1,8 +1,13 @@
 import React, { useCallback, useMemo, useState } from "react";
-import { Button, Select, Table, Typography, type TableColumnsType } from "antd";
+import { Button, Select, Table, Tag, Typography, type TableColumnsType } from "antd";
 import { LineChartOutlined } from "@ant-design/icons";
 import { getEvaluationDetailEntry } from "../data/evaluationDetailsLoader";
 import { buildCaseDetailChartPayload } from "../features/caseDetailChart";
+import {
+  bestRoundForDisplay,
+  formatPhaseRoundCount,
+  isMultiphaseCategory,
+} from "../features/multiphaseDetail";
 import { useLocale } from "../i18n/LocaleContext";
 import type { MessageKey } from "../i18n/messages";
 import type {
@@ -20,6 +25,7 @@ const CATEGORY_OPTIONS: Array<{ value: string; labelKey: MessageKey }> = [
   { value: "LTLB", labelKey: "ltlbTitle" },
   { value: "LTCO", labelKey: "ltcoTitle" },
   { value: "LTHOps", labelKey: "lthOpsTitle" },
+  { value: "LTMixOps", labelKey: "ltmixOpsTitle" },
   { value: "LTSOps", labelKey: "ltsOpsTitle" },
   { value: "LTNOps", labelKey: "ltnOpsTitle" },
 ];
@@ -36,6 +42,18 @@ function formatDuration(minutes: number): string {
 
 function formatOptPercent(value: number): string {
   return `${value.toFixed(2)}%`;
+}
+
+function formatScore(value: number): string {
+  return value.toFixed(4);
+}
+
+function formatAttemptTime(value: string | undefined): string {
+  if (!value) {
+    return "-";
+  }
+  const date = new Date(value);
+  return Number.isNaN(date.getTime()) ? value : date.toLocaleString();
 }
 
 function totalDuration(cases: EvaluationCaseResult[]): number {
@@ -69,13 +87,16 @@ export const EvaluationDetailPage: React.FC<EvaluationDetailPageProps> = ({
     localizedCategoryOptions.find((option) => option.value === selection.category)
       ?.title ?? t("noData");
   const cases = activeEntry?.cases ?? [];
+  const hasExpandableHistory = cases.some((record) => (record.history?.length ?? 0) > 1);
+  const isMultiphase = isMultiphaseCategory(selection.category);
 
   const openCaseChart = useCallback(
     (caseName: string) => {
       const payload = buildCaseDetailChartPayload(
         selection.category,
         caseName,
-        categoryTitle
+        categoryTitle,
+        selection.model
       );
       if (!payload) {
         return;
@@ -83,7 +104,7 @@ export const EvaluationDetailPage: React.FC<EvaluationDetailPageProps> = ({
       setChartPayload(payload);
       setChartOpen(true);
     },
-    [categoryTitle, selection.category]
+    [categoryTitle, selection.category, selection.model]
   );
 
   const columns = useMemo<TableColumnsType<(typeof cases)[number]>>(
@@ -121,6 +142,8 @@ export const EvaluationDetailPage: React.FC<EvaluationDetailPageProps> = ({
         align: "center",
         width: "20%",
         sorter: (a, b) => a.rounds - b.rounds,
+        render: (rounds: number, record) =>
+          isMultiphase ? formatPhaseRoundCount(record.detail, rounds) : rounds,
       },
       {
         title: t("detailBestColumn"),
@@ -128,16 +151,21 @@ export const EvaluationDetailPage: React.FC<EvaluationDetailPageProps> = ({
         key: "best",
         align: "center",
         width: "20%",
+        render: (best: string, record) =>
+          isMultiphase ? bestRoundForDisplay(record.detail, best) : best,
       },
       {
-        title: t("detailOptPercentColumn"),
+        title: isMultiphase ? t("detailScoreColumn") : t("detailOptPercentColumn"),
         dataIndex: "optPercent",
         key: "optPercent",
         align: "center",
         width: "20%",
-        sorter: (a, b) => a.optPercent - b.optPercent,
-        render: (value: number) => (
-          <span className="detail-score-pill">{formatOptPercent(value)}</span>
+        sorter: (a, b) =>
+          isMultiphase ? a.score - b.score : a.optPercent - b.optPercent,
+        render: (value: number, record) => (
+          <span className="detail-score-pill">
+            {isMultiphase ? formatScore(record.score) : formatOptPercent(value)}
+          </span>
         ),
       },
       {
@@ -150,9 +178,43 @@ export const EvaluationDetailPage: React.FC<EvaluationDetailPageProps> = ({
         render: (minutes: number) => formatDuration(minutes),
       },
     ],
-    [openCaseChart, t]
+    [isMultiphase, openCaseChart, t]
   );
   const activeDuration = totalDuration(cases);
+
+  const renderHistory = useCallback(
+    (record: (typeof cases)[number]) => {
+      const history = record.history ?? [];
+      if (history.length <= 1) {
+        return null;
+      }
+
+      return (
+        <div className="detail-history-list">
+          {history.map((attempt, index) => (
+            <div
+              className="detail-history-item"
+              key={`${attempt.runId ?? "run"}-${attempt.evaluatedAt ?? index}`}
+            >
+              <span>{formatAttemptTime(attempt.evaluatedAt ?? attempt.submittedAt)}</span>
+              <strong>
+                {isMultiphase
+                  ? formatScore(attempt.score)
+                  : formatOptPercent(attempt.optPercent)}
+              </strong>
+              <span>{formatDuration(attempt.durationMinutes)}</span>
+              <span className="detail-history-tags">
+                {attempt.isLatest ? <Tag color="blue">latest</Tag> : null}
+                {attempt.isBest ? <Tag color="green">best</Tag> : null}
+              </span>
+              <small>{attempt.sourceCaseRunPath ?? attempt.runId}</small>
+            </div>
+          ))}
+        </div>
+      );
+    },
+    [isMultiphase]
+  );
 
   return (
     <section className="detail-page">
@@ -199,11 +261,30 @@ export const EvaluationDetailPage: React.FC<EvaluationDetailPageProps> = ({
         </div>
       </div>
 
+      {isMultiphase ? (
+        <div className="detail-multiphase-explainer">
+          <Typography.Text strong>{t("multiphaseExplainerTitle")}</Typography.Text>
+          <Typography.Paragraph>
+            {selection.category === "LTCC"
+              ? t("ltccDetailExplainer")
+              : t("ltlbDetailExplainer")}
+          </Typography.Paragraph>
+        </div>
+      ) : null}
+
       <Table<(typeof cases)[number]>
         className="detail-result-table"
         rowKey="case"
         columns={columns}
         dataSource={cases}
+        expandable={
+          hasExpandableHistory
+            ? {
+                expandedRowRender: renderHistory,
+                rowExpandable: (record) => (record.history?.length ?? 0) > 1,
+              }
+            : undefined
+        }
         pagination={false}
         bordered={false}
         tableLayout="fixed"

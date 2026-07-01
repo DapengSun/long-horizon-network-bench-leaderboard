@@ -1,0 +1,32 @@
+{
+  "ltcc-highbdp-v4|deepseek-v4-pro|opencode|2026-06-30T110636+0000-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_20260701_005611Z.jsonl",
+    "runId": "2026-06-30T110636+0000-opencode-deepseek-v4-pro",
+    "taskId": "ltcc-highbdp-v4"
+  },
+  "ltco-a100-ag-16-128m|deepseek-v4-pro|opencode|2026-06-30T110636+0000-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_20260701_005611Z.jsonl",
+    "runId": "2026-06-30T110636+0000-opencode-deepseek-v4-pro",
+    "taskId": "ltco-a100-ag-16-128m"
+  },
+  "ltlb-elephant-interfere-v4|deepseek-v4-pro|opencode|2026-06-30T110636+0000-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_20260701_005611Z.jsonl",
+    "runId": "2026-06-30T110636+0000-opencode-deepseek-v4-pro",
+    "taskId": "ltlb-elephant-interfere-v4"
+  },
+  "ltnp-hpcnet-newbuild-v1-std|deepseek-v4-pro|opencode|2026-06-30T110636+0000-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_20260701_005611Z.jsonl",
+    "runId": "2026-06-30T110636+0000-opencode-deepseek-v4-pro",
+    "taskId": "ltnp-hpcnet-newbuild-v1-std"
+  },
+  "ltrp-egress-multivrf-v1-std|deepseek-v4-pro|opencode|2026-06-30T110636+0000-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_20260701_005611Z.jsonl",
+    "runId": "2026-06-30T110636+0000-opencode-deepseek-v4-pro",
+    "taskId": "ltrp-egress-multivrf-v1-std"
+  },
+  "ltco-a100-ag-16-512k|deepseek-v4-pro|opencode|2026-07-01T010909+0000-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_20260701_013410Z.jsonl",
+    "runId": "2026-07-01T010909+0000-opencode-deepseek-v4-pro",
+    "taskId": "ltco-a100-ag-16-512k"
+  }
+}

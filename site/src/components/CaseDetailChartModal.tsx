@@ -1,8 +1,10 @@
 import React from "react";
 import { Modal, Typography } from "antd";
+import { isMultiphaseCategory } from "../features/multiphaseDetail";
 import { useLocale } from "../i18n/LocaleContext";
 import type { CaseDetailChartPayload } from "../types";
 import { CaseLatencyChart } from "./CaseLatencyChart";
+import { MultiphaseCaseDetail } from "./MultiphaseCaseDetail";
 
 interface CaseDetailChartModalProps {
   open: boolean;
@@ -16,6 +18,7 @@ export const CaseDetailChartModal: React.FC<CaseDetailChartModalProps> = ({
   onClose,
 }) => {
   const { t } = useLocale();
+  const isMultiphase = payload ? isMultiphaseCategory(payload.category) : false;
 
   return (
     <Modal
@@ -23,9 +26,10 @@ export const CaseDetailChartModal: React.FC<CaseDetailChartModalProps> = ({
       open={open}
       onCancel={onClose}
       footer={null}
-      width={820}
+      width={isMultiphase ? 1040 : 820}
+      centered
       destroyOnHidden
-      title={t("detailLatencyModalTitle")}
+      title={isMultiphase ? t("multiphaseModalTitle") : t("detailLatencyModalTitle")}
     >
       {payload ? (
         <div className="case-detail-chart-modal-body">
@@ -33,9 +37,14 @@ export const CaseDetailChartModal: React.FC<CaseDetailChartModalProps> = ({
             <Typography.Text strong>{payload.case}</Typography.Text>
             <Typography.Text type="secondary">
               {payload.category} · {payload.categoryTitle}
+              {isMultiphase ? " · Anchor → Public suite → Final" : ""}
             </Typography.Text>
           </div>
-          <CaseLatencyChart payload={payload} />
+          {isMultiphase ? (
+            <MultiphaseCaseDetail payload={payload} />
+          ) : (
+            <CaseLatencyChart payload={payload} />
+          )}
         </div>
       ) : null}
     </Modal>

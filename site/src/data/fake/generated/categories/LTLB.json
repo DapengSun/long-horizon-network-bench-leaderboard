@@ -1,0 +1,226 @@
+{
+  "benchmark": "LTLB",
+  "generatedAt": "2026-07-01T02:50:42.138Z",
+  "tasks": [
+    {
+      "taskId": "ltlb-elephant-interfere-v4",
+      "model": "DeepSeek-V4-Pro",
+      "agent": "opencode",
+      "runId": "fake-latest-opencode-deepseek-v4-pro",
+      "score": 0.675896,
+      "nativeScore": 0.675896,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 48,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltlb-elephant-interfere-v4",
+      "model": "GLM-5.1",
+      "agent": "claudecode",
+      "runId": "fake-latest-claudecode-glm-5-1",
+      "score": 0.811696,
+      "nativeScore": 0.811696,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 42.2,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltlb-elephant-interfere-v4",
+      "model": "MiniMax-M2.5",
+      "agent": "claudecode",
+      "runId": "fake-latest-claudecode-minimax-m2-5",
+      "score": 0.615764,
+      "nativeScore": 0.615764,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 54.9,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltlb-elephant-interfere-v4",
+      "model": "Qwen3.6-35B-A3B",
+      "agent": "opencode",
+      "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+      "score": 0.693308,
+      "nativeScore": 0.693308,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 44.8,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltlb-flowlet-timeout-v4",
+      "model": "DeepSeek-V4-Pro",
+      "agent": "opencode",
+      "runId": "fake-latest-opencode-deepseek-v4-pro",
+      "score": 0.66578,
+      "nativeScore": 0.66578,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 47.1,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltlb-flowlet-timeout-v4",
+      "model": "GLM-5.1",
+      "agent": "claudecode",
+      "runId": "fake-latest-claudecode-glm-5-1",
+      "score": 0.81646,
+      "nativeScore": 0.81646,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 47.5,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltlb-flowlet-timeout-v4",
+      "model": "MiniMax-M2.5",
+      "agent": "claudecode",
+      "runId": "fake-latest-claudecode-minimax-m2-5",
+      "score": 0.618752,
+      "nativeScore": 0.618752,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 42.2,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltlb-flowlet-timeout-v4",
+      "model": "Qwen3.6-35B-A3B",
+      "agent": "opencode",
+      "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+      "score": 0.730088,
+      "nativeScore": 0.730088,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 57.8,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltlb-heavytail-ecmp-v4",
+      "model": "DeepSeek-V4-Pro",
+      "agent": "opencode",
+      "runId": "fake-latest-opencode-deepseek-v4-pro",
+      "score": 0.659492,
+      "nativeScore": 0.659492,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 44.1,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltlb-heavytail-ecmp-v4",
+      "model": "GLM-5.1",
+      "agent": "claudecode",
+      "runId": "fake-latest-claudecode-glm-5-1",
+      "score": 0.74566,
+      "nativeScore": 0.74566,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 44,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltlb-heavytail-ecmp-v4",
+      "model": "MiniMax-M2.5",
+      "agent": "claudecode",
+      "runId": "fake-latest-claudecode-minimax-m2-5",
+      "score": 0.622904,
+      "nativeScore": 0.622904,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 59.1,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltlb-heavytail-ecmp-v4",
+      "model": "Qwen3.6-35B-A3B",
+      "agent": "opencode",
+      "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+      "score": 0.740432,
+      "nativeScore": 0.740432,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 58.8,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltlb-rdma-reorder-v4",
+      "model": "DeepSeek-V4-Pro",
+      "agent": "opencode",
+      "runId": "fake-latest-opencode-deepseek-v4-pro",
+      "score": 0.680264,
+      "nativeScore": 0.680264,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 52.8,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltlb-rdma-reorder-v4",
+      "model": "GLM-5.1",
+      "agent": "claudecode",
+      "runId": "fake-latest-claudecode-glm-5-1",
+      "score": 0.815968,
+      "nativeScore": 0.815968,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 44.7,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltlb-rdma-reorder-v4",
+      "model": "MiniMax-M2.5",
+      "agent": "claudecode",
+      "runId": "fake-latest-claudecode-minimax-m2-5",
+      "score": 0.668324,
+      "nativeScore": 0.668324,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 42.3,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltlb-rdma-reorder-v4",
+      "model": "Qwen3.6-35B-A3B",
+      "agent": "opencode",
+      "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+      "score": 0.7547,
+      "nativeScore": 0.7547,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 45.7,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltlb-voq-path-lb-v4",
+      "model": "DeepSeek-V4-Pro",
+      "agent": "opencode",
+      "runId": "fake-latest-opencode-deepseek-v4-pro",
+      "score": 0.69554,
+      "nativeScore": 0.69554,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 56.1,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltlb-voq-path-lb-v4",
+      "model": "GLM-5.1",
+      "agent": "claudecode",
+      "runId": "fake-latest-claudecode-glm-5-1",
+      "score": 0.77326,
+      "nativeScore": 0.77326,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 44.1,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltlb-voq-path-lb-v4",
+      "model": "MiniMax-M2.5",
+      "agent": "claudecode",
+      "runId": "fake-latest-claudecode-minimax-m2-5",
+      "score": 0.59024,
+      "nativeScore": 0.59024,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 52.8,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltlb-voq-path-lb-v4",
+      "model": "Qwen3.6-35B-A3B",
+      "agent": "opencode",
+      "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+      "score": 0.681752,
+      "nativeScore": 0.681752,
+      "bestRound": "phase2/round2",
+      "durationMinutes": 45.9,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    }
+  ]
+}

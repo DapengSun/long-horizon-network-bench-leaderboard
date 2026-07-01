@@ -1,0 +1,50 @@
+{
+  "benchmark": "LTCG",
+  "generatedAt": "2026-07-01T02:50:42.138Z",
+  "tasks": [
+    {
+      "taskId": "ltcg-clos-bgp-v1",
+      "model": "DeepSeek-V4-Pro",
+      "agent": "opencode",
+      "runId": "fake-latest-opencode-deepseek-v4-pro",
+      "score": 0.684096,
+      "nativeScore": 0.684096,
+      "bestRound": "round3",
+      "durationMinutes": 30.1,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltcg-clos-bgp-v1",
+      "model": "GLM-5.1",
+      "agent": "claudecode",
+      "runId": "fake-latest-claudecode-glm-5-1",
+      "score": 0.773528,
+      "nativeScore": 0.773528,
+      "bestRound": "round3",
+      "durationMinutes": 29.3,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltcg-clos-bgp-v1",
+      "model": "MiniMax-M2.5",
+      "agent": "claudecode",
+      "runId": "fake-latest-claudecode-minimax-m2-5",
+      "score": 0.619116,
+      "nativeScore": 0.619116,
+      "bestRound": "round3",
+      "durationMinutes": 23.6,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    },
+    {
+      "taskId": "ltcg-clos-bgp-v1",
+      "model": "Qwen3.6-35B-A3B",
+      "agent": "opencode",
+      "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+      "score": 0.710628,
+      "nativeScore": 0.710628,
+      "bestRound": "round3",
+      "durationMinutes": 31,
+      "submittedAt": "2026-06-16T09:15:00Z"
+    }
+  ]
+}

@@ -10,8 +10,8 @@ import type { EvaluationDetailSelection } from "./types";
 const AppContent: React.FC = () => {
   const [activeTab, setActiveTab] = useState("ranking");
   const [detailSelection, setDetailSelection] = useState<EvaluationDetailSelection>({
-    model: "DeepSeek-V4-Pro",
-    category: "LTCO",
+    model: "GLM-5.1 · ClaudeCode",
+    category: "LTNP",
   });
 
   const handleViewDetail = (selection: EvaluationDetailSelection) => {

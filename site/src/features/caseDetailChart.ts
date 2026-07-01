@@ -13,12 +13,32 @@ export function parseRoundIndex(round: string): number {
   return match ? Number(match[1]) : Number.MAX_SAFE_INTEGER;
 }
 
+export function phaseOrder(phase?: string): number {
+  if (phase === "phase1") {
+    return 1;
+  }
+  if (phase === "phase2") {
+    return 2;
+  }
+  if (phase === "final") {
+    return 3;
+  }
+  return 0;
+}
+
+export function detailPointSortValue(point: EvaluationCaseDetailPoint): number {
+  const roundIndex =
+    typeof point.roundIndex === "number" ? point.roundIndex : parseRoundIndex(point.round);
+  return phaseOrder(point.phase) * 1_000_000 + roundIndex;
+}
+
 export function sortDetailPoints(
   detail: EvaluationCaseDetailPoint[]
 ): EvaluationCaseDetailPoint[] {
-  return [...detail].sort(
-    (a, b) => parseRoundIndex(a.round) - parseRoundIndex(b.round)
-  );
+  return [...detail].sort((a, b) => {
+    const byPhaseRound = detailPointSortValue(a) - detailPointSortValue(b);
+    return byPhaseRound || a.round.localeCompare(b.round);
+  });
 }
 
 export function improvementVsBaselinePct(
@@ -35,6 +55,24 @@ export function improvementVsBaselinePct(
   }
 
   return ((baseline - current) / baseline) * 100;
+}
+
+export function chartValueForDetailPoint({
+  category,
+  baselineScore,
+  currentScore,
+  direction,
+}: {
+  category: string;
+  baselineScore: number;
+  currentScore: number;
+  direction: MetricDirection;
+}): number {
+  if (category === "LTCO") {
+    return currentScore * 100;
+  }
+
+  return improvementVsBaselinePct(baselineScore, currentScore, direction);
 }
 
 /** @deprecated use improvementVsBaselinePct for chart semantics */
@@ -90,10 +128,11 @@ export function formatScoreWithUnit(score: number, unit: string): string {
 export function buildCaseDetailChartPayload(
   category: string,
   caseName: string,
-  categoryTitle: string
+  categoryTitle: string,
+  model?: string
 ): CaseDetailChartPayload | undefined {
   const matchingEntries = evaluationDetailEntries.filter(
-    (entry) => entry.category === category
+    (entry) => entry.category === category && (!model || entry.model === model)
   );
   const results = matchingEntries
     .map((entry) => {
@@ -105,12 +144,23 @@ export function buildCaseDetailChartPayload(
       return {
         model: entry.model,
         detail: sortDetailPoints(caseItem.detail),
+        finalScore: caseItem.optPercent / 100,
+        bestRound: caseItem.best,
+        durationMinutes: caseItem.durationMinutes,
+        roundCount: caseItem.rounds,
       };
     })
     .filter(
       (
         result
-      ): result is { model: string; detail: EvaluationCaseDetailPoint[] } =>
+      ): result is {
+        model: string;
+        detail: EvaluationCaseDetailPoint[];
+        finalScore: number;
+        bestRound: string;
+        durationMinutes: number;
+        roundCount: number;
+      } =>
         result !== null
     );
 

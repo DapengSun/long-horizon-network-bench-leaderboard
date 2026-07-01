@@ -1,0 +1,2202 @@
+{
+  "ltco-a100-ag-16-128m|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltco-a100-ag-16-128m"
+  },
+  "ltcc-highbdp-v4|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltcc-highbdp-v4"
+  },
+  "ltcc-incast-v4|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltcc-incast-v4"
+  },
+  "ltcc-lat-mouse-v4|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltcc-lat-mouse-v4"
+  },
+  "ltcc-link-perturb-v4|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltcc-link-perturb-v4"
+  },
+  "ltcc-m2m-mixed-v4|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltcc-m2m-mixed-v4"
+  },
+  "ltcc-tandem-db-v4|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltcc-tandem-db-v4"
+  },
+  "ltcg-clos-bgp-v1|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltcg-clos-bgp-v1"
+  },
+  "ltco-a100-ag-16-128m|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltco-a100-ag-16-128m"
+  },
+  "ltco-a100-ag-16-1g|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltco-a100-ag-16-1g"
+  },
+  "ltco-a100-ag-16-4k|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltco-a100-ag-16-4k"
+  },
+  "ltco-a100-ag-16-512k|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltco-a100-ag-16-512k"
+  },
+  "ltco-a100-ag-32-128m|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltco-a100-ag-32-128m"
+  },
+  "ltco-a100-ag-32-1g|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltco-a100-ag-32-1g"
+  },
+  "ltco-a100-ag-32-4k|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltco-a100-ag-32-4k"
+  },
+  "ltco-a100-ag-32-512k|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltco-a100-ag-32-512k"
+  },
+  "ltco-a100-ag-8-128m|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltco-a100-ag-8-128m"
+  },
+  "ltco-a100-ag-8-1g|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltco-a100-ag-8-1g"
+  },
+  "ltco-a100-ag-8-4k|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltco-a100-ag-8-4k"
+  },
+  "ltco-a100-ag-8-512k|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltco-a100-ag-8-512k"
+  },
+  "ltco-mi300x-ag-16-128m|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltco-mi300x-ag-16-128m"
+  },
+  "ltco-mi300x-ag-16-1g|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltco-mi300x-ag-16-1g"
+  },
+  "ltco-mi300x-ag-16-4k|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltco-mi300x-ag-16-4k"
+  },
+  "ltco-mi300x-ag-16-512k|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltco-mi300x-ag-16-512k"
+  },
+  "ltco-mi300x-ag-32-128m|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltco-mi300x-ag-32-128m"
+  },
+  "ltco-mi300x-ag-32-1g|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltco-mi300x-ag-32-1g"
+  },
+  "ltco-mi300x-ag-32-4k|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltco-mi300x-ag-32-4k"
+  },
+  "ltco-mi300x-ag-32-512k|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltco-mi300x-ag-32-512k"
+  },
+  "ltco-mi300x-ag-8-128m|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltco-mi300x-ag-8-128m"
+  },
+  "ltco-mi300x-ag-8-1g|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltco-mi300x-ag-8-1g"
+  },
+  "ltco-mi300x-ag-8-4k|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltco-mi300x-ag-8-4k"
+  },
+  "ltco-mi300x-ag-8-512k|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltco-mi300x-ag-8-512k"
+  },
+  "LTHOps-001|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTHOps-001"
+  },
+  "LTHOps-002|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTHOps-002"
+  },
+  "LTHOps-003|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTHOps-003"
+  },
+  "LTHOps-004|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTHOps-004"
+  },
+  "LTHOps-005|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTHOps-005"
+  },
+  "LTHOps-006|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTHOps-006"
+  },
+  "LTHOps-007|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTHOps-007"
+  },
+  "LTHOps-008|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTHOps-008"
+  },
+  "LTHOps-009|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTHOps-009"
+  },
+  "LTHOps-010|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTHOps-010"
+  },
+  "LTHOps-011|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTHOps-011"
+  },
+  "LTHOps-012|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTHOps-012"
+  },
+  "LTHOps-013|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTHOps-013"
+  },
+  "LTHOps-014|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTHOps-014"
+  },
+  "LTHOps-015|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTHOps-015"
+  },
+  "LTHOps-016|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTHOps-016"
+  },
+  "LTHOps-017|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTHOps-017"
+  },
+  "LTHOps-018|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTHOps-018"
+  },
+  "LTHOps-019|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTHOps-019"
+  },
+  "LTHOps-020|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTHOps-020"
+  },
+  "LTHOps-021|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTHOps-021"
+  },
+  "LTHOps-022|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTHOps-022"
+  },
+  "LTHOps-023|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTHOps-023"
+  },
+  "LTHOps-024|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTHOps-024"
+  },
+  "LTHOps-025|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTHOps-025"
+  },
+  "LTHOps-026|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTHOps-026"
+  },
+  "ltlb-elephant-interfere-v4|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltlb-elephant-interfere-v4"
+  },
+  "ltlb-flowlet-timeout-v4|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltlb-flowlet-timeout-v4"
+  },
+  "ltlb-heavytail-ecmp-v4|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltlb-heavytail-ecmp-v4"
+  },
+  "ltlb-rdma-reorder-v4|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltlb-rdma-reorder-v4"
+  },
+  "ltlb-voq-path-lb-v4|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltlb-voq-path-lb-v4"
+  },
+  "LTMixOps-001|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTMixOps-001"
+  },
+  "LTMixOps-002|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTMixOps-002"
+  },
+  "LTMixOps-003|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTMixOps-003"
+  },
+  "LTMixOps-004|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTMixOps-004"
+  },
+  "LTMixOps-005|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTMixOps-005"
+  },
+  "LTNOps-001|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTNOps-001"
+  },
+  "LTNOps-002|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTNOps-002"
+  },
+  "LTNOps-003|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTNOps-003"
+  },
+  "LTNOps-004|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTNOps-004"
+  },
+  "LTNOps-005|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTNOps-005"
+  },
+  "LTNOps-006|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTNOps-006"
+  },
+  "LTNOps-007|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTNOps-007"
+  },
+  "LTNOps-008|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTNOps-008"
+  },
+  "LTNOps-009|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTNOps-009"
+  },
+  "LTNOps-010|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTNOps-010"
+  },
+  "LTNOps-011|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTNOps-011"
+  },
+  "LTNOps-012|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTNOps-012"
+  },
+  "ltnp-hpcnet-newbuild-v1-std|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltnp-hpcnet-newbuild-v1-std"
+  },
+  "ltnp-hpcnet-newbuild-v2-std|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltnp-hpcnet-newbuild-v2-std"
+  },
+  "ltnp-hpcnet-newbuild-v3-std|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltnp-hpcnet-newbuild-v3-std"
+  },
+  "ltnp-idc-expansion-v1-std|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltnp-idc-expansion-v1-std"
+  },
+  "ltnp-idc-expansion-v2-std|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltnp-idc-expansion-v2-std"
+  },
+  "ltnp-idc-expansion-v3-std|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltnp-idc-expansion-v3-std"
+  },
+  "ltnp-idc-newpod-v1-std|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltnp-idc-newpod-v1-std"
+  },
+  "ltnp-idc-newpod-v2-std|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltnp-idc-newpod-v2-std"
+  },
+  "ltnp-idc-newpod-v3-std|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltnp-idc-newpod-v3-std"
+  },
+  "ltnp-multiscene-mix-v1-std|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltnp-multiscene-mix-v1-std"
+  },
+  "ltnp-multiscene-mix-v2-std|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltnp-multiscene-mix-v2-std"
+  },
+  "ltnp-multiscene-mix-v3-std|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltnp-multiscene-mix-v3-std"
+  },
+  "ltnp-overseas-mini-v1-std|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltnp-overseas-mini-v1-std"
+  },
+  "ltnp-overseas-mini-v2-std|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltnp-overseas-mini-v2-std"
+  },
+  "ltnp-overseas-mini-v3-std|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltnp-overseas-mini-v3-std"
+  },
+  "ltrp-egress-multivrf-v1-std|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltrp-egress-multivrf-v1-std"
+  },
+  "ltrp-egress-multivrf-v2-std|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltrp-egress-multivrf-v2-std"
+  },
+  "ltrp-egress-multivrf-v3-std|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltrp-egress-multivrf-v3-std"
+  },
+  "ltrp-expansion-continuity-v1-std|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltrp-expansion-continuity-v1-std"
+  },
+  "ltrp-expansion-continuity-v2-std|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltrp-expansion-continuity-v2-std"
+  },
+  "ltrp-expansion-continuity-v3-std|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltrp-expansion-continuity-v3-std"
+  },
+  "ltrp-multitenant-ipam-v1-std|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltrp-multitenant-ipam-v1-std"
+  },
+  "ltrp-multitenant-ipam-v2-std|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltrp-multitenant-ipam-v2-std"
+  },
+  "ltrp-multitenant-ipam-v3-std|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "ltrp-multitenant-ipam-v3-std"
+  },
+  "LTSOps-001|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTSOps-001"
+  },
+  "LTSOps-002|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTSOps-002"
+  },
+  "LTSOps-003|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTSOps-003"
+  },
+  "LTSOps-004|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTSOps-004"
+  },
+  "LTSOps-005|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTSOps-005"
+  },
+  "LTSOps-006|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTSOps-006"
+  },
+  "LTSOps-007|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-glm-5-1",
+    "taskId": "LTSOps-007"
+  },
+  "ltcc-highbdp-v4|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltcc-highbdp-v4"
+  },
+  "ltcc-incast-v4|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltcc-incast-v4"
+  },
+  "ltcc-lat-mouse-v4|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltcc-lat-mouse-v4"
+  },
+  "ltcc-link-perturb-v4|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltcc-link-perturb-v4"
+  },
+  "ltcc-m2m-mixed-v4|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltcc-m2m-mixed-v4"
+  },
+  "ltcc-tandem-db-v4|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltcc-tandem-db-v4"
+  },
+  "ltcg-clos-bgp-v1|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltcg-clos-bgp-v1"
+  },
+  "ltco-a100-ag-16-128m|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltco-a100-ag-16-128m"
+  },
+  "ltco-a100-ag-16-1g|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltco-a100-ag-16-1g"
+  },
+  "ltco-a100-ag-16-4k|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltco-a100-ag-16-4k"
+  },
+  "ltco-a100-ag-16-512k|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltco-a100-ag-16-512k"
+  },
+  "ltco-a100-ag-32-128m|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltco-a100-ag-32-128m"
+  },
+  "ltco-a100-ag-32-1g|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltco-a100-ag-32-1g"
+  },
+  "ltco-a100-ag-32-4k|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltco-a100-ag-32-4k"
+  },
+  "ltco-a100-ag-32-512k|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltco-a100-ag-32-512k"
+  },
+  "ltco-a100-ag-8-128m|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltco-a100-ag-8-128m"
+  },
+  "ltco-a100-ag-8-1g|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltco-a100-ag-8-1g"
+  },
+  "ltco-a100-ag-8-4k|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltco-a100-ag-8-4k"
+  },
+  "ltco-a100-ag-8-512k|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltco-a100-ag-8-512k"
+  },
+  "ltco-mi300x-ag-16-128m|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltco-mi300x-ag-16-128m"
+  },
+  "ltco-mi300x-ag-16-1g|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltco-mi300x-ag-16-1g"
+  },
+  "ltco-mi300x-ag-16-4k|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltco-mi300x-ag-16-4k"
+  },
+  "ltco-mi300x-ag-16-512k|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltco-mi300x-ag-16-512k"
+  },
+  "ltco-mi300x-ag-32-128m|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltco-mi300x-ag-32-128m"
+  },
+  "ltco-mi300x-ag-32-1g|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltco-mi300x-ag-32-1g"
+  },
+  "ltco-mi300x-ag-32-4k|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltco-mi300x-ag-32-4k"
+  },
+  "ltco-mi300x-ag-32-512k|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltco-mi300x-ag-32-512k"
+  },
+  "ltco-mi300x-ag-8-128m|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltco-mi300x-ag-8-128m"
+  },
+  "ltco-mi300x-ag-8-1g|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltco-mi300x-ag-8-1g"
+  },
+  "ltco-mi300x-ag-8-4k|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltco-mi300x-ag-8-4k"
+  },
+  "ltco-mi300x-ag-8-512k|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltco-mi300x-ag-8-512k"
+  },
+  "LTHOps-001|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTHOps-001"
+  },
+  "LTHOps-002|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTHOps-002"
+  },
+  "LTHOps-003|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTHOps-003"
+  },
+  "LTHOps-004|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTHOps-004"
+  },
+  "LTHOps-005|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTHOps-005"
+  },
+  "LTHOps-006|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTHOps-006"
+  },
+  "LTHOps-007|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTHOps-007"
+  },
+  "LTHOps-008|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTHOps-008"
+  },
+  "LTHOps-009|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTHOps-009"
+  },
+  "LTHOps-010|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTHOps-010"
+  },
+  "LTHOps-011|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTHOps-011"
+  },
+  "LTHOps-012|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTHOps-012"
+  },
+  "LTHOps-013|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTHOps-013"
+  },
+  "LTHOps-014|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTHOps-014"
+  },
+  "LTHOps-015|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTHOps-015"
+  },
+  "LTHOps-016|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTHOps-016"
+  },
+  "LTHOps-017|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTHOps-017"
+  },
+  "LTHOps-018|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTHOps-018"
+  },
+  "LTHOps-019|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTHOps-019"
+  },
+  "LTHOps-020|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTHOps-020"
+  },
+  "LTHOps-021|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTHOps-021"
+  },
+  "LTHOps-022|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTHOps-022"
+  },
+  "LTHOps-023|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTHOps-023"
+  },
+  "LTHOps-024|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTHOps-024"
+  },
+  "LTHOps-025|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTHOps-025"
+  },
+  "LTHOps-026|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTHOps-026"
+  },
+  "ltlb-elephant-interfere-v4|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltlb-elephant-interfere-v4"
+  },
+  "ltlb-flowlet-timeout-v4|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltlb-flowlet-timeout-v4"
+  },
+  "ltlb-heavytail-ecmp-v4|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltlb-heavytail-ecmp-v4"
+  },
+  "ltlb-rdma-reorder-v4|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltlb-rdma-reorder-v4"
+  },
+  "ltlb-voq-path-lb-v4|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltlb-voq-path-lb-v4"
+  },
+  "LTMixOps-001|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTMixOps-001"
+  },
+  "LTMixOps-002|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTMixOps-002"
+  },
+  "LTMixOps-003|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTMixOps-003"
+  },
+  "LTMixOps-004|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTMixOps-004"
+  },
+  "LTMixOps-005|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTMixOps-005"
+  },
+  "LTNOps-001|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTNOps-001"
+  },
+  "LTNOps-002|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTNOps-002"
+  },
+  "LTNOps-003|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTNOps-003"
+  },
+  "LTNOps-004|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTNOps-004"
+  },
+  "LTNOps-005|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTNOps-005"
+  },
+  "LTNOps-006|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTNOps-006"
+  },
+  "LTNOps-007|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTNOps-007"
+  },
+  "LTNOps-008|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTNOps-008"
+  },
+  "LTNOps-009|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTNOps-009"
+  },
+  "LTNOps-010|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTNOps-010"
+  },
+  "LTNOps-011|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTNOps-011"
+  },
+  "LTNOps-012|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTNOps-012"
+  },
+  "ltnp-hpcnet-newbuild-v1-std|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltnp-hpcnet-newbuild-v1-std"
+  },
+  "ltnp-hpcnet-newbuild-v2-std|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltnp-hpcnet-newbuild-v2-std"
+  },
+  "ltnp-hpcnet-newbuild-v3-std|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltnp-hpcnet-newbuild-v3-std"
+  },
+  "ltnp-idc-expansion-v1-std|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltnp-idc-expansion-v1-std"
+  },
+  "ltnp-idc-expansion-v2-std|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltnp-idc-expansion-v2-std"
+  },
+  "ltnp-idc-expansion-v3-std|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltnp-idc-expansion-v3-std"
+  },
+  "ltnp-idc-newpod-v1-std|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltnp-idc-newpod-v1-std"
+  },
+  "ltnp-idc-newpod-v2-std|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltnp-idc-newpod-v2-std"
+  },
+  "ltnp-idc-newpod-v3-std|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltnp-idc-newpod-v3-std"
+  },
+  "ltnp-multiscene-mix-v1-std|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltnp-multiscene-mix-v1-std"
+  },
+  "ltnp-multiscene-mix-v2-std|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltnp-multiscene-mix-v2-std"
+  },
+  "ltnp-multiscene-mix-v3-std|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltnp-multiscene-mix-v3-std"
+  },
+  "ltnp-overseas-mini-v1-std|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltnp-overseas-mini-v1-std"
+  },
+  "ltnp-overseas-mini-v2-std|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltnp-overseas-mini-v2-std"
+  },
+  "ltnp-overseas-mini-v3-std|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltnp-overseas-mini-v3-std"
+  },
+  "ltrp-egress-multivrf-v1-std|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltrp-egress-multivrf-v1-std"
+  },
+  "ltrp-egress-multivrf-v2-std|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltrp-egress-multivrf-v2-std"
+  },
+  "ltrp-egress-multivrf-v3-std|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltrp-egress-multivrf-v3-std"
+  },
+  "ltrp-expansion-continuity-v1-std|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltrp-expansion-continuity-v1-std"
+  },
+  "ltrp-expansion-continuity-v2-std|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltrp-expansion-continuity-v2-std"
+  },
+  "ltrp-expansion-continuity-v3-std|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltrp-expansion-continuity-v3-std"
+  },
+  "ltrp-multitenant-ipam-v1-std|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltrp-multitenant-ipam-v1-std"
+  },
+  "ltrp-multitenant-ipam-v2-std|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltrp-multitenant-ipam-v2-std"
+  },
+  "ltrp-multitenant-ipam-v3-std|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "ltrp-multitenant-ipam-v3-std"
+  },
+  "LTSOps-001|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTSOps-001"
+  },
+  "LTSOps-002|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTSOps-002"
+  },
+  "LTSOps-003|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTSOps-003"
+  },
+  "LTSOps-004|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTSOps-004"
+  },
+  "LTSOps-005|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTSOps-005"
+  },
+  "LTSOps-006|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTSOps-006"
+  },
+  "LTSOps-007|Qwen3.6-35B-A3B|opencode|fake-latest-opencode-qwen3-6-35b-a3b": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-qwen3-6-35b-a3b",
+    "taskId": "LTSOps-007"
+  },
+  "ltcc-highbdp-v4|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltcc-highbdp-v4"
+  },
+  "ltcc-incast-v4|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltcc-incast-v4"
+  },
+  "ltcc-lat-mouse-v4|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltcc-lat-mouse-v4"
+  },
+  "ltcc-link-perturb-v4|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltcc-link-perturb-v4"
+  },
+  "ltcc-m2m-mixed-v4|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltcc-m2m-mixed-v4"
+  },
+  "ltcc-tandem-db-v4|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltcc-tandem-db-v4"
+  },
+  "ltcg-clos-bgp-v1|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltcg-clos-bgp-v1"
+  },
+  "ltco-a100-ag-16-1g|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltco-a100-ag-16-1g"
+  },
+  "ltco-a100-ag-16-4k|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltco-a100-ag-16-4k"
+  },
+  "ltco-a100-ag-16-512k|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltco-a100-ag-16-512k"
+  },
+  "ltco-a100-ag-32-128m|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltco-a100-ag-32-128m"
+  },
+  "ltco-a100-ag-32-1g|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltco-a100-ag-32-1g"
+  },
+  "ltco-a100-ag-32-4k|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltco-a100-ag-32-4k"
+  },
+  "ltco-a100-ag-32-512k|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltco-a100-ag-32-512k"
+  },
+  "ltco-a100-ag-8-128m|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltco-a100-ag-8-128m"
+  },
+  "ltco-a100-ag-8-1g|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltco-a100-ag-8-1g"
+  },
+  "ltco-a100-ag-8-4k|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltco-a100-ag-8-4k"
+  },
+  "ltco-a100-ag-8-512k|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltco-a100-ag-8-512k"
+  },
+  "ltco-mi300x-ag-16-128m|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltco-mi300x-ag-16-128m"
+  },
+  "ltco-mi300x-ag-16-1g|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltco-mi300x-ag-16-1g"
+  },
+  "ltco-mi300x-ag-16-4k|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltco-mi300x-ag-16-4k"
+  },
+  "ltco-mi300x-ag-16-512k|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltco-mi300x-ag-16-512k"
+  },
+  "ltco-mi300x-ag-32-128m|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltco-mi300x-ag-32-128m"
+  },
+  "ltco-mi300x-ag-32-1g|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltco-mi300x-ag-32-1g"
+  },
+  "ltco-mi300x-ag-32-4k|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltco-mi300x-ag-32-4k"
+  },
+  "ltco-mi300x-ag-32-512k|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltco-mi300x-ag-32-512k"
+  },
+  "ltco-mi300x-ag-8-128m|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltco-mi300x-ag-8-128m"
+  },
+  "ltco-mi300x-ag-8-1g|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltco-mi300x-ag-8-1g"
+  },
+  "ltco-mi300x-ag-8-4k|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltco-mi300x-ag-8-4k"
+  },
+  "ltco-mi300x-ag-8-512k|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltco-mi300x-ag-8-512k"
+  },
+  "LTHOps-001|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTHOps-001"
+  },
+  "LTHOps-002|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTHOps-002"
+  },
+  "LTHOps-003|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTHOps-003"
+  },
+  "LTHOps-004|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTHOps-004"
+  },
+  "LTHOps-005|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTHOps-005"
+  },
+  "LTHOps-006|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTHOps-006"
+  },
+  "LTHOps-007|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTHOps-007"
+  },
+  "LTHOps-008|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTHOps-008"
+  },
+  "LTHOps-009|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTHOps-009"
+  },
+  "LTHOps-010|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTHOps-010"
+  },
+  "LTHOps-011|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTHOps-011"
+  },
+  "LTHOps-012|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTHOps-012"
+  },
+  "LTHOps-013|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTHOps-013"
+  },
+  "LTHOps-014|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTHOps-014"
+  },
+  "LTHOps-015|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTHOps-015"
+  },
+  "LTHOps-016|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTHOps-016"
+  },
+  "LTHOps-017|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTHOps-017"
+  },
+  "LTHOps-018|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTHOps-018"
+  },
+  "LTHOps-019|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTHOps-019"
+  },
+  "LTHOps-020|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTHOps-020"
+  },
+  "LTHOps-021|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTHOps-021"
+  },
+  "LTHOps-022|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTHOps-022"
+  },
+  "LTHOps-023|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTHOps-023"
+  },
+  "LTHOps-024|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTHOps-024"
+  },
+  "LTHOps-025|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTHOps-025"
+  },
+  "LTHOps-026|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTHOps-026"
+  },
+  "ltlb-elephant-interfere-v4|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltlb-elephant-interfere-v4"
+  },
+  "ltlb-flowlet-timeout-v4|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltlb-flowlet-timeout-v4"
+  },
+  "ltlb-heavytail-ecmp-v4|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltlb-heavytail-ecmp-v4"
+  },
+  "ltlb-rdma-reorder-v4|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltlb-rdma-reorder-v4"
+  },
+  "ltlb-voq-path-lb-v4|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltlb-voq-path-lb-v4"
+  },
+  "LTMixOps-001|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTMixOps-001"
+  },
+  "LTMixOps-002|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTMixOps-002"
+  },
+  "LTMixOps-003|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTMixOps-003"
+  },
+  "LTMixOps-004|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTMixOps-004"
+  },
+  "LTMixOps-005|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTMixOps-005"
+  },
+  "LTNOps-001|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTNOps-001"
+  },
+  "LTNOps-002|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTNOps-002"
+  },
+  "LTNOps-003|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTNOps-003"
+  },
+  "LTNOps-004|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTNOps-004"
+  },
+  "LTNOps-005|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTNOps-005"
+  },
+  "LTNOps-006|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTNOps-006"
+  },
+  "LTNOps-007|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTNOps-007"
+  },
+  "LTNOps-008|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTNOps-008"
+  },
+  "LTNOps-009|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTNOps-009"
+  },
+  "LTNOps-010|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTNOps-010"
+  },
+  "LTNOps-011|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTNOps-011"
+  },
+  "LTNOps-012|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTNOps-012"
+  },
+  "ltnp-hpcnet-newbuild-v1-std|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltnp-hpcnet-newbuild-v1-std"
+  },
+  "ltnp-hpcnet-newbuild-v2-std|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltnp-hpcnet-newbuild-v2-std"
+  },
+  "ltnp-hpcnet-newbuild-v3-std|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltnp-hpcnet-newbuild-v3-std"
+  },
+  "ltnp-idc-expansion-v1-std|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltnp-idc-expansion-v1-std"
+  },
+  "ltnp-idc-expansion-v2-std|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltnp-idc-expansion-v2-std"
+  },
+  "ltnp-idc-expansion-v3-std|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltnp-idc-expansion-v3-std"
+  },
+  "ltnp-idc-newpod-v1-std|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltnp-idc-newpod-v1-std"
+  },
+  "ltnp-idc-newpod-v2-std|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltnp-idc-newpod-v2-std"
+  },
+  "ltnp-idc-newpod-v3-std|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltnp-idc-newpod-v3-std"
+  },
+  "ltnp-multiscene-mix-v1-std|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltnp-multiscene-mix-v1-std"
+  },
+  "ltnp-multiscene-mix-v2-std|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltnp-multiscene-mix-v2-std"
+  },
+  "ltnp-multiscene-mix-v3-std|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltnp-multiscene-mix-v3-std"
+  },
+  "ltnp-overseas-mini-v1-std|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltnp-overseas-mini-v1-std"
+  },
+  "ltnp-overseas-mini-v2-std|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltnp-overseas-mini-v2-std"
+  },
+  "ltnp-overseas-mini-v3-std|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltnp-overseas-mini-v3-std"
+  },
+  "ltrp-egress-multivrf-v1-std|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltrp-egress-multivrf-v1-std"
+  },
+  "ltrp-egress-multivrf-v2-std|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltrp-egress-multivrf-v2-std"
+  },
+  "ltrp-egress-multivrf-v3-std|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltrp-egress-multivrf-v3-std"
+  },
+  "ltrp-expansion-continuity-v1-std|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltrp-expansion-continuity-v1-std"
+  },
+  "ltrp-expansion-continuity-v2-std|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltrp-expansion-continuity-v2-std"
+  },
+  "ltrp-expansion-continuity-v3-std|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltrp-expansion-continuity-v3-std"
+  },
+  "ltrp-multitenant-ipam-v1-std|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltrp-multitenant-ipam-v1-std"
+  },
+  "ltrp-multitenant-ipam-v2-std|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltrp-multitenant-ipam-v2-std"
+  },
+  "ltrp-multitenant-ipam-v3-std|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "ltrp-multitenant-ipam-v3-std"
+  },
+  "LTSOps-001|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTSOps-001"
+  },
+  "LTSOps-002|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTSOps-002"
+  },
+  "LTSOps-003|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTSOps-003"
+  },
+  "LTSOps-004|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTSOps-004"
+  },
+  "LTSOps-005|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTSOps-005"
+  },
+  "LTSOps-006|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTSOps-006"
+  },
+  "LTSOps-007|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "taskId": "LTSOps-007"
+  },
+  "ltcc-highbdp-v4|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltcc-highbdp-v4"
+  },
+  "ltcc-incast-v4|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltcc-incast-v4"
+  },
+  "ltcc-lat-mouse-v4|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltcc-lat-mouse-v4"
+  },
+  "ltcc-link-perturb-v4|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltcc-link-perturb-v4"
+  },
+  "ltcc-m2m-mixed-v4|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltcc-m2m-mixed-v4"
+  },
+  "ltcc-tandem-db-v4|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltcc-tandem-db-v4"
+  },
+  "ltcg-clos-bgp-v1|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltcg-clos-bgp-v1"
+  },
+  "ltco-a100-ag-16-128m|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltco-a100-ag-16-128m"
+  },
+  "ltco-a100-ag-16-1g|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltco-a100-ag-16-1g"
+  },
+  "ltco-a100-ag-16-4k|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltco-a100-ag-16-4k"
+  },
+  "ltco-a100-ag-16-512k|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltco-a100-ag-16-512k"
+  },
+  "ltco-a100-ag-32-128m|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltco-a100-ag-32-128m"
+  },
+  "ltco-a100-ag-32-1g|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltco-a100-ag-32-1g"
+  },
+  "ltco-a100-ag-32-4k|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltco-a100-ag-32-4k"
+  },
+  "ltco-a100-ag-32-512k|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltco-a100-ag-32-512k"
+  },
+  "ltco-a100-ag-8-128m|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltco-a100-ag-8-128m"
+  },
+  "ltco-a100-ag-8-1g|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltco-a100-ag-8-1g"
+  },
+  "ltco-a100-ag-8-4k|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltco-a100-ag-8-4k"
+  },
+  "ltco-a100-ag-8-512k|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltco-a100-ag-8-512k"
+  },
+  "ltco-mi300x-ag-16-128m|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltco-mi300x-ag-16-128m"
+  },
+  "ltco-mi300x-ag-16-1g|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltco-mi300x-ag-16-1g"
+  },
+  "ltco-mi300x-ag-16-4k|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltco-mi300x-ag-16-4k"
+  },
+  "ltco-mi300x-ag-16-512k|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltco-mi300x-ag-16-512k"
+  },
+  "ltco-mi300x-ag-32-128m|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltco-mi300x-ag-32-128m"
+  },
+  "ltco-mi300x-ag-32-1g|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltco-mi300x-ag-32-1g"
+  },
+  "ltco-mi300x-ag-32-4k|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltco-mi300x-ag-32-4k"
+  },
+  "ltco-mi300x-ag-32-512k|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltco-mi300x-ag-32-512k"
+  },
+  "ltco-mi300x-ag-8-128m|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltco-mi300x-ag-8-128m"
+  },
+  "ltco-mi300x-ag-8-1g|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltco-mi300x-ag-8-1g"
+  },
+  "ltco-mi300x-ag-8-4k|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltco-mi300x-ag-8-4k"
+  },
+  "ltco-mi300x-ag-8-512k|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltco-mi300x-ag-8-512k"
+  },
+  "LTHOps-001|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTHOps-001"
+  },
+  "LTHOps-002|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTHOps-002"
+  },
+  "LTHOps-003|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTHOps-003"
+  },
+  "LTHOps-004|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTHOps-004"
+  },
+  "LTHOps-005|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTHOps-005"
+  },
+  "LTHOps-006|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTHOps-006"
+  },
+  "LTHOps-007|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTHOps-007"
+  },
+  "LTHOps-008|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTHOps-008"
+  },
+  "LTHOps-009|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTHOps-009"
+  },
+  "LTHOps-010|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTHOps-010"
+  },
+  "LTHOps-011|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTHOps-011"
+  },
+  "LTHOps-012|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTHOps-012"
+  },
+  "LTHOps-013|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTHOps-013"
+  },
+  "LTHOps-014|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTHOps-014"
+  },
+  "LTHOps-015|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTHOps-015"
+  },
+  "LTHOps-016|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTHOps-016"
+  },
+  "LTHOps-017|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTHOps-017"
+  },
+  "LTHOps-018|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTHOps-018"
+  },
+  "LTHOps-019|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTHOps-019"
+  },
+  "LTHOps-020|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTHOps-020"
+  },
+  "LTHOps-021|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTHOps-021"
+  },
+  "LTHOps-022|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTHOps-022"
+  },
+  "LTHOps-023|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTHOps-023"
+  },
+  "LTHOps-024|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTHOps-024"
+  },
+  "LTHOps-025|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTHOps-025"
+  },
+  "LTHOps-026|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTHOps-026"
+  },
+  "ltlb-elephant-interfere-v4|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltlb-elephant-interfere-v4"
+  },
+  "ltlb-flowlet-timeout-v4|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltlb-flowlet-timeout-v4"
+  },
+  "ltlb-heavytail-ecmp-v4|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltlb-heavytail-ecmp-v4"
+  },
+  "ltlb-rdma-reorder-v4|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltlb-rdma-reorder-v4"
+  },
+  "ltlb-voq-path-lb-v4|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltlb-voq-path-lb-v4"
+  },
+  "LTMixOps-001|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTMixOps-001"
+  },
+  "LTMixOps-002|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTMixOps-002"
+  },
+  "LTMixOps-003|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTMixOps-003"
+  },
+  "LTMixOps-004|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTMixOps-004"
+  },
+  "LTMixOps-005|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTMixOps-005"
+  },
+  "LTNOps-001|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTNOps-001"
+  },
+  "LTNOps-002|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTNOps-002"
+  },
+  "LTNOps-003|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTNOps-003"
+  },
+  "LTNOps-004|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTNOps-004"
+  },
+  "LTNOps-005|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTNOps-005"
+  },
+  "LTNOps-006|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTNOps-006"
+  },
+  "LTNOps-007|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTNOps-007"
+  },
+  "LTNOps-008|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTNOps-008"
+  },
+  "LTNOps-009|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTNOps-009"
+  },
+  "LTNOps-010|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTNOps-010"
+  },
+  "LTNOps-011|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTNOps-011"
+  },
+  "LTNOps-012|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTNOps-012"
+  },
+  "ltnp-hpcnet-newbuild-v1-std|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltnp-hpcnet-newbuild-v1-std"
+  },
+  "ltnp-hpcnet-newbuild-v2-std|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltnp-hpcnet-newbuild-v2-std"
+  },
+  "ltnp-hpcnet-newbuild-v3-std|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltnp-hpcnet-newbuild-v3-std"
+  },
+  "ltnp-idc-expansion-v1-std|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltnp-idc-expansion-v1-std"
+  },
+  "ltnp-idc-expansion-v2-std|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltnp-idc-expansion-v2-std"
+  },
+  "ltnp-idc-expansion-v3-std|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltnp-idc-expansion-v3-std"
+  },
+  "ltnp-idc-newpod-v1-std|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltnp-idc-newpod-v1-std"
+  },
+  "ltnp-idc-newpod-v2-std|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltnp-idc-newpod-v2-std"
+  },
+  "ltnp-idc-newpod-v3-std|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltnp-idc-newpod-v3-std"
+  },
+  "ltnp-multiscene-mix-v1-std|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltnp-multiscene-mix-v1-std"
+  },
+  "ltnp-multiscene-mix-v2-std|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltnp-multiscene-mix-v2-std"
+  },
+  "ltnp-multiscene-mix-v3-std|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltnp-multiscene-mix-v3-std"
+  },
+  "ltnp-overseas-mini-v1-std|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltnp-overseas-mini-v1-std"
+  },
+  "ltnp-overseas-mini-v2-std|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltnp-overseas-mini-v2-std"
+  },
+  "ltnp-overseas-mini-v3-std|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltnp-overseas-mini-v3-std"
+  },
+  "ltrp-egress-multivrf-v1-std|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltrp-egress-multivrf-v1-std"
+  },
+  "ltrp-egress-multivrf-v2-std|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltrp-egress-multivrf-v2-std"
+  },
+  "ltrp-egress-multivrf-v3-std|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltrp-egress-multivrf-v3-std"
+  },
+  "ltrp-expansion-continuity-v1-std|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltrp-expansion-continuity-v1-std"
+  },
+  "ltrp-expansion-continuity-v2-std|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltrp-expansion-continuity-v2-std"
+  },
+  "ltrp-expansion-continuity-v3-std|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltrp-expansion-continuity-v3-std"
+  },
+  "ltrp-multitenant-ipam-v1-std|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltrp-multitenant-ipam-v1-std"
+  },
+  "ltrp-multitenant-ipam-v2-std|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltrp-multitenant-ipam-v2-std"
+  },
+  "ltrp-multitenant-ipam-v3-std|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "ltrp-multitenant-ipam-v3-std"
+  },
+  "LTSOps-001|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTSOps-001"
+  },
+  "LTSOps-002|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTSOps-002"
+  },
+  "LTSOps-003|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTSOps-003"
+  },
+  "LTSOps-004|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTSOps-004"
+  },
+  "LTSOps-005|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTSOps-005"
+  },
+  "LTSOps-006|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTSOps-006"
+  },
+  "LTSOps-007|MiniMax-M2.5|claudecode|fake-latest-claudecode-minimax-m2-5": {
+    "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
+    "runId": "fake-latest-claudecode-minimax-m2-5",
+    "taskId": "LTSOps-007"
+  }
+}

@@ -1,13 +1,18 @@
 import React, { useMemo, useState } from "react";
+import { Tooltip } from "antd";
 import {
+  chartValueForDetailPoint,
   findBestDetailPoint,
   formatImprovementPct,
   formatScoreWithUnit,
-  improvementVsBaselinePct,
   parseRoundIndex,
 } from "../features/caseDetailChart";
 import { useLocale } from "../i18n/LocaleContext";
-import type { CaseDetailChartPayload } from "../types";
+import type {
+  CaseDetailChartModelResult,
+  CaseDetailChartPayload,
+  EvaluationCaseDetailPoint,
+} from "../types";
 
 const SERIES_COLORS = [
   "#1f77b4",
@@ -29,6 +34,8 @@ interface PlotPoint {
   round: string;
   roundIndex: number;
   score: number;
+  bestLatencyUs?: number;
+  baselineLatencyUs?: number;
   improvementPct: number;
   x: number;
   y: number;
@@ -38,6 +45,96 @@ interface PlotPoint {
 
 interface CaseLatencyChartProps {
   payload: CaseDetailChartPayload;
+}
+
+function metricNumber(
+  point: EvaluationCaseDetailPoint,
+  key: string
+): number | undefined {
+  const value = point.metrics?.[key];
+  return typeof value === "number" ? value : undefined;
+}
+
+function formatScore(score: number): string {
+  return score.toFixed(4);
+}
+
+function formatLatencyUs(value: number | undefined): string {
+  return value === undefined ? "-" : String(Number(value.toFixed(6)));
+}
+
+function ltcoFormula(point: EvaluationCaseDetailPoint): string {
+  const bestLatency = metricNumber(point, "best_latency_us");
+  const baselineLatency = metricNumber(point, "baseline_latency_us");
+  if (bestLatency === undefined || baselineLatency === undefined) {
+    return "max(0, 1 - best_latency_us / baseline_latency_us)";
+  }
+  return `max(0, 1 - ${bestLatency} / ${baselineLatency})`;
+}
+
+function LtcoRoundTable({
+  result,
+}: {
+  result: CaseDetailChartModelResult;
+}) {
+  const bestRound =
+    result.bestRound ?? findBestDetailPoint(result.detail, "higher_is_better")?.round;
+
+  return (
+    <div className="ltco-round-detail">
+      <div className="multiphase-round-table-wrap ltco-round-table-wrap">
+        <table className="multiphase-round-table ltco-round-table">
+          <thead>
+            <tr>
+              <th>Round</th>
+              <th>Latency improvement</th>
+              <th>Raw score</th>
+              <th>Best latency (us)</th>
+              <th>Baseline latency (us)</th>
+              <th>
+                <Tooltip title="Score formula: max(0, 1 - best_latency_us / baseline_latency_us).">
+                  <span className="multiphase-column-help">Formula</span>
+                </Tooltip>
+              </th>
+            </tr>
+          </thead>
+          <tbody>
+            {result.detail.map((point) => {
+              const isBest = point.round === bestRound;
+              const bestLatency = metricNumber(point, "best_latency_us");
+              const baselineLatency = metricNumber(point, "baseline_latency_us");
+              return (
+                <tr key={point.round}>
+                  <td>
+                    <span className="multiphase-round-name">
+                      {point.round}
+                      {isBest ? (
+                        <Tooltip title="Best round: the round with the highest normalized latency improvement for this LTCO task.">
+                          <span
+                            className="multiphase-selected-star"
+                            aria-label="Best round"
+                          >
+                            ⭐
+                          </span>
+                        </Tooltip>
+                      ) : null}
+                    </span>
+                  </td>
+                  <td>{formatImprovementPct(point.score * 100)}</td>
+                  <td>{formatScore(point.score)}</td>
+                  <td>{formatLatencyUs(bestLatency)}</td>
+                  <td>{formatLatencyUs(baselineLatency)}</td>
+                  <td>
+                    <code>{ltcoFormula(point)}</code>
+                  </td>
+                </tr>
+              );
+            })}
+          </tbody>
+        </table>
+      </div>
+    </div>
+  );
 }
 
 function buildTicks(min: number, max: number, count = 5): number[] {
@@ -53,6 +150,7 @@ export const CaseLatencyChart: React.FC<CaseLatencyChartProps> = ({ payload }) =
   const { t } = useLocale();
   const [hoveredPoint, setHoveredPoint] = useState<PlotPoint | null>(null);
   const { metric } = payload;
+  const isLtco = payload.category === "LTCO";
 
   const plot = useMemo(() => {
     const innerWidth = CHART_WIDTH - MARGIN.left - MARGIN.right;
@@ -69,19 +167,25 @@ export const CaseLatencyChart: React.FC<CaseLatencyChartProps> = ({ payload }) =
       const color = SERIES_COLORS[index % SERIES_COLORS.length];
       const sortedDetail = result.detail;
       const baselineScore = sortedDetail[0]?.score ?? 0;
-      const bestPoint = findBestDetailPoint(sortedDetail, metric.direction);
+      const bestPoint =
+        isLtco && result.bestRound
+          ? sortedDetail.find((point) => point.round === result.bestRound)
+          : findBestDetailPoint(sortedDetail, metric.direction);
       const points: PlotPoint[] = sortedDetail.map((point) => {
         const roundIndex = parseRoundIndex(point.round);
-        const improvementPct = improvementVsBaselinePct(
+        const improvementPct = chartValueForDetailPoint({
+          category: payload.category,
           baselineScore,
-          point.score,
-          metric.direction
-        );
+          currentScore: point.score,
+          direction: metric.direction,
+        });
         return {
           model: result.model,
           round: point.round,
           roundIndex,
           score: point.score,
+          bestLatencyUs: metricNumber(point, "best_latency_us"),
+          baselineLatencyUs: metricNumber(point, "baseline_latency_us"),
           improvementPct,
           x: 0,
           y: 0,
@@ -165,7 +269,7 @@ export const CaseLatencyChart: React.FC<CaseLatencyChartProps> = ({ payload }) =
       innerHeight,
       baselineY: plotBaselineY(),
     };
-  }, [metric.direction, payload]);
+  }, [isLtco, metric.direction, payload]);
 
   const metricMeta = metric.unit
     ? `${metric.label} (${metric.unit})`
@@ -207,12 +311,13 @@ export const CaseLatencyChart: React.FC<CaseLatencyChartProps> = ({ payload }) =
         ) : null}
       </div>
 
-      <svg
-        className="case-latency-chart-svg"
-        viewBox={`0 0 ${CHART_WIDTH} ${CHART_HEIGHT}`}
-        role="img"
-        aria-label={t("detailLatencyChartAria")}
-      >
+      <div className="case-latency-chart-plot">
+        <svg
+          className="case-latency-chart-svg"
+          viewBox={`0 0 ${CHART_WIDTH} ${CHART_HEIGHT}`}
+          role="img"
+          aria-label={t("detailLatencyChartAria")}
+        >
         <defs>
           {plot.series.map((series, index) => (
             <React.Fragment key={series.model}>
@@ -390,21 +495,44 @@ export const CaseLatencyChart: React.FC<CaseLatencyChartProps> = ({ payload }) =
             })}
           </g>
         ))}
-      </svg>
+        </svg>
 
-      {hoveredPoint && (
-        <div className="case-latency-chart-tooltip">
-          <strong>{hoveredPoint.model}</strong>
-          <span>
-            {hoveredPoint.round}: {formatImprovementPct(hoveredPoint.improvementPct)}
-          </span>
-          <span>
-            {t("detailChartRawMetric")}:{" "}
-            {formatScoreWithUnit(hoveredPoint.score, metric.unit)}
-          </span>
-          {hoveredPoint.isBest ? <span>{t("detailLatencyBestRound")}</span> : null}
-        </div>
-      )}
+        {hoveredPoint && (
+          <div
+            className={[
+              "case-latency-chart-tooltip",
+              hoveredPoint.x < MARGIN.left + 90 ? "align-left" : "",
+              hoveredPoint.x > CHART_WIDTH - MARGIN.right - 90 ? "align-right" : "",
+            ]
+              .filter(Boolean)
+              .join(" ")}
+            style={{
+              left: `${(hoveredPoint.x / CHART_WIDTH) * 100}%`,
+              top: `${(hoveredPoint.y / CHART_HEIGHT) * 100}%`,
+            }}
+          >
+            <strong>{hoveredPoint.model}</strong>
+            <span>
+              {hoveredPoint.round}: {formatImprovementPct(hoveredPoint.improvementPct)}
+            </span>
+            <span>
+              {t("detailChartRawMetric")}:{" "}
+              {formatScoreWithUnit(hoveredPoint.score, metric.unit)}
+            </span>
+            {isLtco ? (
+              <>
+                <span>
+                  best_latency_us: {formatLatencyUs(hoveredPoint.bestLatencyUs)} us
+                </span>
+                <span>
+                  baseline_latency_us: {formatLatencyUs(hoveredPoint.baselineLatencyUs)} us
+                </span>
+              </>
+            ) : null}
+            {hoveredPoint.isBest ? <span>{t("detailLatencyBestRound")}</span> : null}
+          </div>
+        )}
+      </div>
 
       <div className="case-latency-chart-legend">
         {plot.series.map((series) => (
@@ -423,6 +551,12 @@ export const CaseLatencyChart: React.FC<CaseLatencyChartProps> = ({ payload }) =
           </div>
         ) : null}
       </div>
+
+      {isLtco
+        ? payload.results.map((result) => (
+            <LtcoRoundTable key={result.model} result={result} />
+          ))
+        : null}
     </div>
   );
 };

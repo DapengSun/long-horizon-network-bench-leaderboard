@@ -1,7 +1,7 @@
 import React, { useMemo, useState } from "react";
 import { Button, Empty, Input, Typography } from "antd";
 import { SearchOutlined } from "@ant-design/icons";
-import mockData from "../data/networkDashboardMock.json";
+import { getDashboardData } from "../data/leaderboardDataSource";
 import {
   buildRadarSeries,
   type DashboardBenchmarkData,
@@ -10,7 +10,7 @@ import {
 import { useLocale } from "../i18n/LocaleContext";
 import type { MessageKey } from "../i18n/messages";
 
-const data = mockData as DashboardBenchmarkData;
+const data: DashboardBenchmarkData = getDashboardData();
 
 const PRIMARY_CATEGORIES: Array<{
   id: PrimaryCategoryId;
@@ -40,6 +40,7 @@ const PRIMARY_CATEGORIES: Array<{
     labelKey: "ops",
     children: [
       { id: "LTHOps", labelKey: "lthOpsTitle" },
+      { id: "LTMixOps", labelKey: "ltmixOpsTitle" },
       { id: "LTSOps", labelKey: "ltsOpsTitle" },
       { id: "LTNOps", labelKey: "ltnOpsTitle" },
     ],
