@@ -7,6 +7,8 @@
     "dev": "vite",
     "prod": "npm run generate:data:real && vite --mode production",
     "build": "tsc --noEmit && vite build",
+    "build:fake": "npm run generate:data:fake && VITE_LEADERBOARD_DATA_MODE=fake npm run build",
+    "build:real": "npm run generate:data:real && VITE_LEADERBOARD_DATA_MODE=real npm run build",
     "preview": "vite preview",
     "test": "vitest run",
     "seed:data:fake": "node scripts/seed-fake-leaderboard-data.js",
