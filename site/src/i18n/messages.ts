@@ -50,6 +50,7 @@ export const messages = {
     detailBestColumn: "最佳",
     detailScoreColumn: "分数",
     detailOptPercentColumn: "优化%",
+    detailEvaluatedAtColumn: "评测时间",
     detailDurationColumn: "时长",
     detailViewLatencyChart: "查看 latency 折线图",
     detailLatencyModalTitle: "优化轨迹",
@@ -60,6 +61,8 @@ export const messages = {
     detailChartLatestRound: "最新轮次",
     detailRoundAxis: "Round",
     detailLatencyBestRound: "最佳轮次",
+    detailBestScoreLabel: "最佳成绩",
+    detailBestScoreTooltip: "该 case 所有评测尝试中的最佳成绩。",
     detailLatencyChartAria: "模型优化轨迹折线图",
     multiphaseModalTitle: "Learning Journey",
     ltccMultiphaseDescription:
@@ -139,6 +142,7 @@ export const messages = {
     detailBestColumn: "best",
     detailScoreColumn: "Score",
     detailOptPercentColumn: "opt%",
+    detailEvaluatedAtColumn: "evaluated at",
     detailDurationColumn: "duration",
     detailViewLatencyChart: "View latency trend chart",
     detailLatencyModalTitle: "Optimization Trend",
@@ -149,6 +153,8 @@ export const messages = {
     detailChartLatestRound: "Latest",
     detailRoundAxis: "Round",
     detailLatencyBestRound: "Best round",
+    detailBestScoreLabel: "Best score",
+    detailBestScoreTooltip: "Best score across all evaluation attempts for this case.",
     detailLatencyChartAria: "Model optimization trend line chart",
     multiphaseModalTitle: "Learning Journey",
     ltccMultiphaseDescription:

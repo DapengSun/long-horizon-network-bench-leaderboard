@@ -1,32 +1,17 @@
 {
-  "ltcc-highbdp-v4|deepseek-v4-pro|opencode|2026-06-30T110636+0000-opencode-deepseek-v4-pro": {
-    "rawFile": "raw-runs/export_to_leaderboard_20260701_005611Z.jsonl",
-    "runId": "2026-06-30T110636+0000-opencode-deepseek-v4-pro",
-    "taskId": "ltcc-highbdp-v4"
+  "ltco-a100-ag-32-128m|deepseek-v4-pro|opencode|2026-07-07T011729+0000-opencode-deepseek-v4-pro-lbco-0706-2": {
+    "rawFile": "raw-runs/export_to_leaderboard_20260707_033456Z.jsonl",
+    "runId": "2026-07-07T011729+0000-opencode-deepseek-v4-pro-lbco-0706-2",
+    "taskId": "ltco-a100-ag-32-128m"
   },
-  "ltco-a100-ag-16-128m|deepseek-v4-pro|opencode|2026-06-30T110636+0000-opencode-deepseek-v4-pro": {
-    "rawFile": "raw-runs/export_to_leaderboard_20260701_005611Z.jsonl",
-    "runId": "2026-06-30T110636+0000-opencode-deepseek-v4-pro",
-    "taskId": "ltco-a100-ag-16-128m"
+  "ltco-a100-ag-8-512k|deepseek-v4-pro|opencode|2026-07-07T011729+0000-opencode-deepseek-v4-pro-lbco-0706-2": {
+    "rawFile": "raw-runs/export_to_leaderboard_20260707_033456Z.jsonl",
+    "runId": "2026-07-07T011729+0000-opencode-deepseek-v4-pro-lbco-0706-2",
+    "taskId": "ltco-a100-ag-8-512k"
   },
-  "ltlb-elephant-interfere-v4|deepseek-v4-pro|opencode|2026-06-30T110636+0000-opencode-deepseek-v4-pro": {
-    "rawFile": "raw-runs/export_to_leaderboard_20260701_005611Z.jsonl",
-    "runId": "2026-06-30T110636+0000-opencode-deepseek-v4-pro",
-    "taskId": "ltlb-elephant-interfere-v4"
-  },
-  "ltnp-hpcnet-newbuild-v1-std|deepseek-v4-pro|opencode|2026-06-30T110636+0000-opencode-deepseek-v4-pro": {
-    "rawFile": "raw-runs/export_to_leaderboard_20260701_005611Z.jsonl",
-    "runId": "2026-06-30T110636+0000-opencode-deepseek-v4-pro",
-    "taskId": "ltnp-hpcnet-newbuild-v1-std"
-  },
-  "ltrp-egress-multivrf-v1-std|deepseek-v4-pro|opencode|2026-06-30T110636+0000-opencode-deepseek-v4-pro": {
-    "rawFile": "raw-runs/export_to_leaderboard_20260701_005611Z.jsonl",
-    "runId": "2026-06-30T110636+0000-opencode-deepseek-v4-pro",
-    "taskId": "ltrp-egress-multivrf-v1-std"
-  },
-  "ltco-a100-ag-16-512k|deepseek-v4-pro|opencode|2026-07-01T010909+0000-opencode-deepseek-v4-pro": {
-    "rawFile": "raw-runs/export_to_leaderboard_20260701_013410Z.jsonl",
-    "runId": "2026-07-01T010909+0000-opencode-deepseek-v4-pro",
-    "taskId": "ltco-a100-ag-16-512k"
+  "ltco-a100-ag-8-1g|deepseek-v4-pro|opencode|2026-07-07T063113+0000-opencode-deepseek-v4-pro-e2e-20260707-143113": {
+    "rawFile": "raw-runs/export_to_leaderboard_20260707_065811Z.jsonl",
+    "runId": "2026-07-07T063113+0000-opencode-deepseek-v4-pro-e2e-20260707-143113",
+    "taskId": "ltco-a100-ag-8-1g"
   }
 }

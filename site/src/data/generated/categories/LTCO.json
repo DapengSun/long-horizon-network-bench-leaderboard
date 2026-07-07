@@ -1,28 +1,39 @@
 {
   "benchmark": "LTCO",
-  "generatedAt": "2026-07-01T02:15:53.783Z",
+  "generatedAt": "2026-07-07T07:41:26.062Z",
   "tasks": [
     {
-      "taskId": "ltco-a100-ag-16-128m",
+      "taskId": "ltco-a100-ag-32-128m",
       "model": "deepseek-v4-pro",
       "agent": "opencode",
-      "runId": "2026-06-30T110636+0000-opencode-deepseek-v4-pro",
+      "runId": "2026-07-07T011729+0000-opencode-deepseek-v4-pro-lbco-0706-2",
       "score": 0,
       "nativeScore": 0,
-      "bestRound": "round6",
-      "durationMinutes": 16.4,
-      "submittedAt": "2026-06-30T11:06:36+00:00"
+      "bestRound": "round3",
+      "durationMinutes": 31.5,
+      "submittedAt": "2026-07-07T01:17:29+00:00"
     },
     {
-      "taskId": "ltco-a100-ag-16-512k",
+      "taskId": "ltco-a100-ag-8-1g",
       "model": "deepseek-v4-pro",
       "agent": "opencode",
-      "runId": "2026-07-01T010909+0000-opencode-deepseek-v4-pro",
-      "score": 0.19769620566061052,
-      "nativeScore": 0.19769620566061052,
-      "bestRound": "round2",
-      "durationMinutes": 10.6,
-      "submittedAt": "2026-07-01T01:09:09+00:00"
+      "runId": "2026-07-07T063113+0000-opencode-deepseek-v4-pro-e2e-20260707-143113",
+      "score": 0.8571426860882112,
+      "nativeScore": 0.8571426860882112,
+      "bestRound": "round3",
+      "durationMinutes": 18.2,
+      "submittedAt": "2026-07-07T06:31:13+00:00"
+    },
+    {
+      "taskId": "ltco-a100-ag-8-512k",
+      "model": "deepseek-v4-pro",
+      "agent": "opencode",
+      "runId": "2026-07-07T011729+0000-opencode-deepseek-v4-pro-lbco-0706-2",
+      "score": 0.4285714285714286,
+      "nativeScore": 0.4285714285714286,
+      "bestRound": "round1",
+      "durationMinutes": 22.3,
+      "submittedAt": "2026-07-07T01:17:29+00:00"
     }
   ]
 }

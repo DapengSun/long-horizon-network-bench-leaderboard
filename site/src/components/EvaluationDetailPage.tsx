@@ -1,5 +1,5 @@
 import React, { useCallback, useMemo, useState } from "react";
-import { Button, Select, Table, Tag, Typography, type TableColumnsType } from "antd";
+import { Button, Select, Table, Tooltip, Typography, type TableColumnsType } from "antd";
 import { LineChartOutlined } from "@ant-design/icons";
 import { getEvaluationDetailEntry } from "../data/evaluationDetailsLoader";
 import { buildCaseDetailChartPayload } from "../features/caseDetailChart";
@@ -8,10 +8,12 @@ import {
   formatPhaseRoundCount,
   isMultiphaseCategory,
 } from "../features/multiphaseDetail";
+import { DEFAULT_DETAIL_METRIC, sortDetailPoints } from "../features/caseDetailChart";
 import { useLocale } from "../i18n/LocaleContext";
 import type { MessageKey } from "../i18n/messages";
 import type {
   CaseDetailChartPayload,
+  EvaluationCaseAttempt,
   EvaluationCaseResult,
   EvaluationDetailSelection,
 } from "../types";
@@ -58,6 +60,38 @@ function formatAttemptTime(value: string | undefined): string {
 
 function totalDuration(cases: EvaluationCaseResult[]): number {
   return cases.reduce((sum, item) => sum + item.durationMinutes, 0);
+}
+
+function attemptTime(
+  attempt: Pick<EvaluationCaseResult, "evaluatedAt" | "submittedAt">
+): string | undefined {
+  return attempt.evaluatedAt ?? attempt.submittedAt;
+}
+
+function renderScoreCell(
+  record: Pick<EvaluationCaseResult, "score" | "optPercent" | "isBest">,
+  isMultiphase: boolean,
+  t: (key: MessageKey) => string,
+  options?: { showBestStar?: boolean }
+): React.ReactNode {
+  const label = isMultiphase ? formatScore(record.score) : formatOptPercent(record.optPercent);
+  const showBestStar = options?.showBestStar && record.isBest;
+
+  return (
+    <span className="detail-score-pill">
+      <span className="detail-score-pill-value">{label}</span>
+      {showBestStar ? (
+        <Tooltip title={t("detailBestScoreTooltip")}>
+          <span
+            className="detail-score-pill-star multiphase-selected-star"
+            aria-label={t("detailBestScoreLabel")}
+          >
+            ⭐
+          </span>
+        </Tooltip>
+      ) : null}
+    </span>
+  );
 }
 
 export const EvaluationDetailPage: React.FC<EvaluationDetailPageProps> = ({
@@ -107,12 +141,40 @@ export const EvaluationDetailPage: React.FC<EvaluationDetailPageProps> = ({
     [categoryTitle, selection.category, selection.model]
   );
 
+  const openAttemptChart = useCallback(
+    (caseName: string, attempt: EvaluationCaseAttempt) => {
+      if (!attempt.detail?.length) {
+        return;
+      }
+      const timeLabel = formatAttemptTime(attempt.evaluatedAt ?? attempt.submittedAt);
+      setChartPayload({
+        case: caseName,
+        category: selection.category,
+        categoryTitle,
+        metric: activeEntry?.metric ?? DEFAULT_DETAIL_METRIC,
+        results: [
+          {
+            model: `${selection.model} · ${timeLabel}`,
+            detail: sortDetailPoints(attempt.detail),
+            finalScore: attempt.optPercent / 100,
+            bestRound: attempt.best,
+            durationMinutes: attempt.durationMinutes,
+            roundCount: attempt.rounds,
+          },
+        ],
+      });
+      setChartOpen(true);
+    },
+    [activeEntry?.metric, categoryTitle, selection.category, selection.model]
+  );
+
   const columns = useMemo<TableColumnsType<(typeof cases)[number]>>(
     () => [
       {
         title: t("detailCaseColumn"),
         dataIndex: "case",
         key: "case",
+        align: "center",
         width: "20%",
         defaultSortOrder: "ascend",
         sorter: (a, b) => a.case.localeCompare(b.case),
@@ -129,9 +191,26 @@ export const EvaluationDetailPage: React.FC<EvaluationDetailPageProps> = ({
                 icon={<LineChartOutlined />}
                 title={t("detailViewLatencyChart")}
                 aria-label={t("detailViewLatencyChart")}
-                onClick={() => openCaseChart(record.case)}
+                onClick={(event) => {
+                  event.stopPropagation();
+                  openCaseChart(record.case);
+                }}
               />
             ) : null}
+          </div>
+        ),
+      },
+      {
+        title: t("detailEvaluatedAtColumn"),
+        key: "evaluatedAt",
+        align: "center",
+        width: "18%",
+        sorter: (a, b) =>
+          new Date(attemptTime(a) ?? 0).getTime() -
+          new Date(attemptTime(b) ?? 0).getTime(),
+        render: (_, record) => (
+          <div className="detail-attempt-time-cell">
+            <span>{formatAttemptTime(attemptTime(record))}</span>
           </div>
         ),
       },
@@ -140,7 +219,7 @@ export const EvaluationDetailPage: React.FC<EvaluationDetailPageProps> = ({
         dataIndex: "rounds",
         key: "rounds",
         align: "center",
-        width: "20%",
+        width: "13%",
         sorter: (a, b) => a.rounds - b.rounds,
         render: (rounds: number, record) =>
           isMultiphase ? formatPhaseRoundCount(record.detail, rounds) : rounds,
@@ -150,7 +229,7 @@ export const EvaluationDetailPage: React.FC<EvaluationDetailPageProps> = ({
         dataIndex: "best",
         key: "best",
         align: "center",
-        width: "20%",
+        width: "15%",
         render: (best: string, record) =>
           isMultiphase ? bestRoundForDisplay(record.detail, best) : best,
       },
@@ -159,12 +238,14 @@ export const EvaluationDetailPage: React.FC<EvaluationDetailPageProps> = ({
         dataIndex: "optPercent",
         key: "optPercent",
         align: "center",
-        width: "20%",
+        width: "15%",
         sorter: (a, b) =>
           isMultiphase ? a.score - b.score : a.optPercent - b.optPercent,
-        render: (value: number, record) => (
+        render: (_, record) => (
           <span className="detail-score-pill">
-            {isMultiphase ? formatScore(record.score) : formatOptPercent(value)}
+            <span className="detail-score-pill-value">
+              {isMultiphase ? formatScore(record.score) : formatOptPercent(record.optPercent)}
+            </span>
           </span>
         ),
       },
@@ -173,7 +254,7 @@ export const EvaluationDetailPage: React.FC<EvaluationDetailPageProps> = ({
         dataIndex: "durationMinutes",
         key: "durationMinutes",
         align: "center",
-        width: "20%",
+        width: "15%",
         sorter: (a, b) => a.durationMinutes - b.durationMinutes,
         render: (minutes: number) => formatDuration(minutes),
       },
@@ -190,30 +271,80 @@ export const EvaluationDetailPage: React.FC<EvaluationDetailPageProps> = ({
       }
 
       return (
-        <div className="detail-history-list">
-          {history.map((attempt, index) => (
-            <div
-              className="detail-history-item"
-              key={`${attempt.runId ?? "run"}-${attempt.evaluatedAt ?? index}`}
-            >
-              <span>{formatAttemptTime(attempt.evaluatedAt ?? attempt.submittedAt)}</span>
-              <strong>
-                {isMultiphase
-                  ? formatScore(attempt.score)
-                  : formatOptPercent(attempt.optPercent)}
-              </strong>
-              <span>{formatDuration(attempt.durationMinutes)}</span>
-              <span className="detail-history-tags">
-                {attempt.isLatest ? <Tag color="blue">latest</Tag> : null}
-                {attempt.isBest ? <Tag color="green">best</Tag> : null}
-              </span>
-              <small>{attempt.sourceCaseRunPath ?? attempt.runId}</small>
-            </div>
-          ))}
+        <div className="detail-history-panel">
+          <table className="detail-history-rows-table">
+          <colgroup>
+            <col className="detail-history-col-expand" />
+            <col style={{ width: "20%" }} />
+            <col style={{ width: "18%" }} />
+            <col style={{ width: "13%" }} />
+            <col style={{ width: "15%" }} />
+            <col style={{ width: "15%" }} />
+            <col style={{ width: "15%" }} />
+          </colgroup>
+          <tbody>
+            {history.map((attempt, index) => (
+              <tr
+                key={`${attempt.runId ?? "run"}-${attempt.evaluatedAt ?? index}`}
+                className="detail-history-row"
+              >
+                <td className="detail-history-col-expand" aria-hidden="true" />
+                <td className="detail-history-cell-case" />
+                <td className="detail-history-cell-center">
+                  <div className="detail-history-cell-inner">
+                    <div className="detail-attempt-time-cell">
+                      {attempt.detail?.length ? (
+                        <Button
+                          type="text"
+                          size="small"
+                          className="detail-case-chart-button"
+                          icon={<LineChartOutlined />}
+                          title={t("detailViewLatencyChart")}
+                          aria-label={t("detailViewLatencyChart")}
+                          onClick={(event) => {
+                            event.stopPropagation();
+                            openAttemptChart(record.case, attempt);
+                          }}
+                        />
+                      ) : null}
+                      <span>
+                        {formatAttemptTime(attempt.evaluatedAt ?? attempt.submittedAt)}
+                      </span>
+                    </div>
+                  </div>
+                </td>
+                <td className="detail-history-cell-center">
+                  <span className="detail-history-cell-inner">
+                    {isMultiphase
+                      ? formatPhaseRoundCount(attempt.detail, attempt.rounds)
+                      : attempt.rounds}
+                  </span>
+                </td>
+                <td className="detail-history-cell-center">
+                  <span className="detail-history-cell-inner">
+                    {isMultiphase
+                      ? bestRoundForDisplay(attempt.detail, attempt.best)
+                      : attempt.best}
+                  </span>
+                </td>
+                <td className="detail-history-cell-center">
+                  <span className="detail-history-cell-inner">
+                    {renderScoreCell(attempt, isMultiphase, t, { showBestStar: true })}
+                  </span>
+                </td>
+                <td className="detail-history-cell-center">
+                  <span className="detail-history-cell-inner">
+                    {formatDuration(attempt.durationMinutes)}
+                  </span>
+                </td>
+              </tr>
+            ))}
+          </tbody>
+          </table>
         </div>
       );
     },
-    [isMultiphase]
+    [isMultiphase, openAttemptChart, t]
   );
 
   return (
@@ -280,10 +411,15 @@ export const EvaluationDetailPage: React.FC<EvaluationDetailPageProps> = ({
         expandable={
           hasExpandableHistory
             ? {
+                expandRowByClick: true,
                 expandedRowRender: renderHistory,
+                expandedRowClassName: () => "detail-expanded-row",
                 rowExpandable: (record) => (record.history?.length ?? 0) > 1,
               }
             : undefined
+        }
+        rowClassName={(record) =>
+          (record.history?.length ?? 0) > 1 ? "detail-row-expandable" : ""
         }
         pagination={false}
         bordered={false}

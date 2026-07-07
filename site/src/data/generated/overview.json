@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-01T02:15:53.783Z",
+  "generatedAt": "2026-07-07T07:41:26.062Z",
   "benchmarks": [
     {
       "id": "LTNP",
@@ -142,15 +142,11 @@
         "OSS",
         "国产"
       ],
-      "latestRunId": "2026-06-30T110636+0000-opencode-deepseek-v4-pro",
+      "latestRunId": "2026-07-07T063113+0000-opencode-deepseek-v4-pro-e2e-20260707-143113",
       "benchmarks": {
-        "LTCC": 0.1671,
-        "LTCO": 0.0988,
-        "LTLB": 0.1221,
-        "LTNP": 0.4349,
-        "LTRP": 0.3847
+        "LTCO": 0.4286
       },
-      "overall": 0.2415
+      "overall": 0.4286
     }
   ]
 }

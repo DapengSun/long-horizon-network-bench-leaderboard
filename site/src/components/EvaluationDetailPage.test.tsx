@@ -72,8 +72,47 @@ describe("EvaluationDetailPage", () => {
     expect(screen.getByText("rounds")).toBeTruthy();
     expect(screen.getByText("best")).toBeTruthy();
     expect(screen.getByText("opt%")).toBeTruthy();
+    expect(screen.getByText("evaluated at")).toBeTruthy();
     expect(screen.getByText("duration")).toBeTruthy();
     expect(screen.getByText("ltco-a100-ag-16-128m")).toBeTruthy();
+  });
+
+  it("expands historical attempts as evaluation rows without source paths", () => {
+    const { container } = renderDetail({
+      model: "DeepSeek-V4-Pro · OpenCode",
+      category: "LTCO",
+    });
+
+    const expandButton = container.querySelector(
+      ".ant-table-row-expand-icon"
+    ) as HTMLButtonElement | null;
+    expect(expandButton).toBeTruthy();
+    const expandableRow = expandButton?.closest("tr");
+    expect(expandableRow).toBeTruthy();
+    fireEvent.click(expandableRow as Element);
+    expect(expandButton?.getAttribute("aria-expanded")).toBe("true");
+    fireEvent.click(expandableRow as Element);
+    expect(expandButton?.getAttribute("aria-expanded")).toBe("false");
+    fireEvent.click(expandableRow as Element);
+
+    expect(screen.getByRole("columnheader", { name: "evaluated at" })).toBeTruthy();
+    expect(screen.getByRole("columnheader", { name: "rounds" })).toBeTruthy();
+    expect(screen.getByRole("columnheader", { name: "best" })).toBeTruthy();
+    expect(screen.getByRole("columnheader", { name: "opt%" })).toBeTruthy();
+    expect(screen.getByRole("columnheader", { name: "duration" })).toBeTruthy();
+    expect(container.querySelector(".detail-history-panel")).toBeTruthy();
+    expect(screen.queryByText("latest")).toBeNull();
+    expect(
+      container.querySelectorAll(".detail-history-panel .detail-score-pill-star").length
+    ).toBeGreaterThan(0);
+    const mainTableBody = container.querySelector(".detail-result-table .ant-table-tbody");
+    for (const row of mainTableBody?.querySelectorAll(":scope > tr:not(.ant-table-expanded-row)") ??
+      []) {
+      expect(row.querySelector(".detail-score-pill-star")).toBeNull();
+    }
+    expect(screen.getAllByLabelText("View latency trend chart").length).toBeGreaterThan(1);
+    expect(screen.queryByText("fake-old-opencode-deepseek-v4-pro")).toBeNull();
+    expect(screen.queryByText("fake-latest-opencode-deepseek-v4-pro")).toBeNull();
   });
 
   it("shows Chinese UI chrome when locale is Chinese", () => {
