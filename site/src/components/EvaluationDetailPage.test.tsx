@@ -71,7 +71,7 @@ describe("EvaluationDetailPage", () => {
     expect(screen.getByText("case")).toBeTruthy();
     expect(screen.getByText("rounds")).toBeTruthy();
     expect(screen.getByText("best")).toBeTruthy();
-    expect(screen.getByText("opt%")).toBeTruthy();
+    expect(screen.getByText("Score")).toBeTruthy();
     expect(screen.getByText("evaluated at")).toBeTruthy();
     expect(screen.getByText("duration")).toBeTruthy();
     expect(screen.getByText("ltco-a100-ag-16-128m")).toBeTruthy();
@@ -98,7 +98,7 @@ describe("EvaluationDetailPage", () => {
     expect(screen.getByRole("columnheader", { name: "evaluated at" })).toBeTruthy();
     expect(screen.getByRole("columnheader", { name: "rounds" })).toBeTruthy();
     expect(screen.getByRole("columnheader", { name: "best" })).toBeTruthy();
-    expect(screen.getByRole("columnheader", { name: "opt%" })).toBeTruthy();
+    expect(screen.getByRole("columnheader", { name: "Score" })).toBeTruthy();
     expect(screen.getByRole("columnheader", { name: "duration" })).toBeTruthy();
     expect(container.querySelector(".detail-history-panel")).toBeTruthy();
     expect(screen.queryByText("latest")).toBeNull();
@@ -231,7 +231,7 @@ describe("EvaluationDetailPage", () => {
     expect(screen.getByRole("columnheader", { name: "Baseline latency (us)" })).toBeTruthy();
     expect(screen.getByText("162.286")).toBeTruthy();
     expect(screen.getAllByText("202.275").length).toBeGreaterThan(0);
-    expect(screen.getAllByText("+19.77%").length).toBeGreaterThan(0);
+    expect(screen.getAllByText("0.1977").length).toBeGreaterThan(0);
     expect(screen.queryByRole("columnheader", { name: "Best" })).toBeNull();
     expect(screen.queryByLabelText("Expand row")).toBeNull();
     expect(screen.getByLabelText("Best round")).toBeTruthy();

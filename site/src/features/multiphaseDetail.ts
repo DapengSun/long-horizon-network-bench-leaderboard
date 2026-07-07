@@ -200,13 +200,13 @@ function buildGeneralizationStory(
     parts.push(`anchor gain ${sign}${(phase1GainValue * 100).toFixed(1)}pp`);
   }
   if (bestPhase2Round) {
-    parts.push(`best public suite ${(bestPhase2Round.score * 100).toFixed(1)}%`);
+    parts.push(`best public suite ${bestPhase2Round.score.toFixed(4)}`);
   }
   if (phase2SloPassRate !== undefined) {
     parts.push(`SLO pass ${(phase2SloPassRate * 100).toFixed(0)}%`);
   }
   if (worstPublicScenarioScore !== undefined) {
-    parts.push(`worst scenario ${(worstPublicScenarioScore * 100).toFixed(1)}%`);
+    parts.push(`worst scenario ${worstPublicScenarioScore.toFixed(4)}`);
   }
   return parts.length > 0
     ? `This run shows ${parts.join(", ")}.`

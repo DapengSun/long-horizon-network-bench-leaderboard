@@ -3,7 +3,7 @@ import { Tooltip } from "antd";
 import {
   chartValueForDetailPoint,
   findBestDetailPoint,
-  formatImprovementPct,
+  formatNormalizedScore,
   formatScoreWithUnit,
   parseRoundIndex,
 } from "../features/caseDetailChart";
@@ -36,7 +36,7 @@ interface PlotPoint {
   score: number;
   bestLatencyUs?: number;
   baselineLatencyUs?: number;
-  improvementPct: number;
+  chartScore: number;
   x: number;
   y: number;
   color: string;
@@ -87,8 +87,7 @@ function LtcoRoundTable({
           <thead>
             <tr>
               <th>Round</th>
-              <th>Latency improvement</th>
-              <th>Raw score</th>
+              <th>Score</th>
               <th>Best latency (us)</th>
               <th>Baseline latency (us)</th>
               <th>
@@ -120,7 +119,6 @@ function LtcoRoundTable({
                       ) : null}
                     </span>
                   </td>
-                  <td>{formatImprovementPct(point.score * 100)}</td>
                   <td>{formatScore(point.score)}</td>
                   <td>{formatLatencyUs(bestLatency)}</td>
                   <td>{formatLatencyUs(baselineLatency)}</td>
@@ -173,11 +171,8 @@ export const CaseLatencyChart: React.FC<CaseLatencyChartProps> = ({ payload }) =
           : findBestDetailPoint(sortedDetail, metric.direction);
       const points: PlotPoint[] = sortedDetail.map((point) => {
         const roundIndex = parseRoundIndex(point.round);
-        const improvementPct = chartValueForDetailPoint({
-          category: payload.category,
-          baselineScore,
+        const chartScore = chartValueForDetailPoint({
           currentScore: point.score,
-          direction: metric.direction,
         });
         return {
           model: result.model,
@@ -186,7 +181,7 @@ export const CaseLatencyChart: React.FC<CaseLatencyChartProps> = ({ payload }) =
           score: point.score,
           bestLatencyUs: metricNumber(point, "best_latency_us"),
           baselineLatencyUs: metricNumber(point, "baseline_latency_us"),
-          improvementPct,
+          chartScore,
           x: 0,
           y: 0,
           color,
@@ -203,15 +198,14 @@ export const CaseLatencyChart: React.FC<CaseLatencyChartProps> = ({ payload }) =
       };
     });
 
-    const improvements = series.flatMap((item) =>
-      item.points.map((point) => point.improvementPct)
+    const chartScores = series.flatMap((item) =>
+      item.points.map((point) => point.chartScore)
     );
-    const minImprovement = Math.min(0, ...improvements);
-    const maxImprovement = Math.max(0, ...improvements);
-    const padding =
-      (maxImprovement - minImprovement || Math.abs(maxImprovement) || 1) * 0.12;
-    const yMin = minImprovement - padding;
-    const yMax = maxImprovement + padding;
+    const minScore = Math.min(0, ...chartScores);
+    const maxScore = Math.max(1, ...chartScores);
+    const padding = (maxScore - minScore || 1) * 0.12;
+    const yMin = Math.max(0, minScore - padding);
+    const yMax = Math.min(1, maxScore + padding);
     const xStep =
       roundIndexes.length > 1 ? innerWidth / (roundIndexes.length - 1) : 0;
 
@@ -220,7 +214,7 @@ export const CaseLatencyChart: React.FC<CaseLatencyChartProps> = ({ payload }) =
       return MARGIN.left + position * xStep;
     };
 
-    const yForImprovement = (value: number) => {
+    const yForScore = (value: number) => {
       if (yMax === yMin) {
         return MARGIN.top + innerHeight / 2;
       }
@@ -232,7 +226,7 @@ export const CaseLatencyChart: React.FC<CaseLatencyChartProps> = ({ payload }) =
       const points = item.points.map((point) => ({
         ...point,
         x: xForRound(point.roundIndex),
-        y: yForImprovement(point.improvementPct),
+        y: yForScore(point.chartScore),
       }));
 
       return {
@@ -256,13 +250,13 @@ export const CaseLatencyChart: React.FC<CaseLatencyChartProps> = ({ payload }) =
     });
 
     function plotBaselineY(): number {
-      return yForImprovement(0);
+      return yForScore(0);
     }
 
     return {
       roundIndexes,
       yTicks: buildTicks(yMin, yMax),
-      yForImprovement,
+      yForScore,
       xForRound,
       series: plottedSeries,
       innerWidth,
@@ -280,7 +274,7 @@ export const CaseLatencyChart: React.FC<CaseLatencyChartProps> = ({ payload }) =
       if (!best) {
         return point;
       }
-      return point.improvementPct > best.improvementPct ? point : best;
+      return point.chartScore > best.chartScore ? point : best;
     }, null);
     const latestPoint = allPoints.reduce<PlotPoint | null>((latest, point) => {
       if (!latest) {
@@ -297,7 +291,7 @@ export const CaseLatencyChart: React.FC<CaseLatencyChartProps> = ({ payload }) =
       <div className="case-latency-chart-meta">
         <div className="case-latency-chart-meta-card">
           <span>{t("detailChartPlotMetric")}</span>
-          <strong>{t("detailImprovementAxis")}</strong>
+          <strong>{t("detailScoreAxis")}</strong>
         </div>
         <div className="case-latency-chart-meta-card">
           <span>{t("detailChartRawMetric")}</span>
@@ -306,7 +300,7 @@ export const CaseLatencyChart: React.FC<CaseLatencyChartProps> = ({ payload }) =
         {summary.bestPoint ? (
           <div className="case-latency-chart-meta-card accent">
             <span>{t("detailLatencyBestRound")}</span>
-            <strong>{formatImprovementPct(summary.bestPoint.improvementPct)}</strong>
+            <strong>{formatNormalizedScore(summary.bestPoint.chartScore)}</strong>
           </div>
         ) : null}
       </div>
@@ -377,7 +371,7 @@ export const CaseLatencyChart: React.FC<CaseLatencyChartProps> = ({ payload }) =
         />
 
         {plot.yTicks.map((tick) => {
-          const y = plot.yForImprovement(tick);
+          const y = plot.yForScore(tick);
           return (
             <g key={tick}>
               <line
@@ -388,7 +382,7 @@ export const CaseLatencyChart: React.FC<CaseLatencyChartProps> = ({ payload }) =
                 className="case-latency-chart-grid"
               />
               <text x={MARGIN.left - 10} y={y + 4} className="case-latency-chart-tick">
-                {formatImprovementPct(tick)}
+                {formatNormalizedScore(tick)}
               </text>
             </g>
           );
@@ -429,7 +423,7 @@ export const CaseLatencyChart: React.FC<CaseLatencyChartProps> = ({ payload }) =
           className="case-latency-chart-axis-label"
           transform={`rotate(-90 18 ${MARGIN.top + plot.innerHeight / 2})`}
         >
-          {t("detailImprovementAxis")}
+          {t("detailScoreAxis")}
         </text>
         <text
           x={MARGIN.left + plot.innerWidth / 2}
@@ -513,7 +507,7 @@ export const CaseLatencyChart: React.FC<CaseLatencyChartProps> = ({ payload }) =
           >
             <strong>{hoveredPoint.model}</strong>
             <span>
-              {hoveredPoint.round}: {formatImprovementPct(hoveredPoint.improvementPct)}
+              {hoveredPoint.round}: {formatNormalizedScore(hoveredPoint.chartScore)}
             </span>
             <span>
               {t("detailChartRawMetric")}:{" "}
@@ -546,7 +540,7 @@ export const CaseLatencyChart: React.FC<CaseLatencyChartProps> = ({ payload }) =
             <span />
             <span>
               {t("detailChartLatestRound")} {summary.latestPoint.round}:{" "}
-              {formatImprovementPct(summary.latestPoint.improvementPct)}
+              {formatNormalizedScore(summary.latestPoint.chartScore)}
             </span>
           </div>
         ) : null}

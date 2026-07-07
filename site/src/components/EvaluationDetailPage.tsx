@@ -42,10 +42,6 @@ function formatDuration(minutes: number): string {
   return `${minutes.toFixed(1)}m`;
 }
 
-function formatOptPercent(value: number): string {
-  return `${value.toFixed(2)}%`;
-}
-
 function formatScore(value: number): string {
   return value.toFixed(4);
 }
@@ -69,12 +65,11 @@ function attemptTime(
 }
 
 function renderScoreCell(
-  record: Pick<EvaluationCaseResult, "score" | "optPercent" | "isBest">,
-  isMultiphase: boolean,
+  record: Pick<EvaluationCaseResult, "score" | "isBest">,
   t: (key: MessageKey) => string,
   options?: { showBestStar?: boolean }
 ): React.ReactNode {
-  const label = isMultiphase ? formatScore(record.score) : formatOptPercent(record.optPercent);
+  const label = formatScore(record.score);
   const showBestStar = options?.showBestStar && record.isBest;
 
   return (
@@ -156,7 +151,7 @@ export const EvaluationDetailPage: React.FC<EvaluationDetailPageProps> = ({
           {
             model: `${selection.model} · ${timeLabel}`,
             detail: sortDetailPoints(attempt.detail),
-            finalScore: attempt.optPercent / 100,
+            finalScore: attempt.score,
             bestRound: attempt.best,
             durationMinutes: attempt.durationMinutes,
             roundCount: attempt.rounds,
@@ -234,20 +229,13 @@ export const EvaluationDetailPage: React.FC<EvaluationDetailPageProps> = ({
           isMultiphase ? bestRoundForDisplay(record.detail, best) : best,
       },
       {
-        title: isMultiphase ? t("detailScoreColumn") : t("detailOptPercentColumn"),
-        dataIndex: "optPercent",
-        key: "optPercent",
+        title: t("detailScoreColumn"),
+        dataIndex: "score",
+        key: "score",
         align: "center",
         width: "15%",
-        sorter: (a, b) =>
-          isMultiphase ? a.score - b.score : a.optPercent - b.optPercent,
-        render: (_, record) => (
-          <span className="detail-score-pill">
-            <span className="detail-score-pill-value">
-              {isMultiphase ? formatScore(record.score) : formatOptPercent(record.optPercent)}
-            </span>
-          </span>
-        ),
+        sorter: (a, b) => a.score - b.score,
+        render: (_, record) => renderScoreCell(record, t),
       },
       {
         title: t("detailDurationColumn"),
@@ -329,7 +317,7 @@ export const EvaluationDetailPage: React.FC<EvaluationDetailPageProps> = ({
                 </td>
                 <td className="detail-history-cell-center">
                   <span className="detail-history-cell-inner">
-                    {renderScoreCell(attempt, isMultiphase, t, { showBestStar: true })}
+                    {renderScoreCell(attempt, t, { showBestStar: true })}
                   </span>
                 </td>
                 <td className="detail-history-cell-center">

@@ -60,7 +60,6 @@ export interface EvaluationCaseResult {
   rounds: number;
   best: string;
   score: number;
-  optPercent: number;
   durationMinutes: number;
   runId?: string;
   evaluatedAt?: string;
@@ -80,7 +79,6 @@ export interface EvaluationCaseAttempt {
   rounds: number;
   best: string;
   score: number;
-  optPercent: number;
   durationMinutes: number;
   isBest: boolean;
   isLatest: boolean;

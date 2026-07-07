@@ -56,26 +56,20 @@ describe("caseDetailChart", () => {
     expect(formatImprovementPct(12.5)).toBe("+12.50%");
   });
 
-  it("uses LTCO normalized score as latency improvement percent", () => {
+  it("uses normalized score directly for chart values", () => {
     expect(
       chartValueForDetailPoint({
-        category: "LTCO",
-        baselineScore: 0,
         currentScore: 0.19769620566061058,
-        direction: "higher_is_better",
       })
-    ).toBeCloseTo(19.7696205661);
+    ).toBeCloseTo(0.19769620566061058);
   });
 
-  it("keeps non-LTCO chart values relative to the first round baseline", () => {
+  it("keeps chart values on the normalized 0-1 scale", () => {
     expect(
       chartValueForDetailPoint({
-        category: "LTCC",
-        baselineScore: 0.5,
         currentScore: 0.75,
-        direction: "higher_is_better",
       })
-    ).toBe(50);
+    ).toBe(0.75);
   });
 
   it("builds chart payload with metric metadata", () => {

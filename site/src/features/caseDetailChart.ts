@@ -58,21 +58,18 @@ export function improvementVsBaselinePct(
 }
 
 export function chartValueForDetailPoint({
-  category,
-  baselineScore,
   currentScore,
-  direction,
 }: {
-  category: string;
-  baselineScore: number;
+  category?: string;
+  baselineScore?: number;
   currentScore: number;
-  direction: MetricDirection;
+  direction?: MetricDirection;
 }): number {
-  if (category === "LTCO") {
-    return currentScore * 100;
-  }
+  return currentScore;
+}
 
-  return improvementVsBaselinePct(baselineScore, currentScore, direction);
+export function formatNormalizedScore(value: number): string {
+  return value.toFixed(4);
 }
 
 /** @deprecated use improvementVsBaselinePct for chart semantics */
@@ -144,7 +141,7 @@ export function buildCaseDetailChartPayload(
       return {
         model: entry.model,
         detail: sortDetailPoints(caseItem.detail),
-        finalScore: caseItem.optPercent / 100,
+        finalScore: caseItem.score,
         bestRound: caseItem.best,
         durationMinutes: caseItem.durationMinutes,
         roundCount: caseItem.rounds,

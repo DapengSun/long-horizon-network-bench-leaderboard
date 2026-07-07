@@ -59,7 +59,7 @@ const RADAR_COLORS = [
 ];
 
 function formatScore(score: number): string {
-  return `${(score * 100).toFixed(1)}%`;
+  return score.toFixed(4);
 }
 
 function pointForAxis(

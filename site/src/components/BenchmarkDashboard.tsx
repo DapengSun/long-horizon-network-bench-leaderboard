@@ -70,7 +70,7 @@ const FIELD_OPTIONS: FieldOption[] = [
 ];
 
 function formatAverage(value: number): string {
-  return `${(value * 100).toFixed(2)}%`;
+  return value.toFixed(4);
 }
 
 function scoreStyle(score: number): React.CSSProperties {

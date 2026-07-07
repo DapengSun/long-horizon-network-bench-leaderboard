@@ -23,13 +23,13 @@ describe("evaluationDetailsLoader", () => {
     );
     const history = caseResult?.history ?? [];
 
-    expect(caseResult?.optPercent).toBe(88);
+    expect(caseResult?.score).toBe(0.88);
     expect(caseResult?.evaluatedAt).toBe("2026-06-16T10:30:00Z");
     expect(history).toHaveLength(2);
     expect(history.find((attempt) => attempt.isLatest)?.evaluatedAt).toBe(
       "2026-06-16T10:30:00Z"
     );
-    expect(history.find((attempt) => attempt.isBest)?.optPercent).toBe(95);
+    expect(history.find((attempt) => attempt.isBest)?.score).toBe(0.95);
   });
 
   it("returns undefined when model or category has no detail file", () => {
