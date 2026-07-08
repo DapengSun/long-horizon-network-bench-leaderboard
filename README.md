@@ -7,9 +7,10 @@
 
 > 中文版本：[README_zh.md](README_zh.md)
 
-Web frontend for the Long-Horizon-Network-Bench evaluation leaderboard. The site
-presents model rankings, benchmark comparisons, and per-evaluation drill-down
-views.
+Web frontend for the Long-Horizon-Network-Bench evaluation leaderboard. It
+displays model rankings, benchmark comparisons, and per-evaluation details.
+
+Quick links: [Getting started](#getting-started) · [Local preview](#optional-local-preview) · [Development](#development)
 
 This project receives user-submitted NetEval Pro harness results and publishes
 the public leaderboard:
@@ -46,12 +47,9 @@ leaderboard-mvp/
         └── i18n/         # EN / ZH UI strings
 ```
 
-## Submit Real Harness Data
+## Getting Started
 
-Use this when you have already run NetEval Pro locally and want your results to
-appear on the public leaderboard.
-
-From the NetEval Pro checkout, export completed harness runs into this
+After running NetEval Pro locally, export completed harness runs into this
 leaderboard checkout:
 
 ```bash
@@ -70,23 +68,21 @@ The exporter writes JSONL files like:
 site/src/data/raw-runs/export_to_leaderboard_<timestamp>.jsonl
 ```
 
-## Pull Request Checklist
-
 Open the PR in this repository. The PR should include only the raw-runs JSONL
 files exported by NetEval Pro.
 
-Commit:
+Submit:
 
 - `site/src/data/raw-runs/export_to_leaderboard_<timestamp>.jsonl`
 
-Do not commit:
+Do not submit:
 
 - `.netops-runs/`
 - local logs or secrets
 - `site/src/data/generated/`
 - `site/dist/`
 
-Use this PR description template:
+Suggested PR description:
 
 ```markdown
 ## Evaluation

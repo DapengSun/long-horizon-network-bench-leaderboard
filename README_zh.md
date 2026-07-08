@@ -10,6 +10,8 @@
 本项目是 Long-Horizon-Network-Bench evaluation leaderboard 的 Web 前端，用于展示
 模型排名、benchmark 对比和单次评测详情。
 
+快速导航：[快速开始](#快速开始) · [本地预览](#可选本地预览) · [开发](#开发)
+
 本仓库接收由 NetEval Pro harness 导出的真实评测结果，并用于公开榜单展示：
 
 ```text
@@ -44,10 +46,9 @@ leaderboard-mvp/
         └── i18n/         # EN / ZH UI strings
 ```
 
-## 提交真实 Harness 数据
+## 快速开始
 
-如果你已经在本地运行 NetEval Pro，并希望结果进入公开榜单，请将完成的 harness 运行导出到
-本 leaderboard checkout：
+本地运行 NetEval Pro 后，将完成的 harness 运行导出到本 leaderboard checkout：
 
 ```bash
 export LEADERBOARD_FRONTEND=/path/to/long-horizon-network-bench/leaderboard-mvp
@@ -65,8 +66,6 @@ uv run neteval export leaderboard \
 site/src/data/raw-runs/export_to_leaderboard_<timestamp>.jsonl
 ```
 
-## Pull Request 清单
-
 在本仓库发起 PR。PR 应只包含 NetEval Pro 导出的 raw-runs JSONL 文件。
 
 提交：
@@ -80,7 +79,7 @@ site/src/data/raw-runs/export_to_leaderboard_<timestamp>.jsonl
 - `site/src/data/generated/`
 - `site/dist/`
 
-PR 描述建议使用：
+PR 描述建议：
 
 ```markdown
 ## Evaluation
