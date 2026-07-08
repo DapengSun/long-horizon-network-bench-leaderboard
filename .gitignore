@@ -12,5 +12,5 @@ dist/
 # OS
 .DS_Store
 
-site/src/data/raw-runs/
+# Real harness exports under site/src/data/raw-runs/ are submitted by users via PR.
 site/src/data/generated/
