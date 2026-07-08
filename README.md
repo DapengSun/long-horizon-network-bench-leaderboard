@@ -1,5 +1,10 @@
 # Long-Horizon-Network-Bench Leaderboard
 
+[![Node 20](https://img.shields.io/badge/node-20-blue)](site/package.json)
+[![React 18](https://img.shields.io/badge/react-18-blue)](site/package.json)
+[![Vite 5](https://img.shields.io/badge/vite-5-purple)](site/package.json)
+![Data submissions](https://img.shields.io/badge/data-raw--runs%20PR-green)
+
 Web frontend for the Long-Horizon-Network-Bench evaluation leaderboard. The site
 presents model rankings, benchmark comparisons, and per-evaluation drill-down
 views.
@@ -13,12 +18,11 @@ Long-Horizon-Network-Bench case bank
   -> run_report.json
   -> site/src/data/raw-runs/export_to_leaderboard_*.jsonl
   -> pull request
-  -> maintainer/CI regenerates leaderboard data and publishes the site
+  -> review and publish
 ```
 
 For normal submitters, the only files to add are exported JSONL files under
-`site/src/data/raw-runs/`. Do not submit generated frontend data; maintainers or
-CI rebuild it after merging accepted PRs.
+`site/src/data/raw-runs/`. Do not submit generated frontend data.
 
 ## Features
 
@@ -102,9 +106,6 @@ Use this PR description template:
 - Any known failed or skipped cases:
 ```
 
-Maintainers merge accepted raw-runs PRs and run the real-data generation and
-publish flow.
-
 ## Optional Local Preview
 
 Preview is not required for submission. If you want to inspect the site locally:
@@ -150,41 +151,3 @@ npm run preview -- --host 127.0.0.1
 ```
 
 Open http://127.0.0.1:4173
-
-## Deployment
-
-This directory can be published as a standalone repository (e.g. `long-horizon-network-bench-leaderboard`).
-
-### GitHub Pages
-
-Workflow: `.github/workflows/deploy-pages.yml`
-
-- Runs `npm ci`, `npm test`, and `npm run build` in `site/`
-- Sets `VITE_BASE_PATH=/${{ github.event.repository.name }}/`
-- Deploys `site/dist` to GitHub Pages
-
-In the repository, go to **Settings → Pages** and set **Source** to **GitHub Actions**. Pushes to `master` deploy automatically; you can also trigger **Deploy leaderboard to GitHub Pages** manually.
-
-Example URL:
-
-```text
-https://<github-username>.github.io/long-horizon-network-bench-leaderboard/
-```
-
-### GitLab Pages
-
-Workflow: `.gitlab-ci.yml`
-
-- Runs `npm ci`, `npm test`, and `npm run build` in `site/`
-- Sets `VITE_BASE_PATH=/${CI_PROJECT_NAME}/`
-- Publishes `site/dist` as the Pages artifact
-
-Pushes to the default branch trigger deployment automatically.
-
-Example URL:
-
-```text
-https://<gitlab-username>.gitlab.io/long-horizon-network-bench-leaderboard/
-```
-
-For a user Pages site (`<gitlab-username>.gitlab.io`) or a custom domain, set `VITE_BASE_PATH` to `/` in `.gitlab-ci.yml`.
