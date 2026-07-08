@@ -1,18 +1,16 @@
-# Long-Horizon-Network-Bench Leaderboard
+# Long-Horizon-Network-Bench Leaderboard 使用说明
 
 [![Node 20](https://img.shields.io/badge/node-20-blue)](site/package.json)
 [![React 18](https://img.shields.io/badge/react-18-blue)](site/package.json)
 [![Vite 5](https://img.shields.io/badge/vite-5-purple)](site/package.json)
 ![Data submissions](https://img.shields.io/badge/data-raw--runs%20PR-green)
 
-> 中文版本：[README_zh.md](README_zh.md)
+> English version: [README.md](README.md)
 
-Web frontend for the Long-Horizon-Network-Bench evaluation leaderboard. The site
-presents model rankings, benchmark comparisons, and per-evaluation drill-down
-views.
+本项目是 Long-Horizon-Network-Bench evaluation leaderboard 的 Web 前端，用于展示
+模型排名、benchmark 对比和单次评测详情。
 
-This project receives user-submitted NetEval Pro harness results and publishes
-the public leaderboard:
+本仓库接收由 NetEval Pro harness 导出的真实评测结果，并用于公开榜单展示：
 
 ```text
 Long-Horizon-Network-Bench case bank
@@ -23,20 +21,20 @@ Long-Horizon-Network-Bench case bank
   -> review and publish
 ```
 
-For normal submitters, the only files to add are exported JSONL files under
-`site/src/data/raw-runs/`. Do not submit generated frontend data.
+普通提交者只需要提交 `site/src/data/raw-runs/` 下的导出 JSONL 文件。不要提交生成后的
+前端数据。
 
-## Features
+## 功能
 
-- **Ranking** — Sortable leaderboard with benchmark category filters, model search, and configurable columns.
-- **Dashboard** — Radar chart comparing models across network task categories; search and legend stay in sync.
-- **Evaluation details** — Case-level results for a selected model and category, with per-case optimization trend charts.
-- **Localization** — English and Chinese UI.
-- **External link** — Shortcut to run your own evaluation via NetEval-Pro.
+- **Ranking** - 可排序榜单，支持 benchmark 类别过滤、模型搜索和列配置。
+- **Dashboard** - 雷达图对比模型在不同网络任务类别上的表现。
+- **Evaluation details** - 查看指定模型和类别的 case 级结果，以及单 case 优化趋势图。
+- **Localization** - 英文和中文 UI。
+- **External link** - 跳转到 NetEval Pro，运行自己的评测。
 
-## Project layout
+## 项目结构
 
-```
+```text
 leaderboard-mvp/
 └── site/                 # React + Vite frontend
     └── src/
@@ -46,13 +44,10 @@ leaderboard-mvp/
         └── i18n/         # EN / ZH UI strings
 ```
 
-## Submit Real Harness Data
+## 提交真实 Harness 数据
 
-Use this when you have already run NetEval Pro locally and want your results to
-appear on the public leaderboard.
-
-From the NetEval Pro checkout, export completed harness runs into this
-leaderboard checkout:
+如果你已经在本地运行 NetEval Pro，并希望结果进入公开榜单，请将完成的 harness 运行导出到
+本 leaderboard checkout：
 
 ```bash
 export LEADERBOARD_FRONTEND=/path/to/long-horizon-network-bench/leaderboard-mvp
@@ -64,29 +59,28 @@ uv run neteval export leaderboard \
   --out-data-dir "$LEADERBOARD_DATA_DIR"
 ```
 
-The exporter writes JSONL files like:
+导出器会写入类似文件：
 
 ```text
 site/src/data/raw-runs/export_to_leaderboard_<timestamp>.jsonl
 ```
 
-## Pull Request Checklist
+## Pull Request 清单
 
-Open the PR in this repository. The PR should include only the raw-runs JSONL
-files exported by NetEval Pro.
+在本仓库发起 PR。PR 应只包含 NetEval Pro 导出的 raw-runs JSONL 文件。
 
-Commit:
+提交：
 
 - `site/src/data/raw-runs/export_to_leaderboard_<timestamp>.jsonl`
 
-Do not commit:
+不要提交：
 
 - `.netops-runs/`
-- local logs or secrets
+- 本地日志或 secrets
 - `site/src/data/generated/`
 - `site/dist/`
 
-Use this PR description template:
+PR 描述建议使用：
 
 ```markdown
 ## Evaluation
@@ -108,9 +102,9 @@ Use this PR description template:
 - Any known failed or skipped cases:
 ```
 
-## Optional Local Preview
+## 可选本地预览
 
-Preview is not required for submission. If you want to inspect the site locally:
+提交 PR 不要求本地预览。如需先查看页面效果：
 
 ```bash
 cd "$LEADERBOARD_FRONTEND/site"
@@ -119,15 +113,15 @@ npm run generate:data:real
 npm run dev
 ```
 
-This creates `site/src/data/generated/`; leave that directory out of your PR.
+这会生成 `site/src/data/generated/`；不要把该目录提交到 PR。
 
-For a local production build:
+本地 production build：
 
 ```bash
 npm run build:real
 ```
 
-## Development
+## 开发
 
 ```bash
 cd site
@@ -135,9 +129,9 @@ npm install
 npm run dev
 ```
 
-Open http://127.0.0.1:5173
+打开 http://127.0.0.1:5173
 
-### Tests
+### 测试
 
 ```bash
 cd site
@@ -152,4 +146,4 @@ npm run build
 npm run preview -- --host 127.0.0.1
 ```
 
-Open http://127.0.0.1:4173
+打开 http://127.0.0.1:4173
