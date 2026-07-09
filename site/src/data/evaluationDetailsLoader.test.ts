@@ -16,15 +16,17 @@ describe("evaluationDetailsLoader", () => {
     );
   });
 
-  it("shows the latest evaluated result by default and keeps historical attempts", () => {
+  it("shows the best evaluated result by default and keeps historical attempts", () => {
     const entry = getEvaluationDetailEntry("DeepSeek-V4-Pro · OpenCode", "LTCO");
     const caseResult = entry?.cases.find(
       (item) => item.case === "ltco-a100-ag-16-128m"
     );
     const history = caseResult?.history ?? [];
 
-    expect(caseResult?.score).toBe(0.88);
-    expect(caseResult?.evaluatedAt).toBe("2026-06-16T10:30:00Z");
+    expect(caseResult?.score).toBe(0.95);
+    expect(caseResult?.evaluatedAt).toBe("2026-06-15T09:20:00Z");
+    expect(caseResult?.isBest).toBe(true);
+    expect(caseResult?.isLatest).toBe(false);
     expect(history).toHaveLength(2);
     expect(history.find((attempt) => attempt.isLatest)?.evaluatedAt).toBe(
       "2026-06-16T10:30:00Z"

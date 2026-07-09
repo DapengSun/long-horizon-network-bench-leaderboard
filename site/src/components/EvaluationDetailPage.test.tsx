@@ -60,19 +60,25 @@ describe("EvaluationDetailPage", () => {
     renderDetail({ model: "DeepSeek-V4-Pro · OpenCode", category: "LTCO" });
 
     expect(screen.getByText("Back to ranking")).toBeTruthy();
-    expect(screen.getByText("Latest Evaluation Details")).toBeTruthy();
+    expect(screen.getByText("Evaluation Details")).toBeTruthy();
     expect(screen.getByText("Model")).toBeTruthy();
     expect(screen.getByText("Benchmark Category")).toBeTruthy();
     expect(
       screen.getByText("Collective Communication CCL Algorithm Optimization - LTCO")
+    ).toBeTruthy();
+    expect(
+      screen.getByText(
+        "The main table shows the best-scoring historical attempt for each case. Expand a row to view all attempts, including the latest one."
+      )
     ).toBeTruthy();
     expect(screen.getByText("Case Count")).toBeTruthy();
     expect(screen.getByText("Total Duration")).toBeTruthy();
     expect(screen.getByText("case")).toBeTruthy();
     expect(screen.getByText("rounds")).toBeTruthy();
     expect(screen.getByText("best")).toBeTruthy();
-    expect(screen.getByText("Score")).toBeTruthy();
-    expect(screen.getByText("evaluated at")).toBeTruthy();
+    expect(screen.getByText("Best score")).toBeTruthy();
+    expect(screen.getByText("best evaluated at")).toBeTruthy();
+    expect(screen.getByText("last evaluated at")).toBeTruthy();
     expect(screen.getByText("duration")).toBeTruthy();
     expect(screen.getByText("ltco-a100-ag-16-128m")).toBeTruthy();
   });
@@ -95,10 +101,11 @@ describe("EvaluationDetailPage", () => {
     expect(expandButton?.getAttribute("aria-expanded")).toBe("false");
     fireEvent.click(expandableRow as Element);
 
-    expect(screen.getByRole("columnheader", { name: "evaluated at" })).toBeTruthy();
+    expect(screen.getByRole("columnheader", { name: "best evaluated at" })).toBeTruthy();
+    expect(screen.getByRole("columnheader", { name: "last evaluated at" })).toBeTruthy();
     expect(screen.getByRole("columnheader", { name: "rounds" })).toBeTruthy();
     expect(screen.getByRole("columnheader", { name: "best" })).toBeTruthy();
-    expect(screen.getByRole("columnheader", { name: "Score" })).toBeTruthy();
+    expect(screen.getByRole("columnheader", { name: "Best score" })).toBeTruthy();
     expect(screen.getByRole("columnheader", { name: "duration" })).toBeTruthy();
     expect(container.querySelector(".detail-history-panel")).toBeTruthy();
     expect(screen.queryByText("latest")).toBeNull();
@@ -119,15 +126,23 @@ describe("EvaluationDetailPage", () => {
     renderDetail({ model: "DeepSeek-V4-Pro · OpenCode", category: "LTCO" }, "zh-CN");
 
     expect(screen.getByText("返回排名表")).toBeTruthy();
-    expect(screen.getByText("最新评测详情")).toBeTruthy();
+    expect(screen.getByText("评测详情")).toBeTruthy();
     expect(screen.getByText("模型")).toBeTruthy();
     expect(screen.getByText("基准分类")).toBeTruthy();
     expect(screen.getByText("集合通信 CCL 算法调优-LTCO")).toBeTruthy();
     expect(screen.getByText("case 数量")).toBeTruthy();
     expect(screen.getByText("总评测时长")).toBeTruthy();
+    expect(
+      screen.getByText(
+        "主表展示每个 case 历史评测记录中最佳分数最高的那次结果；展开行可查看全部历史记录，包括最新一次。"
+      )
+    ).toBeTruthy();
     expect(screen.getByText("用例")).toBeTruthy();
     expect(screen.getByText("轮次")).toBeTruthy();
     expect(screen.getByText("最佳")).toBeTruthy();
+    expect(screen.getByText("最佳分数")).toBeTruthy();
+    expect(screen.getByText("最佳评测时间")).toBeTruthy();
+    expect(screen.getByText("最近评测时间")).toBeTruthy();
     expect(screen.getByText("时长")).toBeTruthy();
     expect(screen.getByText("ltco-a100-ag-16-128m")).toBeTruthy();
   });
@@ -158,7 +173,7 @@ describe("EvaluationDetailPage", () => {
     expect(screen.getByText("LTCC/LTLB multiphase evaluation")).toBeTruthy();
     expect(document.querySelector(".ant-table-row-expand-icon-cell")).toBeNull();
     expect(screen.getAllByText(/P1 \d+ \/ P2 \d+/).length).toBeGreaterThan(0);
-    expect(screen.getByText("Score")).toBeTruthy();
+    expect(screen.getByText("Best score")).toBeTruthy();
     expect(screen.getByText("0.6445")).toBeTruthy();
     expect(screen.queryByText("64.45%")).toBeNull();
 

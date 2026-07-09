@@ -72,6 +72,13 @@ function isNewer(a, b) {
   return timestampValue(resultTime(a)) > timestampValue(resultTime(b));
 }
 
+function isBetter(a, b) {
+  if (a.score !== b.score) {
+    return a.score > b.score;
+  }
+  return isNewer(a, b);
+}
+
 function resultTime(result) {
   return result.evaluatedAt ?? result.completedAt ?? result.submittedAt;
 }
@@ -106,8 +113,8 @@ async function readRawRuns(rawRunsDir) {
   return runs;
 }
 
-function latestCompletedResults(runs, benchmarks) {
-  const latest = new Map();
+export function selectBestCompletedResults(runs, benchmarks) {
+  const best = new Map();
   const allowedBenchmarks = new Set(benchmarks.map((benchmark) => benchmark.id));
 
   for (const run of runs) {
@@ -132,17 +139,17 @@ function latestCompletedResults(runs, benchmarks) {
         completedAt: result.completedAt,
         rawFile: run.rawFile,
       };
-      const current = latest.get(key);
-      if (!current || isNewer(candidate, current)) {
-        latest.set(key, candidate);
+      const current = best.get(key);
+      if (!current || isBetter(candidate, current)) {
+        best.set(key, candidate);
       }
     }
   }
 
-  return [...latest.values()];
+  return [...best.values()];
 }
 
-function buildOverview({ benchmarks, models, latestResults, generatedAt }) {
+export function buildOverview({ benchmarks, models, latestResults, generatedAt }) {
   const byModelAgentBenchmark = new Map();
 
   for (const result of latestResults) {
@@ -275,14 +282,14 @@ async function main() {
     readJson(path.join(metadataDir, "models.json")),
     readRawRuns(rawRunsDir),
   ]);
-  const latestResults = latestCompletedResults(runs, benchmarks);
-  const overview = buildOverview({ benchmarks, models, latestResults, generatedAt });
+  const bestResults = selectBestCompletedResults(runs, benchmarks);
+  const overview = buildOverview({ benchmarks, models, latestResults: bestResults, generatedAt });
   const categorySummaries = buildCategorySummaries({
     benchmarks,
-    latestResults,
+    latestResults: bestResults,
     generatedAt,
   });
-  const taskDetailIndex = buildTaskDetailIndex(latestResults);
+  const taskDetailIndex = buildTaskDetailIndex(bestResults);
 
   await writeJson(path.join(generatedDir, "overview.json"), overview);
   await rm(path.join(generatedDir, "categories"), { recursive: true, force: true });
@@ -297,16 +304,18 @@ async function main() {
     generatedAt,
     mode: args.mode,
     rawRuns: runs.length,
-    latestResults: latestResults.length,
+    bestResults: bestResults.length,
     categories: categorySummaries.length,
   });
 
   console.log(
-    `Generated ${args.mode} leaderboard data: ${latestResults.length} latest task results`
+    `Generated ${args.mode} leaderboard data: ${bestResults.length} best task results`
   );
 }
 
-main().catch((error) => {
-  console.error(error);
-  process.exitCode = 1;
-});
+if (process.argv[1] === fileURLToPath(import.meta.url)) {
+  main().catch((error) => {
+    console.error(error);
+    process.exitCode = 1;
+  });
+}

@@ -202,6 +202,14 @@ function activeRawRuns(): RawRunRecord[] {
   return Object.values(modules).flatMap(parseJsonl);
 }
 
+function averageCaseScore(cases: EvaluationCaseResult[]): number {
+  if (cases.length === 0) {
+    return 0;
+  }
+  const average = cases.reduce((sum, item) => sum + item.score, 0) / cases.length;
+  return Number(average.toFixed(4));
+}
+
 export function getLeaderboardDataMode(): DataMode {
   return dataMode;
 }
@@ -211,6 +219,12 @@ export function getDashboardData(): DashboardBenchmarkData {
   if (!overview) {
     return { benchmarks: [] };
   }
+  const bestAveragesByModelCategory = new Map(
+    getEvaluationDetailEntries().map((entry) => [
+      `${entry.model}|${entry.category}`,
+      averageCaseScore(entry.cases),
+    ])
+  );
 
   return {
     benchmarks: overview.benchmarks.map((benchmark) => {
@@ -225,11 +239,14 @@ export function getDashboardData(): DashboardBenchmarkData {
           .filter((row) => typeof row.benchmarks[secondary] === "number")
           .map((row) => {
             const modelFields = modelDisplayFields(row.model, row.provider);
+            const displayModel = formatModelWithAgent(row.model, row.agent);
             return {
               provider: modelFields.provider,
-              model: formatModelWithAgent(row.model, row.agent),
+              model: displayModel,
               url: modelFields.url ?? row.url,
-              average: row.benchmarks[secondary],
+              average:
+                bestAveragesByModelCategory.get(`${displayModel}|${secondary}`) ??
+                row.benchmarks[secondary],
               tags: [...(modelFields.tags ?? row.tags ?? []), formatAgentName(row.agent)],
             };
           }),
@@ -388,7 +405,7 @@ export function getEvaluationDetailEntries(): EvaluationDetailEntry[] {
     const best = attempts.reduce((current, candidate) =>
       isBetterAttempt(candidate, current) ? candidate : current
     );
-    const entryKey = `${latest.displayModel}|${latest.category}`;
+    const entryKey = `${best.displayModel}|${best.category}`;
     const history = attempts
       .map((candidate) =>
         attemptFromCandidate(candidate, {
@@ -404,25 +421,25 @@ export function getEvaluationDetailEntries(): EvaluationDetailEntry[] {
     const current =
       groups.get(entryKey) ??
       ({
-        model: latest.displayModel,
-        category: latest.category,
-        submittedAt: candidateTime(latest),
-        metric: latest.result.metric ?? DEFAULT_DETAIL_METRIC,
+        model: best.displayModel,
+        category: best.category,
+        submittedAt: candidateTime(best),
+        metric: best.result.metric ?? DEFAULT_DETAIL_METRIC,
         cases: [],
       } satisfies EvaluationDetailEntry);
 
     current.cases.push(
       caseFromCandidate(
-        latest,
+        best,
         {
-          isBest: latest === best,
-          isLatest: true,
+          isBest: true,
+          isLatest: best === latest,
         },
         history
       )
     );
-    if (timestampValue(candidateTime(latest)) > timestampValue(current.submittedAt)) {
-      current.submittedAt = candidateTime(latest);
+    if (timestampValue(candidateTime(best)) > timestampValue(current.submittedAt)) {
+      current.submittedAt = candidateTime(best);
     }
     groups.set(entryKey, current);
   }

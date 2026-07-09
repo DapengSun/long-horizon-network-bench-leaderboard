@@ -64,6 +64,13 @@ function attemptTime(
   return attempt.evaluatedAt ?? attempt.submittedAt;
 }
 
+function latestAttemptTime(record: EvaluationCaseResult): string | undefined {
+  const latestAttempt = record.history?.find((attempt) => attempt.isLatest);
+  return latestAttempt
+    ? latestAttempt.evaluatedAt ?? latestAttempt.submittedAt
+    : attemptTime(record);
+}
+
 function renderScoreCell(
   record: Pick<EvaluationCaseResult, "score" | "isBest">,
   t: (key: MessageKey) => string,
@@ -196,10 +203,14 @@ export const EvaluationDetailPage: React.FC<EvaluationDetailPageProps> = ({
         ),
       },
       {
-        title: t("detailEvaluatedAtColumn"),
+        title: (
+          <Tooltip title={t("detailBestEvaluatedAtTooltip")}>
+            <span>{t("detailBestEvaluatedAtColumn")}</span>
+          </Tooltip>
+        ),
         key: "evaluatedAt",
         align: "center",
-        width: "18%",
+        width: "16%",
         sorter: (a, b) =>
           new Date(attemptTime(a) ?? 0).getTime() -
           new Date(attemptTime(b) ?? 0).getTime(),
@@ -210,11 +221,29 @@ export const EvaluationDetailPage: React.FC<EvaluationDetailPageProps> = ({
         ),
       },
       {
+        title: (
+          <Tooltip title={t("detailLastEvaluatedAtTooltip")}>
+            <span>{t("detailLastEvaluatedAtColumn")}</span>
+          </Tooltip>
+        ),
+        key: "lastEvaluatedAt",
+        align: "center",
+        width: "16%",
+        sorter: (a, b) =>
+          new Date(latestAttemptTime(a) ?? 0).getTime() -
+          new Date(latestAttemptTime(b) ?? 0).getTime(),
+        render: (_, record) => (
+          <div className="detail-attempt-time-cell">
+            <span>{formatAttemptTime(latestAttemptTime(record))}</span>
+          </div>
+        ),
+      },
+      {
         title: t("detailRoundsColumn"),
         dataIndex: "rounds",
         key: "rounds",
         align: "center",
-        width: "13%",
+        width: "10%",
         sorter: (a, b) => a.rounds - b.rounds,
         render: (rounds: number, record) =>
           isMultiphase ? formatPhaseRoundCount(record.detail, rounds) : rounds,
@@ -224,7 +253,7 @@ export const EvaluationDetailPage: React.FC<EvaluationDetailPageProps> = ({
         dataIndex: "best",
         key: "best",
         align: "center",
-        width: "15%",
+        width: "12%",
         render: (best: string, record) =>
           isMultiphase ? bestRoundForDisplay(record.detail, best) : best,
       },
@@ -233,7 +262,7 @@ export const EvaluationDetailPage: React.FC<EvaluationDetailPageProps> = ({
         dataIndex: "score",
         key: "score",
         align: "center",
-        width: "15%",
+        width: "14%",
         sorter: (a, b) => a.score - b.score,
         render: (_, record) => renderScoreCell(record, t),
       },
@@ -242,7 +271,7 @@ export const EvaluationDetailPage: React.FC<EvaluationDetailPageProps> = ({
         dataIndex: "durationMinutes",
         key: "durationMinutes",
         align: "center",
-        width: "15%",
+        width: "12%",
         sorter: (a, b) => a.durationMinutes - b.durationMinutes,
         render: (minutes: number) => formatDuration(minutes),
       },
@@ -264,11 +293,12 @@ export const EvaluationDetailPage: React.FC<EvaluationDetailPageProps> = ({
           <colgroup>
             <col className="detail-history-col-expand" />
             <col style={{ width: "20%" }} />
-            <col style={{ width: "18%" }} />
-            <col style={{ width: "13%" }} />
-            <col style={{ width: "15%" }} />
-            <col style={{ width: "15%" }} />
-            <col style={{ width: "15%" }} />
+            <col style={{ width: "16%" }} />
+            <col style={{ width: "16%" }} />
+            <col style={{ width: "10%" }} />
+            <col style={{ width: "12%" }} />
+            <col style={{ width: "14%" }} />
+            <col style={{ width: "12%" }} />
           </colgroup>
           <tbody>
             {history.map((attempt, index) => (
@@ -301,6 +331,7 @@ export const EvaluationDetailPage: React.FC<EvaluationDetailPageProps> = ({
                     </div>
                   </div>
                 </td>
+                <td className="detail-history-cell-center" />
                 <td className="detail-history-cell-center">
                   <span className="detail-history-cell-inner">
                     {isMultiphase
@@ -379,6 +410,10 @@ export const EvaluationDetailPage: React.FC<EvaluationDetailPageProps> = ({
           <small>{activeEntry?.submittedAt ?? t("noData")}</small>
         </div>
       </div>
+
+      <Typography.Paragraph className="detail-attempt-policy">
+        {t("detailBestAttemptNotice")}
+      </Typography.Paragraph>
 
       {isMultiphase ? (
         <div className="detail-multiphase-explainer">
