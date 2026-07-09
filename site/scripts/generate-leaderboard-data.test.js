@@ -1,5 +1,9 @@
 import { describe, expect, it } from "vitest";
-import { buildOverview, selectBestCompletedResults } from "./generate-leaderboard-data.js";
+import {
+  buildCategorySummaries,
+  buildOverview,
+  selectBestCompletedResults,
+} from "./generate-leaderboard-data.js";
 
 describe("generate leaderboard data", () => {
   it("uses the best historical score for each task when computing overview averages", () => {
@@ -80,5 +84,32 @@ describe("generate leaderboard data", () => {
       "older-better"
     );
     expect(overview.rows[0].benchmarks.LTCO).toBe(0.85);
+  });
+
+  it("carries lightweight round counts into category summaries", () => {
+    const summaries = buildCategorySummaries({
+      benchmarks: [{ id: "LTCO", primary: "performance-tuning", title: "LTCO" }],
+      latestResults: [
+        {
+          taskId: "case-1",
+          benchmark: "LTCO",
+          runId: "run-1",
+          model: "model-a",
+          agent: "opencode",
+          score: 0.95,
+          nativeScore: 0.95,
+          roundCount: 3,
+          phaseRoundCounts: { phase1: 1, phase2: 2 },
+          submittedAt: "2026-06-15T09:00:00Z",
+        },
+      ],
+      generatedAt: "2026-07-08T00:00:00Z",
+    });
+
+    expect(summaries[0].data.tasks[0].rounds).toBe(3);
+    expect(summaries[0].data.tasks[0].phaseRoundCounts).toEqual({
+      phase1: 1,
+      phase2: 2,
+    });
   });
 });

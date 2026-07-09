@@ -134,6 +134,9 @@ describe("multiphaseDetail", () => {
     const detail = ltlbPayload.results[0].detail;
 
     expect(formatPhaseRoundCount(detail, 3)).toBe("P1 1 / P2 2");
+    expect(formatPhaseRoundCount(undefined, 9, { phase1: 4, phase2: 5 })).toBe(
+      "P1 4 / P2 5"
+    );
     expect(bestRoundForDisplay(detail, "phase1/round1")).toBe("phase2/round2");
   });
 

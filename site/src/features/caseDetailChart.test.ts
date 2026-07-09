@@ -87,8 +87,10 @@ describe("caseDetailChart", () => {
       "DeepSeek-V4-Pro · OpenCode"
     );
     expect(
-      payload?.results.find((result) => result.model === "DeepSeek-V4-Pro · OpenCode")
-        ?.detail.length
+      payload?.results.find(
+        (result) =>
+          result.model === "DeepSeek-V4-Pro · OpenCode"
+      )?.detail.length
     ).toBeGreaterThan(0);
   });
 

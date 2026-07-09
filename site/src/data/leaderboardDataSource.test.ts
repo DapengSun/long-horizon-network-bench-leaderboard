@@ -23,7 +23,7 @@ describe("leaderboardDataSource", () => {
     );
 
     expect(fields).toEqual({
-      name: "DeepSeek-V4-Pro",
+      name: "deepseek-v4-pro",
       provider: "DeepSeek",
       url: "https://example.com/deepseek",
       tags: ["OSS"],

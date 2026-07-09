@@ -57,7 +57,10 @@ function renderChart(payload: CaseDetailChartPayload) {
 
 describe("EvaluationDetailPage", () => {
   it("shows the LTCO case list with English UI chrome by default", () => {
-    renderDetail({ model: "DeepSeek-V4-Pro · OpenCode", category: "LTCO" });
+    renderDetail({
+      model: "DeepSeek-V4-Pro · OpenCode",
+      category: "LTCO",
+    });
 
     expect(screen.getByText("Back to ranking")).toBeTruthy();
     expect(screen.getByText("Evaluation Details")).toBeTruthy();
@@ -75,7 +78,7 @@ describe("EvaluationDetailPage", () => {
     expect(screen.getByText("Total Duration")).toBeTruthy();
     expect(screen.getByText("case")).toBeTruthy();
     expect(screen.getByText("rounds")).toBeTruthy();
-    expect(screen.getByText("best")).toBeTruthy();
+    expect(screen.queryByText("best")).toBeNull();
     expect(screen.getByText("Best score")).toBeTruthy();
     expect(screen.getByText("best evaluated at")).toBeTruthy();
     expect(screen.getByText("last evaluated at")).toBeTruthy();
@@ -104,7 +107,7 @@ describe("EvaluationDetailPage", () => {
     expect(screen.getByRole("columnheader", { name: "best evaluated at" })).toBeTruthy();
     expect(screen.getByRole("columnheader", { name: "last evaluated at" })).toBeTruthy();
     expect(screen.getByRole("columnheader", { name: "rounds" })).toBeTruthy();
-    expect(screen.getByRole("columnheader", { name: "best" })).toBeTruthy();
+    expect(screen.queryByRole("columnheader", { name: "best" })).toBeNull();
     expect(screen.getByRole("columnheader", { name: "Best score" })).toBeTruthy();
     expect(screen.getByRole("columnheader", { name: "duration" })).toBeTruthy();
     expect(container.querySelector(".detail-history-panel")).toBeTruthy();
@@ -123,7 +126,13 @@ describe("EvaluationDetailPage", () => {
   });
 
   it("shows Chinese UI chrome when locale is Chinese", () => {
-    renderDetail({ model: "DeepSeek-V4-Pro · OpenCode", category: "LTCO" }, "zh-CN");
+    renderDetail(
+      {
+        model: "DeepSeek-V4-Pro · OpenCode",
+        category: "LTCO",
+      },
+      "zh-CN"
+    );
 
     expect(screen.getByText("返回排名表")).toBeTruthy();
     expect(screen.getByText("评测详情")).toBeTruthy();
@@ -139,7 +148,7 @@ describe("EvaluationDetailPage", () => {
     ).toBeTruthy();
     expect(screen.getByText("用例")).toBeTruthy();
     expect(screen.getByText("轮次")).toBeTruthy();
-    expect(screen.getByText("最佳")).toBeTruthy();
+    expect(screen.queryByText("最佳")).toBeNull();
     expect(screen.getByText("最佳分数")).toBeTruthy();
     expect(screen.getByText("最佳评测时间")).toBeTruthy();
     expect(screen.getByText("最近评测时间")).toBeTruthy();
@@ -155,7 +164,10 @@ describe("EvaluationDetailPage", () => {
   });
 
   it("opens the latency chart modal when clicking the case trend icon", () => {
-    renderDetail({ model: "DeepSeek-V4-Pro · OpenCode", category: "LTCO" });
+    renderDetail({
+      model: "DeepSeek-V4-Pro · OpenCode",
+      category: "LTCO",
+    });
 
     const chartButtons = screen.getAllByLabelText("View latency trend chart");
     expect(chartButtons.length).toBeGreaterThan(0);
@@ -164,11 +176,17 @@ describe("EvaluationDetailPage", () => {
 
     expect(screen.getByText("Optimization Trend")).toBeTruthy();
     expect(screen.getByRole("dialog")).toBeTruthy();
-    expect(screen.getAllByText("DeepSeek-V4-Pro · OpenCode").length).toBeGreaterThan(0);
+    expect(
+      screen.getAllByText("DeepSeek-V4-Pro · OpenCode")
+        .length
+    ).toBeGreaterThan(0);
   });
 
   it("opens the LTCC multiphase modal for phase-aware cases", () => {
-    renderDetail({ model: "DeepSeek-V4-Pro · OpenCode", category: "LTCC" });
+    renderDetail({
+      model: "DeepSeek-V4-Pro · OpenCode",
+      category: "LTCC",
+    });
 
     expect(screen.getByText("LTCC/LTLB multiphase evaluation")).toBeTruthy();
     expect(document.querySelector(".ant-table-row-expand-icon-cell")).toBeNull();

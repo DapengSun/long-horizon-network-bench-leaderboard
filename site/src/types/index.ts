@@ -67,6 +67,7 @@ export interface EvaluationCaseResult {
   sourceCaseRunPath?: string;
   isBest?: boolean;
   isLatest?: boolean;
+  phaseRoundCounts?: PhaseRoundCounts;
   history?: EvaluationCaseAttempt[];
   detail?: EvaluationCaseDetailPoint[];
 }
@@ -82,7 +83,13 @@ export interface EvaluationCaseAttempt {
   durationMinutes: number;
   isBest: boolean;
   isLatest: boolean;
+  phaseRoundCounts?: PhaseRoundCounts;
   detail?: EvaluationCaseDetailPoint[];
+}
+
+export interface PhaseRoundCounts {
+  phase1?: number;
+  phase2?: number;
 }
 
 export interface CaseDetailChartModelResult {

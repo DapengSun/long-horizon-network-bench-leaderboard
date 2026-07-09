@@ -4,6 +4,7 @@ import type {
   EvaluationCaseDetailPoint,
   EvaluationCaseScenario,
   EvaluationMetricValue,
+  PhaseRoundCounts,
 } from "../types";
 import { sortDetailPoints } from "./caseDetailChart";
 
@@ -111,10 +112,16 @@ export function phaseRoundCounts(detail: EvaluationCaseDetailPoint[] | undefined
 
 export function formatPhaseRoundCount(
   detail: EvaluationCaseDetailPoint[] | undefined,
-  fallback: number
+  fallback: number,
+  fallbackPhaseCounts?: PhaseRoundCounts
 ): string {
   const counts = phaseRoundCounts(detail);
   if (counts.phase1 === 0 && counts.phase2 === 0) {
+    if ((fallbackPhaseCounts?.phase1 ?? 0) > 0 || (fallbackPhaseCounts?.phase2 ?? 0) > 0) {
+      return `P1 ${fallbackPhaseCounts?.phase1 ?? 0} / P2 ${
+        fallbackPhaseCounts?.phase2 ?? 0
+      }`;
+    }
     return String(fallback);
   }
   return `P1 ${counts.phase1} / P2 ${counts.phase2}`;

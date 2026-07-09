@@ -175,7 +175,7 @@ export const BenchmarkDashboard: React.FC<BenchmarkDashboardProps> = ({
   );
   const shouldScroll = shouldScrollScoreTable(selectedSecondaryItems.length);
   const scrollX = shouldScroll
-    ? 72 + 150 + 280 + selectedSecondaryItems.length * 112 + 130 + 130
+    ? 72 + 150 + 420 + selectedSecondaryItems.length * 112 + 130 + 130
     : undefined;
   const filteredCategories = useMemo(
     () =>
@@ -222,7 +222,7 @@ export const BenchmarkDashboard: React.FC<BenchmarkDashboardProps> = ({
         key: "model",
         align: "left",
         fixed: shouldScroll ? "left" : undefined,
-        width: shouldScroll ? 280 : undefined,
+        width: shouldScroll ? 420 : undefined,
         render: (model: string, row) => (
           <div className="tw-model-cell">
             {row.url ? (

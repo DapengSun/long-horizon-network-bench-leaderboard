@@ -10,6 +10,16 @@
     ]
   },
   {
+    "id": "GLM-5.2",
+    "name": "GLM-5.2",
+    "provider": "Z.ai",
+    "url": "https://huggingface.co/zai-org/GLM-5.2",
+    "tags": [
+      "OSS",
+      "Agentic"
+    ]
+  },
+  {
     "id": "Qwen3.6-35B-A3B",
     "name": "Qwen3.6-35B-A3B",
     "provider": "Qwen",
@@ -34,6 +44,62 @@
     "name": "MiniMax-M2.5",
     "provider": "MiniMax",
     "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.5",
+    "tags": [
+      "OSS",
+      "MoE"
+    ]
+  },
+  {
+    "id": "claude-opus-4-8-high",
+    "name": "claude-opus-4-8-high",
+    "provider": "Anthropic",
+    "tags": [
+      "Closed",
+      "Agentic"
+    ]
+  },
+  {
+    "id": "claude-sonnet-5",
+    "name": "claude-sonnet-5",
+    "provider": "Anthropic",
+    "tags": [
+      "Closed",
+      "Agentic"
+    ]
+  },
+  {
+    "id": "gemini-3.1-pro",
+    "name": "gemini-3.1-pro",
+    "provider": "Google",
+    "tags": [
+      "Closed",
+      "Multimodal"
+    ]
+  },
+  {
+    "id": "gpt-5.5",
+    "name": "gpt-5.5",
+    "provider": "OpenAI",
+    "tags": [
+      "Closed",
+      "Agentic"
+    ]
+  },
+  {
+    "id": "kimi-k2.6",
+    "name": "kimi-k2.6",
+    "provider": "Moonshot AI",
+    "url": "https://huggingface.co/moonshotai/Kimi-K2.6",
+    "tags": [
+      "OSS",
+      "Agentic"
+    ]
+  },
+  {
+    "id": "minimax-m3",
+    "name": "minimax-m3",
+    "provider": "MiniMax",
+    "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3",
     "tags": [
       "OSS",
       "MoE"

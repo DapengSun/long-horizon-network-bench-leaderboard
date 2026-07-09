@@ -61,7 +61,7 @@ function modelDisplayFieldsFromMetadata(modelId, models, fallbackProvider = "") 
     (model) => metadataKey(model.id) === metadataKey(modelId)
   );
   return {
-    name: metadata?.name ?? modelId,
+    name: modelId,
     provider: metadata?.provider ?? fallbackProvider,
     url: metadata?.url,
     tags: metadata?.tags,
@@ -89,6 +89,13 @@ function timestampValue(value) {
   }
   const timestamp = new Date(value).getTime();
   return Number.isNaN(timestamp) ? 0 : timestamp;
+}
+
+function roundCount(result) {
+  if (Array.isArray(result.rounds) && result.rounds.length > 0) {
+    return result.rounds.length;
+  }
+  return result.roundCount;
 }
 
 async function readRawRuns(rawRunsDir) {
@@ -177,9 +184,9 @@ export function buildOverview({ benchmarks, models, latestResults, generatedAt }
       models,
       bucket.provider ?? ""
     );
-    const rowKey = `${modelFields.name}|${bucket.agent}`;
+    const rowKey = `${bucket.model}|${bucket.agent}`;
     const row = rowsByModelAgent.get(rowKey) ?? {
-      model: modelFields.name,
+      model: bucket.model,
       agent: bucket.agent,
       provider: modelFields.provider,
       url: modelFields.url,
@@ -222,7 +229,7 @@ export function buildOverview({ benchmarks, models, latestResults, generatedAt }
   };
 }
 
-function buildCategorySummaries({ benchmarks, latestResults, generatedAt }) {
+export function buildCategorySummaries({ benchmarks, latestResults, generatedAt }) {
   return benchmarks.map((benchmark) => ({
     fileName: `${benchmark.id}.json`,
     data: {
@@ -238,6 +245,8 @@ function buildCategorySummaries({ benchmarks, latestResults, generatedAt }) {
           score: result.score,
           nativeScore: result.nativeScore,
           bestRound: result.bestRound,
+          rounds: roundCount(result),
+          phaseRoundCounts: result.phaseRoundCounts,
           durationMinutes: result.durationMinutes,
           submittedAt: result.submittedAt,
         }))

@@ -4,7 +4,6 @@ import { LineChartOutlined } from "@ant-design/icons";
 import { getEvaluationDetailEntry } from "../data/evaluationDetailsLoader";
 import { buildCaseDetailChartPayload } from "../features/caseDetailChart";
 import {
-  bestRoundForDisplay,
   formatPhaseRoundCount,
   isMultiphaseCategory,
 } from "../features/multiphaseDetail";
@@ -210,7 +209,7 @@ export const EvaluationDetailPage: React.FC<EvaluationDetailPageProps> = ({
         ),
         key: "evaluatedAt",
         align: "center",
-        width: "16%",
+        width: "18%",
         sorter: (a, b) =>
           new Date(attemptTime(a) ?? 0).getTime() -
           new Date(attemptTime(b) ?? 0).getTime(),
@@ -228,7 +227,7 @@ export const EvaluationDetailPage: React.FC<EvaluationDetailPageProps> = ({
         ),
         key: "lastEvaluatedAt",
         align: "center",
-        width: "16%",
+        width: "18%",
         sorter: (a, b) =>
           new Date(latestAttemptTime(a) ?? 0).getTime() -
           new Date(latestAttemptTime(b) ?? 0).getTime(),
@@ -243,26 +242,19 @@ export const EvaluationDetailPage: React.FC<EvaluationDetailPageProps> = ({
         dataIndex: "rounds",
         key: "rounds",
         align: "center",
-        width: "10%",
+        width: "12%",
         sorter: (a, b) => a.rounds - b.rounds,
         render: (rounds: number, record) =>
-          isMultiphase ? formatPhaseRoundCount(record.detail, rounds) : rounds,
-      },
-      {
-        title: t("detailBestColumn"),
-        dataIndex: "best",
-        key: "best",
-        align: "center",
-        width: "12%",
-        render: (best: string, record) =>
-          isMultiphase ? bestRoundForDisplay(record.detail, best) : best,
+          isMultiphase
+            ? formatPhaseRoundCount(record.detail, rounds, record.phaseRoundCounts)
+            : rounds,
       },
       {
         title: t("detailScoreColumn"),
         dataIndex: "score",
         key: "score",
         align: "center",
-        width: "14%",
+        width: "16%",
         sorter: (a, b) => a.score - b.score,
         render: (_, record) => renderScoreCell(record, t),
       },
@@ -271,7 +263,7 @@ export const EvaluationDetailPage: React.FC<EvaluationDetailPageProps> = ({
         dataIndex: "durationMinutes",
         key: "durationMinutes",
         align: "center",
-        width: "12%",
+        width: "16%",
         sorter: (a, b) => a.durationMinutes - b.durationMinutes,
         render: (minutes: number) => formatDuration(minutes),
       },
@@ -293,12 +285,11 @@ export const EvaluationDetailPage: React.FC<EvaluationDetailPageProps> = ({
           <colgroup>
             <col className="detail-history-col-expand" />
             <col style={{ width: "20%" }} />
+            <col style={{ width: "18%" }} />
+            <col style={{ width: "18%" }} />
+            <col style={{ width: "12%" }} />
             <col style={{ width: "16%" }} />
             <col style={{ width: "16%" }} />
-            <col style={{ width: "10%" }} />
-            <col style={{ width: "12%" }} />
-            <col style={{ width: "14%" }} />
-            <col style={{ width: "12%" }} />
           </colgroup>
           <tbody>
             {history.map((attempt, index) => (
@@ -335,15 +326,12 @@ export const EvaluationDetailPage: React.FC<EvaluationDetailPageProps> = ({
                 <td className="detail-history-cell-center">
                   <span className="detail-history-cell-inner">
                     {isMultiphase
-                      ? formatPhaseRoundCount(attempt.detail, attempt.rounds)
+                      ? formatPhaseRoundCount(
+                          attempt.detail,
+                          attempt.rounds,
+                          attempt.phaseRoundCounts
+                        )
                       : attempt.rounds}
-                  </span>
-                </td>
-                <td className="detail-history-cell-center">
-                  <span className="detail-history-cell-inner">
-                    {isMultiphase
-                      ? bestRoundForDisplay(attempt.detail, attempt.best)
-                      : attempt.best}
                   </span>
                 </td>
                 <td className="detail-history-cell-center">

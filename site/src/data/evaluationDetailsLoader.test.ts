@@ -8,7 +8,10 @@ describe("evaluationDetailsLoader", () => {
   it("loads LTCO details from batch raw-run files", () => {
     expect(evaluationDetailEntries.length).toBeGreaterThan(0);
 
-    const entry = getEvaluationDetailEntry("DeepSeek-V4-Pro · OpenCode", "LTCO");
+    const entry = getEvaluationDetailEntry(
+      "DeepSeek-V4-Pro · OpenCode",
+      "LTCO"
+    );
     expect(entry).toBeDefined();
     expect(entry?.category).toBe("LTCO");
     expect(entry?.cases.some((item) => item.case === "ltco-a100-ag-16-128m")).toBe(
@@ -17,7 +20,10 @@ describe("evaluationDetailsLoader", () => {
   });
 
   it("shows the best evaluated result by default and keeps historical attempts", () => {
-    const entry = getEvaluationDetailEntry("DeepSeek-V4-Pro · OpenCode", "LTCO");
+    const entry = getEvaluationDetailEntry(
+      "DeepSeek-V4-Pro · OpenCode",
+      "LTCO"
+    );
     const caseResult = entry?.cases.find(
       (item) => item.case === "ltco-a100-ag-16-128m"
     );
@@ -36,12 +42,23 @@ describe("evaluationDetailsLoader", () => {
 
   it("returns undefined when model or category has no detail file", () => {
     expect(getEvaluationDetailEntry("GLM-5.1", "LTCO")).toBeUndefined();
-    expect(getEvaluationDetailEntry("DeepSeek-V4-Pro · OpenCode", "missing")).toBeUndefined();
+    expect(
+      getEvaluationDetailEntry(
+        "DeepSeek-V4-Pro · OpenCode",
+        "missing"
+      )
+    ).toBeUndefined();
   });
 
   it("preserves LTCC and LTLB multiphase detail payloads", () => {
-    const ltcc = getEvaluationDetailEntry("DeepSeek-V4-Pro · OpenCode", "LTCC");
-    const ltlb = getEvaluationDetailEntry("DeepSeek-V4-Pro · OpenCode", "LTLB");
+    const ltcc = getEvaluationDetailEntry(
+      "DeepSeek-V4-Pro · OpenCode",
+      "LTCC"
+    );
+    const ltlb = getEvaluationDetailEntry(
+      "DeepSeek-V4-Pro · OpenCode",
+      "LTLB"
+    );
 
     const ltccPhase2 = ltcc?.cases
       .find((item) => item.case === "ltcc-highbdp-v4")

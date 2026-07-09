@@ -79,6 +79,11 @@ interface RawRunResult {
   durationMinutes?: number;
   evaluatedAt?: string;
   completedAt?: string;
+  roundCount?: number;
+  phaseRoundCounts?: {
+    phase1?: number;
+    phase2?: number;
+  };
   rounds?: RawRunRound[];
   source?: {
     caseRunPath?: string;
@@ -166,12 +171,14 @@ export function modelDisplayFieldsFromMetadata(
   modelMetadata: ModelMetadata[],
   fallbackProvider?: string
 ): ModelDisplayFields {
+  const requestedKey = metadataKey(modelId);
   const metadata = modelMetadata.find(
-    (model) => metadataKey(model.id) === metadataKey(modelId)
+    (model) =>
+      metadataKey(model.id) === requestedKey || metadataKey(model.name) === requestedKey
   );
 
   return {
-    name: metadata?.name ?? modelId,
+    name: modelId,
     provider: metadata?.provider ?? fallbackProvider ?? "",
     url: metadata?.url,
     tags: metadata?.tags,
@@ -190,7 +197,7 @@ function formatAgentName(agentId: string): string {
 }
 
 function formatModelWithAgent(model: string, agent: string): string {
-  return `${modelDisplayFields(model).name} · ${formatAgentName(agent)}`;
+  return `${model} · ${formatAgentName(agent)}`;
 }
 
 function activeOverview(): GeneratedOverview | undefined {
@@ -278,6 +285,13 @@ function isBetterAttempt(a: CaseAttemptCandidate, b: CaseAttemptCandidate): bool
   return isLaterAttempt(a, b);
 }
 
+function rawRoundCount(result: RawRunResult): number {
+  if (Array.isArray(result.rounds) && result.rounds.length > 0) {
+    return result.rounds.length;
+  }
+  return result.roundCount ?? 0;
+}
+
 function caseFromCandidate(
   candidate: CaseAttemptCandidate,
   flags: { isBest: boolean; isLatest: boolean },
@@ -286,7 +300,7 @@ function caseFromCandidate(
   const result = candidate.result;
   return {
     case: candidate.taskId,
-    rounds: result.rounds?.length ?? 0,
+    rounds: rawRoundCount(result),
     best: result.bestRound ?? "",
     score: result.score,
     durationMinutes: result.durationMinutes ?? 0,
@@ -296,6 +310,7 @@ function caseFromCandidate(
     sourceCaseRunPath: candidate.sourceCaseRunPath,
     isBest: flags.isBest,
     isLatest: flags.isLatest,
+    phaseRoundCounts: result.phaseRoundCounts,
     history,
     detail: result.rounds?.map(roundDetailFromRaw),
   };
@@ -311,12 +326,13 @@ function attemptFromCandidate(
     evaluatedAt: candidate.evaluatedAt,
     submittedAt: candidate.submittedAt,
     sourceCaseRunPath: candidate.sourceCaseRunPath,
-    rounds: result.rounds?.length ?? 0,
+    rounds: rawRoundCount(result),
     best: result.bestRound ?? "",
     score: result.score,
     durationMinutes: result.durationMinutes ?? 0,
     isBest: flags.isBest,
     isLatest: flags.isLatest,
+    phaseRoundCounts: result.phaseRoundCounts,
     detail: result.rounds?.map(roundDetailFromRaw),
   };
 }
