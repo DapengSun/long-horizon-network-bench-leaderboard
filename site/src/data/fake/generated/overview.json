@@ -1,5 +1,5 @@
 {
-  "generatedAt": "2026-07-08T11:12:18.275Z",
+  "generatedAt": "2026-07-10T02:19:46.195Z",
   "benchmarks": [
     {
       "id": "LTNP",
@@ -138,10 +138,7 @@
       "agent": "claudecode",
       "provider": "Z.ai",
       "url": "https://huggingface.co/zai-org/GLM-5.1",
-      "tags": [
-        "OSS",
-        "Agentic"
-      ],
+      "tags": [],
       "latestRunId": "fake-latest-claudecode-glm-5-1",
       "benchmarks": {
         "LTCC": 0.7764,
@@ -162,10 +159,7 @@
       "agent": "opencode",
       "provider": "Qwen",
       "url": "https://huggingface.co/Qwen/Qwen3.6-35B-A3B",
-      "tags": [
-        "OSS",
-        "Multimodal"
-      ],
+      "tags": [],
       "latestRunId": "fake-latest-opencode-qwen3-6-35b-a3b",
       "benchmarks": {
         "LTCC": 0.6889,
@@ -186,13 +180,10 @@
       "agent": "opencode",
       "provider": "DeepSeek",
       "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
-      "tags": [
-        "OSS",
-        "国产"
-      ],
+      "tags": [],
       "latestRunId": "fake-latest-opencode-deepseek-v4-pro",
       "benchmarks": {
-        "LTCO": 0.694,
+        "LTCO": 0.697,
         "LTCC": 0.6487,
         "LTCG": 0.6841,
         "LTHOps": 0.6236,
@@ -203,17 +194,14 @@
         "LTRP": 0.6865,
         "LTSOps": 0.6037
       },
-      "overall": 0.6556
+      "overall": 0.6559
     },
     {
       "model": "MiniMax-M2.5",
       "agent": "claudecode",
       "provider": "MiniMax",
       "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.5",
-      "tags": [
-        "OSS",
-        "MoE"
-      ],
+      "tags": [],
       "latestRunId": "fake-latest-claudecode-minimax-m2-5",
       "benchmarks": {
         "LTCC": 0.6018,

@@ -18,6 +18,7 @@ type DataMode = "fake" | "real";
 interface AgentMetadata {
   id: string;
   name: string;
+  aliases?: string[];
 }
 
 interface ModelMetadata {
@@ -26,13 +27,20 @@ interface ModelMetadata {
   provider: string;
   url?: string;
   tags?: string[];
+  aliases?: string[];
 }
 
 interface ModelDisplayFields {
+  id: string;
   name: string;
   provider: string;
   url?: string;
   tags?: string[];
+}
+
+interface AgentDisplayFields {
+  id: string;
+  name: string;
 }
 
 interface GeneratedOverviewBenchmark {
@@ -159,11 +167,24 @@ function parseJsonl(content: string): RawRunRecord[] {
 }
 
 const agents = firstModuleValue(agentMetadataModules) ?? [];
-const agentNameById = new Map(agents.map((agent) => [agent.id, agent.name]));
 const models = firstModuleValue(modelMetadataModules) ?? [];
 
 function metadataKey(value: string): string {
-  return value.toUpperCase();
+  return value.trim().toLowerCase();
+}
+
+function metadataAliases(metadata: { id: string; name: string; aliases?: string[] }): string[] {
+  return [metadata.id, metadata.name, ...(metadata.aliases ?? [])];
+}
+
+function findMetadataByAlias<T extends { id: string; name: string; aliases?: string[] }>(
+  value: string,
+  metadata: T[]
+): T | undefined {
+  const requestedKey = metadataKey(value);
+  return metadata.find((item) =>
+    metadataAliases(item).some((alias) => metadataKey(alias) === requestedKey)
+  );
 }
 
 export function modelDisplayFieldsFromMetadata(
@@ -171,14 +192,11 @@ export function modelDisplayFieldsFromMetadata(
   modelMetadata: ModelMetadata[],
   fallbackProvider?: string
 ): ModelDisplayFields {
-  const requestedKey = metadataKey(modelId);
-  const metadata = modelMetadata.find(
-    (model) =>
-      metadataKey(model.id) === requestedKey || metadataKey(model.name) === requestedKey
-  );
+  const metadata = findMetadataByAlias(modelId, modelMetadata);
 
   return {
-    name: modelId,
+    id: metadata?.id ?? modelId,
+    name: metadata?.name ?? modelId,
     provider: metadata?.provider ?? fallbackProvider ?? "",
     url: metadata?.url,
     tags: metadata?.tags,
@@ -192,12 +210,23 @@ function modelDisplayFields(
   return modelDisplayFieldsFromMetadata(modelId, models, fallbackProvider);
 }
 
-function formatAgentName(agentId: string): string {
-  return agentNameById.get(agentId) ?? agentId;
+function agentDisplayFieldsFromMetadata(
+  agentId: string,
+  agentMetadata: AgentMetadata[]
+): AgentDisplayFields {
+  const metadata = findMetadataByAlias(agentId, agentMetadata);
+  return {
+    id: metadata?.id ?? agentId,
+    name: metadata?.name ?? agentId,
+  };
 }
 
-function formatModelWithAgent(model: string, agent: string): string {
-  return `${model} · ${formatAgentName(agent)}`;
+function agentDisplayFields(agentId: string): AgentDisplayFields {
+  return agentDisplayFieldsFromMetadata(agentId, agents);
+}
+
+function formatModelWithAgent(model: ModelDisplayFields, agent: AgentDisplayFields): string {
+  return `${model.name} · ${agent.name}`;
 }
 
 function activeOverview(): GeneratedOverview | undefined {
@@ -246,7 +275,8 @@ export function getDashboardData(): DashboardBenchmarkData {
           .filter((row) => typeof row.benchmarks[secondary] === "number")
           .map((row) => {
             const modelFields = modelDisplayFields(row.model, row.provider);
-            const displayModel = formatModelWithAgent(row.model, row.agent);
+            const agentFields = agentDisplayFields(row.agent);
+            const displayModel = formatModelWithAgent(modelFields, agentFields);
             return {
               provider: modelFields.provider,
               model: displayModel,
@@ -254,7 +284,7 @@ export function getDashboardData(): DashboardBenchmarkData {
               average:
                 bestAveragesByModelCategory.get(`${displayModel}|${secondary}`) ??
                 row.benchmarks[secondary],
-              tags: [...(modelFields.tags ?? row.tags ?? []), formatAgentName(row.agent)],
+              tags: modelFields.tags ?? row.tags ?? [],
             };
           }),
       };
@@ -388,7 +418,9 @@ export function getEvaluationDetailEntries(): EvaluationDetailEntry[] {
   );
 
   for (const run of activeRawRuns()) {
-    const displayModel = formatModelWithAgent(run.model, run.agent);
+    const modelFields = modelDisplayFields(run.model, run.provider);
+    const agentFields = agentDisplayFields(run.agent);
+    const displayModel = formatModelWithAgent(modelFields, agentFields);
     for (const [taskId, result] of Object.entries(run.results ?? {})) {
       if (result.status !== "completed") {
         continue;

@@ -7,7 +7,7 @@ import { buildScoreTableRows } from "../features/dashboardData";
 import { getEvaluationDetailEntry } from "./evaluationDetailsLoader";
 
 describe("leaderboardDataSource", () => {
-  it("matches model metadata by uppercase id and displays metadata fields", () => {
+  it("matches model metadata by alias and displays metadata fields", () => {
     const fields = modelDisplayFieldsFromMetadata(
       "deepseek-v4-pro",
       [
@@ -16,6 +16,7 @@ describe("leaderboardDataSource", () => {
           name: "DeepSeek-V4-Pro",
           provider: "DeepSeek",
           url: "https://example.com/deepseek",
+          aliases: ["deepseek-v4-pro"],
           tags: ["OSS"],
         },
       ],
@@ -23,7 +24,8 @@ describe("leaderboardDataSource", () => {
     );
 
     expect(fields).toEqual({
-      name: "deepseek-v4-pro",
+      id: "DeepSeek-V4-Pro",
+      name: "DeepSeek-V4-Pro",
       provider: "DeepSeek",
       url: "https://example.com/deepseek",
       tags: ["OSS"],

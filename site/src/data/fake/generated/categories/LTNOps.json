@@ -1,6 +1,6 @@
 {
   "benchmark": "LTNOps",
-  "generatedAt": "2026-07-01T02:50:42.138Z",
+  "generatedAt": "2026-07-10T02:19:46.195Z",
   "tasks": [
     {
       "taskId": "LTNOps-001",
@@ -10,6 +10,7 @@
       "score": 0.62124,
       "nativeScore": 0.62124,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 31.7,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -21,6 +22,7 @@
       "score": 0.788528,
       "nativeScore": 0.788528,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 25.5,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -32,6 +34,7 @@
       "score": 0.628452,
       "nativeScore": 0.628452,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 30.8,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -43,6 +46,7 @@
       "score": 0.685356,
       "nativeScore": 0.685356,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 20.4,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -54,6 +58,7 @@
       "score": 0.655524,
       "nativeScore": 0.655524,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 24.9,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -65,6 +70,7 @@
       "score": 0.702812,
       "nativeScore": 0.702812,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 24.8,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -76,6 +82,7 @@
       "score": 0.594168,
       "nativeScore": 0.594168,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 21.9,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -87,6 +94,7 @@
       "score": 0.689232,
       "nativeScore": 0.689232,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 33.7,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -98,6 +106,7 @@
       "score": 0.564096,
       "nativeScore": 0.564096,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 30.2,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -109,6 +118,7 @@
       "score": 0.731384,
       "nativeScore": 0.731384,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 35.3,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -120,6 +130,7 @@
       "score": 0.565596,
       "nativeScore": 0.565596,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 33.2,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -131,6 +142,7 @@
       "score": 0.66066,
       "nativeScore": 0.66066,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 31.9,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -142,6 +154,7 @@
       "score": 0.59838,
       "nativeScore": 0.59838,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 19,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -153,6 +166,7 @@
       "score": 0.754244,
       "nativeScore": 0.754244,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 25,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -164,6 +178,7 @@
       "score": 0.531312,
       "nativeScore": 0.531312,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 26.8,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -175,6 +190,7 @@
       "score": 0.632088,
       "nativeScore": 0.632088,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 19.1,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -186,6 +202,7 @@
       "score": 0.626952,
       "nativeScore": 0.626952,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 28.8,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -197,6 +214,7 @@
       "score": 0.782816,
       "nativeScore": 0.782816,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 21.5,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -208,6 +226,7 @@
       "score": 0.62274,
       "nativeScore": 0.62274,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 30.1,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -219,6 +238,7 @@
       "score": 0.603516,
       "nativeScore": 0.603516,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 24.2,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -230,6 +250,7 @@
       "score": 0.661236,
       "nativeScore": 0.661236,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 24.9,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -241,6 +262,7 @@
       "score": 0.6971,
       "nativeScore": 0.6971,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 18.7,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -252,6 +274,7 @@
       "score": 0.588456,
       "nativeScore": 0.588456,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 22.5,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -263,6 +286,7 @@
       "score": 0.694944,
       "nativeScore": 0.694944,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 26.9,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -274,6 +298,7 @@
       "score": 0.569808,
       "nativeScore": 0.569808,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 33.9,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -285,6 +310,7 @@
       "score": 0.725672,
       "nativeScore": 0.725672,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 32.2,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -296,6 +322,7 @@
       "score": 0.559884,
       "nativeScore": 0.559884,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 18.2,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -307,6 +334,7 @@
       "score": 0.666372,
       "nativeScore": 0.666372,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 23.9,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -318,6 +346,7 @@
       "score": 0.604092,
       "nativeScore": 0.604092,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 22.4,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -329,6 +358,7 @@
       "score": 0.748532,
       "nativeScore": 0.748532,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 23.2,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -340,6 +370,7 @@
       "score": 0.5256,
       "nativeScore": 0.5256,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 21.6,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -351,6 +382,7 @@
       "score": 0.702504,
       "nativeScore": 0.702504,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 18.2,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -362,6 +394,7 @@
       "score": 0.632664,
       "nativeScore": 0.632664,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 34.1,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -373,6 +406,7 @@
       "score": 0.777104,
       "nativeScore": 0.777104,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 27.2,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -384,6 +418,7 @@
       "score": 0.617028,
       "nativeScore": 0.617028,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 28,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -395,6 +430,7 @@
       "score": 0.673932,
       "nativeScore": 0.673932,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 30.6,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -406,6 +442,7 @@
       "score": 0.629424,
       "nativeScore": 0.629424,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 29.1,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -417,6 +454,7 @@
       "score": 0.726248,
       "nativeScore": 0.726248,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 26,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -428,6 +466,7 @@
       "score": 0.58782,
       "nativeScore": 0.58782,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 28.8,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -439,6 +478,7 @@
       "score": 0.660084,
       "nativeScore": 0.660084,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 28,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -450,6 +490,7 @@
       "score": 0.600852,
       "nativeScore": 0.600852,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 27.5,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -461,6 +502,7 @@
       "score": 0.697676,
       "nativeScore": 0.697676,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 33.4,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -472,6 +514,7 @@
       "score": 0.616392,
       "nativeScore": 0.616392,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 34.6,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -483,6 +526,7 @@
       "score": 0.688656,
       "nativeScore": 0.688656,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 24.1,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -494,6 +538,7 @@
       "score": 0.566568,
       "nativeScore": 0.566568,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 24.1,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -505,6 +550,7 @@
       "score": 0.783392,
       "nativeScore": 0.783392,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 31.1,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -516,6 +562,7 @@
       "score": 0.530676,
       "nativeScore": 0.530676,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 28.4,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -527,6 +574,7 @@
       "score": 0.597228,
       "nativeScore": 0.597228,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 28.4,
       "submittedAt": "2026-06-16T09:15:00Z"
     }

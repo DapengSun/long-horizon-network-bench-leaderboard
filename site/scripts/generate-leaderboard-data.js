@@ -53,19 +53,47 @@ function detailIndexKey({ taskId, model, agent, runId }) {
 }
 
 function metadataKey(value) {
-  return String(value).toUpperCase();
+  return String(value).trim().toLowerCase();
+}
+
+function metadataAliases(metadata) {
+  return [metadata.id, metadata.name, ...(metadata.aliases ?? [])];
+}
+
+function findMetadataByAlias(value, metadataList) {
+  const requestedKey = metadataKey(value);
+  return metadataList.find((metadata) =>
+    metadataAliases(metadata).some((alias) => metadataKey(alias) === requestedKey)
+  );
 }
 
 function modelDisplayFieldsFromMetadata(modelId, models, fallbackProvider = "") {
-  const metadata = models.find(
-    (model) => metadataKey(model.id) === metadataKey(modelId)
-  );
+  const metadata = findMetadataByAlias(modelId, models);
   return {
-    name: modelId,
+    id: metadata?.id ?? modelId,
+    name: metadata?.name ?? modelId,
     provider: metadata?.provider ?? fallbackProvider,
     url: metadata?.url,
     tags: metadata?.tags,
   };
+}
+
+function agentDisplayFieldsFromMetadata(agentId, agents) {
+  const metadata = findMetadataByAlias(agentId, agents);
+  return {
+    id: metadata?.id ?? agentId,
+    name: metadata?.name ?? agentId,
+  };
+}
+
+function normalizeRunIdentity(run, metadata) {
+  const model = modelDisplayFieldsFromMetadata(
+    run.model,
+    metadata.models ?? [],
+    run.provider ?? ""
+  );
+  const agent = agentDisplayFieldsFromMetadata(run.agent, metadata.agents ?? []);
+  return { model, agent };
 }
 
 function isNewer(a, b) {
@@ -120,11 +148,12 @@ async function readRawRuns(rawRunsDir) {
   return runs;
 }
 
-export function selectBestCompletedResults(runs, benchmarks) {
+export function selectBestCompletedResults(runs, benchmarks, metadata = {}) {
   const best = new Map();
   const allowedBenchmarks = new Set(benchmarks.map((benchmark) => benchmark.id));
 
   for (const run of runs) {
+    const identity = normalizeRunIdentity(run, metadata);
     for (const [taskId, result] of Object.entries(run.results ?? {})) {
       if (result.status !== "completed" || typeof result.score !== "number") {
         continue;
@@ -133,14 +162,14 @@ export function selectBestCompletedResults(runs, benchmarks) {
         continue;
       }
 
-      const key = `${run.model}|${run.agent}|${result.benchmark}|${taskId}`;
+      const key = `${identity.model.id}|${identity.agent.id}|${result.benchmark}|${taskId}`;
       const candidate = {
         ...result,
         taskId,
         runId: run.runId,
-        agent: run.agent,
-        model: run.model,
-        provider: run.provider,
+        agent: identity.agent.id,
+        model: identity.model.id,
+        provider: identity.model.provider,
         submittedAt: run.submittedAt,
         evaluatedAt: result.evaluatedAt,
         completedAt: result.completedAt,
@@ -186,7 +215,7 @@ export function buildOverview({ benchmarks, models, latestResults, generatedAt }
     );
     const rowKey = `${bucket.model}|${bucket.agent}`;
     const row = rowsByModelAgent.get(rowKey) ?? {
-      model: bucket.model,
+      model: modelFields.id,
       agent: bucket.agent,
       provider: modelFields.provider,
       url: modelFields.url,
@@ -286,12 +315,13 @@ async function main() {
   const metadataDir = path.join(args.dataDir, "metadata");
   const generatedAt = new Date().toISOString();
 
-  const [benchmarks, models, runs] = await Promise.all([
+  const [benchmarks, models, agents, runs] = await Promise.all([
     readJson(path.join(metadataDir, "benchmarks.json")),
     readJson(path.join(metadataDir, "models.json")),
+    readJson(path.join(metadataDir, "agents.json")),
     readRawRuns(rawRunsDir),
   ]);
-  const bestResults = selectBestCompletedResults(runs, benchmarks);
+  const bestResults = selectBestCompletedResults(runs, benchmarks, { models, agents });
   const overview = buildOverview({ benchmarks, models, latestResults: bestResults, generatedAt });
   const categorySummaries = buildCategorySummaries({
     benchmarks,

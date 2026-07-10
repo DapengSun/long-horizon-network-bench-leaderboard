@@ -2,11 +2,20 @@
   {
     "id": "opencode",
     "name": "OpenCode",
+    "aliases": [
+      "open-code",
+      "OpenCode"
+    ],
     "type": "agent-framework"
   },
   {
     "id": "claudecode",
     "name": "ClaudeCode",
+    "aliases": [
+      "claude-code",
+      "claudecode",
+      "ClaudeCode"
+    ],
     "type": "agent-framework"
   }
 ]

@@ -1,7 +1,7 @@
 {
-  "ltco-a100-ag-16-128m|DeepSeek-V4-Pro|opencode|fake-latest-opencode-deepseek-v4-pro": {
+  "ltco-a100-ag-16-128m|DeepSeek-V4-Pro|opencode|fake-old-opencode-deepseek-v4-pro": {
     "rawFile": "raw-runs/export_to_leaderboard_fake_seed.jsonl",
-    "runId": "fake-latest-opencode-deepseek-v4-pro",
+    "runId": "fake-old-opencode-deepseek-v4-pro",
     "taskId": "ltco-a100-ag-16-128m"
   },
   "ltcc-highbdp-v4|GLM-5.1|claudecode|fake-latest-claudecode-glm-5-1": {

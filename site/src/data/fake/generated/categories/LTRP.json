@@ -1,6 +1,6 @@
 {
   "benchmark": "LTRP",
-  "generatedAt": "2026-07-01T02:50:42.138Z",
+  "generatedAt": "2026-07-10T02:19:46.195Z",
   "tasks": [
     {
       "taskId": "ltrp-egress-multivrf-v1-std",
@@ -10,6 +10,7 @@
       "score": 0.71048,
       "nativeScore": 0.71048,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 23.1,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -21,6 +22,7 @@
       "score": 0.81268,
       "nativeScore": 0.81268,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 19,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -32,6 +34,7 @@
       "score": 0.705476,
       "nativeScore": 0.705476,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 20,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -43,6 +46,7 @@
       "score": 0.748556,
       "nativeScore": 0.748556,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 32.4,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -54,6 +58,7 @@
       "score": 0.645452,
       "nativeScore": 0.645452,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 20.8,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -65,6 +70,7 @@
       "score": 0.781636,
       "nativeScore": 0.781636,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 29.2,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -76,6 +82,7 @@
       "score": 0.700568,
       "nativeScore": 0.700568,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 28.2,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -87,6 +94,7 @@
       "score": 0.761744,
       "nativeScore": 0.761744,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 23.2,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -98,6 +106,7 @@
       "score": 0.651128,
       "nativeScore": 0.651128,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 21.8,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -109,6 +118,7 @@
       "score": 0.83608,
       "nativeScore": 0.83608,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 31.4,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -120,6 +130,7 @@
       "score": 0.675884,
       "nativeScore": 0.675884,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 34.6,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -131,6 +142,7 @@
       "score": 0.666404,
       "nativeScore": 0.666404,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 30.3,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -142,6 +154,7 @@
       "score": 0.653708,
       "nativeScore": 0.653708,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 20.1,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -153,6 +166,7 @@
       "score": 0.773188,
       "nativeScore": 0.773188,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 35.1,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -164,6 +178,7 @@
       "score": 0.63104,
       "nativeScore": 0.63104,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 30.4,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -175,6 +190,7 @@
       "score": 0.728456,
       "nativeScore": 0.728456,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 34.8,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -186,6 +202,7 @@
       "score": 0.718736,
       "nativeScore": 0.718736,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 27.1,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -197,6 +214,7 @@
       "score": 0.81076,
       "nativeScore": 0.81076,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 21.4,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -208,6 +226,7 @@
       "score": 0.64454,
       "nativeScore": 0.64454,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 24,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -219,6 +238,7 @@
       "score": 0.671156,
       "nativeScore": 0.671156,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 26.9,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -230,6 +250,7 @@
       "score": 0.671204,
       "nativeScore": 0.671204,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 20.4,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -241,6 +262,7 @@
       "score": 0.827932,
       "nativeScore": 0.827932,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 25.3,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -252,6 +274,7 @@
       "score": 0.645992,
       "nativeScore": 0.645992,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 29.6,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -263,6 +286,7 @@
       "score": 0.749408,
       "nativeScore": 0.749408,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 18.2,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -274,6 +298,7 @@
       "score": 0.668264,
       "nativeScore": 0.668264,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 32.7,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -285,6 +310,7 @@
       "score": 0.815776,
       "nativeScore": 0.815776,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 22.3,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -296,6 +322,7 @@
       "score": 0.669092,
       "nativeScore": 0.669092,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 22.4,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -307,6 +334,7 @@
       "score": 0.695084,
       "nativeScore": 0.695084,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 25.6,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -318,6 +346,7 @@
       "score": 0.754388,
       "nativeScore": 0.754388,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 19.9,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -329,6 +358,7 @@
       "score": 0.870796,
       "nativeScore": 0.870796,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 36,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -340,6 +370,7 @@
       "score": 0.62252,
       "nativeScore": 0.62252,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 32.2,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -351,6 +382,7 @@
       "score": 0.69368,
       "nativeScore": 0.69368,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 20.8,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -362,6 +394,7 @@
       "score": 0.704768,
       "nativeScore": 0.704768,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 27.9,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -373,6 +406,7 @@
       "score": 0.836728,
       "nativeScore": 0.836728,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 21,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -384,6 +418,7 @@
       "score": 0.615884,
       "nativeScore": 0.615884,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 29,
       "submittedAt": "2026-06-16T09:15:00Z"
     },
@@ -395,6 +430,7 @@
       "score": 0.667844,
       "nativeScore": 0.667844,
       "bestRound": "round3",
+      "rounds": 3,
       "durationMinutes": 22.8,
       "submittedAt": "2026-06-16T09:15:00Z"
     }
