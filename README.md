@@ -10,10 +10,10 @@
 Web frontend for the Long-Horizon-Network-Bench evaluation leaderboard. It
 displays model rankings, benchmark comparisons, and per-evaluation details.
 
-Quick links: [Getting started](#getting-started) · [Local preview](#optional-local-preview) · [Development](#development)
+Quick links: [Getting started](#getting-started) · [Local preview](#optional-local-preview) · [Development](#development) · [NetEval-Pro](https://github.com/ybai-nasp/NetEval-Pro)
 
-This project receives user-submitted NetEval Pro harness results and publishes
-the public leaderboard:
+This project receives user-submitted [NetEval-Pro](https://github.com/ybai-nasp/NetEval-Pro) harness results and publishes
+the public leaderboard. Run evaluations with NetEval-Pro first, then export results here.
 
 ```text
 Long-Horizon-Network-Bench case bank
@@ -33,7 +33,7 @@ For normal submitters, the only files to add are exported JSONL files under
 - **Dashboard** — Radar chart comparing models across network task categories; search and legend stay in sync.
 - **Evaluation details** — Case-level results for a selected model and category, with per-case optimization trend charts.
 - **Localization** — English and Chinese UI.
-- **External link** — Shortcut to run your own evaluation via NetEval-Pro.
+- **External link** — Shortcut to run your own evaluation via [NetEval-Pro](https://github.com/ybai-nasp/NetEval-Pro).
 
 ## Project layout
 
@@ -49,7 +49,7 @@ leaderboard-mvp/
 
 ## Getting Started
 
-After running NetEval Pro locally, export completed harness runs into this
+After running [NetEval-Pro](https://github.com/ybai-nasp/NetEval-Pro) locally, export completed harness runs into this
 leaderboard checkout:
 
 ```bash

@@ -10,9 +10,9 @@
 本项目是 Long-Horizon-Network-Bench evaluation leaderboard 的 Web 前端，用于展示
 模型排名、benchmark 对比和单次评测详情。
 
-快速导航：[快速开始](#快速开始) · [本地预览](#可选本地预览) · [开发](#开发)
+快速导航：[快速开始](#快速开始) · [本地预览](#可选本地预览) · [开发](#开发) · [NetEval-Pro](https://github.com/ybai-nasp/NetEval-Pro)
 
-本仓库接收由 NetEval Pro harness 导出的真实评测结果，并用于公开榜单展示：
+本仓库接收由 [NetEval-Pro](https://github.com/ybai-nasp/NetEval-Pro) harness 导出的真实评测结果，并用于公开榜单展示。请先通过 NetEval-Pro 运行评测，再将结果导出到本仓库：
 
 ```text
 Long-Horizon-Network-Bench case bank
@@ -32,7 +32,7 @@ Long-Horizon-Network-Bench case bank
 - **Dashboard** - 雷达图对比模型在不同网络任务类别上的表现。
 - **Evaluation details** - 查看指定模型和类别的 case 级结果，以及单 case 优化趋势图。
 - **Localization** - 英文和中文 UI。
-- **External link** - 跳转到 NetEval Pro，运行自己的评测。
+- **External link** - 跳转到 [NetEval-Pro](https://github.com/ybai-nasp/NetEval-Pro)，运行自己的评测。
 
 ## 项目结构
 
@@ -48,7 +48,7 @@ leaderboard-mvp/
 
 ## 快速开始
 
-本地运行 NetEval Pro 后，将完成的 harness 运行导出到本 leaderboard checkout：
+本地运行 [NetEval-Pro](https://github.com/ybai-nasp/NetEval-Pro) 后，将完成的 harness 运行导出到本 leaderboard checkout：
 
 ```bash
 export LEADERBOARD_FRONTEND=/path/to/long-horizon-network-bench/leaderboard-mvp
