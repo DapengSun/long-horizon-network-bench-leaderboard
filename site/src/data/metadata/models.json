@@ -41,6 +41,7 @@
     "provider": "DeepSeek",
     "url": "https://huggingface.co/deepseek-ai/DeepSeek-V4-Pro",
     "aliases": [
+      "DeepSeek-v4-Pro",
       "deepseek-ai/DeepSeek-V4-Pro",
       "deepseek-v4-pro",
       "deepseek-pro-v4"
@@ -53,6 +54,7 @@
     "provider": "MiniMax",
     "url": "https://huggingface.co/MiniMaxAI/MiniMax-M2.5",
     "aliases": [
+      "MiniMax M2.5",
       "MiniMaxAI/MiniMax-M2.5",
       "minimax-m2.5",
       "minimax-m2-5"
@@ -60,27 +62,46 @@
     "tags": []
   },
   {
-    "id": "claude-opus-4-8-high",
-    "name": "claude-opus-4-8-high",
+    "id": "Claude-Opus 4.8-High",
+    "name": "Claude-Opus 4.8-High",
     "provider": "Anthropic",
+    "aliases": [
+      "Claude-Opus-4.8-High",
+      "claude-opus-4-8-high",
+      "claude-opus-4.8-high",
+      "Claude-Opus-4-8-High"
+    ],
     "tags": []
   },
   {
-    "id": "claude-sonnet-5",
-    "name": "claude-sonnet-5",
+    "id": "Claude-Sonnet-5",
+    "name": "Claude-Sonnet-5",
     "provider": "Anthropic",
+    "aliases": [
+      "Claude Sonnet 5",
+      "claude-sonnet-5"
+    ],
     "tags": []
   },
   {
-    "id": "gemini-3.1-pro",
-    "name": "gemini-3.1-pro",
+    "id": "Gemini-3.1-Pro",
+    "name": "Gemini-3.1-Pro",
     "provider": "Google",
+    "aliases": [
+      "Gemini 3.1 Pro",
+      "gemini-3.1-pro",
+      "gemini-3.1-pro-preview",
+      "gemini 3.1 pro"
+    ],
     "tags": []
   },
   {
-    "id": "gpt-5.5",
-    "name": "gpt-5.5",
+    "id": "GPT-5.5",
+    "name": "GPT-5.5",
     "provider": "OpenAI",
+    "aliases": [
+      "gpt-5.5"
+    ],
     "tags": []
   },
   {
@@ -89,6 +110,7 @@
     "provider": "Moonshot AI",
     "url": "https://huggingface.co/moonshotai/Kimi-K2.6",
     "aliases": [
+      "Kimi K2.6",
       "moonshotai/Kimi-K2.6",
       "kimi-k2.6",
       "kimi-k2-6"
@@ -101,8 +123,10 @@
     "provider": "MiniMax",
     "url": "https://huggingface.co/MiniMaxAI/MiniMax-M3",
     "aliases": [
+      "MiniMax M3",
       "MiniMaxAI/MiniMax-M3",
-      "minimax-m3"
+      "minimax-m3",
+      "minimax m3"
     ],
     "tags": []
   }
